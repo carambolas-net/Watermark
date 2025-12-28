@@ -5,8 +5,8 @@ import os
 class Config:
     # data paths
     if os.name == "nt":  # Windows
-        train_data_path = "data_set/train/"
-        val_data_path = "data_set/val/"
+        train_data_path = "../data_set/train/"
+        val_data_path = "../data_set/val/"
     else:  # Linux/Unix
         train_data_path = "/root/watermark/img/train/class1"
         val_data_path = "/root/watermark/img/val/class1"
@@ -19,14 +19,14 @@ class Config:
     decoder_block = 7
     message_length = 32
     
-    H = 128
-    W = 128
+    H = 100
+    W = 100
 
 
     # training
     device = "cuda" if torch.cuda.is_available() else "cpu"
     num_workers = 16
-    batch_size = 128
+    batch_size = 24
     learning_rate = 1e-3
     num_epochs = 400
     log_interval_batch = 3
@@ -67,28 +67,22 @@ class Config_test:
     decoder_block = 7
     message_length = 32
     
-    H = 128
-    W = 128
+    H = 100
+    W = 100
 
 
     # training
     device = "cuda" if torch.cuda.is_available() else "cpu"
     num_workers = 16
-    batch_size = 128
+    batch_size = 100
     learning_rate = 1e-3
     num_epochs = 400
     log_interval_batch = 3
     save_eval_number = 2
-    ##137效果不错
-    #0-115 0.2ssim0.8 0.7img_loss 1e-3
-    #116-144 0.2ssim0.8 0.7img_loss 1e-4
-    #145-263 0.3ssim0.7 0.5img_loss 1e-4
-    #264-345 0.4ssim0.5 0.5img_loss 1e-4
-    #346- 0.4ssim0.5 0.5img_loss 1e-5
     resume_epoch = 0
     
     # noisy
-    jpeg_quality=75
+    jpeg_quality=60
     gaussian_std = 0.03  # 高斯噪声标准差
     dropout_prob = 0.3  # dropout概率
     crop_ratio_min = 0.7  # 裁剪最小比例
