@@ -5,6 +5,7 @@ from torchvision.transforms import v2
 import numpy as np
 from PIL import Image
 import io
+import math
 
 class Noisy(nn.Module):
     def __init__(self, config):
@@ -13,74 +14,79 @@ class Noisy(nn.Module):
         self.H = config.H
         self.W = config.W
         self.noisy_sequence = config.noise_sequence
-        self.dct_y = config.DCT_Y  # Y通道保留的低频系数
-        self.dct_uv = config.DCT_UV  # UV通道保留的低频系数
+        self.quality = config.jpeg_quality
+     # 1. DCT Filters
+        self.size = 8
+        u = torch.arange(self.size).float().unsqueeze(1)
+        x = torch.arange(self.size).float().unsqueeze(0)
+        mat = torch.cos((2 * x + 1) * u * math.pi / (2 * self.size)) * math.sqrt(2 / self.size)
+        mat[0] *= 1 / math.sqrt(2)
+        self.register_buffer('filters', torch.einsum('ax,by->abxy', mat, mat).reshape(-1, 1, self.size, self.size))
         
-        # 预计算DCT变换核和低频掩码
-        self.register_buffer('dct_kernel', self._create_dct_kernel())
-        self.register_buffer('idct_kernel', self._create_idct_kernel())
-        self.register_buffer('freq_mask_y', self._create_freq_mask(self.dct_y))
-        self.register_buffer('freq_mask_uv', self._create_freq_mask(self.dct_uv))
+        # 2. Quantization Tables
+        self.luma_q_base = torch.tensor([
+            [16, 11, 10, 16, 24, 40, 51, 61],
+            [12, 12, 14, 19, 26, 58, 60, 55],
+            [14, 13, 16, 24, 40, 57, 69, 56],
+            [14, 17, 22, 29, 51, 87, 80, 62],
+            [18, 22, 37, 56, 68, 109, 103, 77],
+            [24, 35, 55, 64, 81, 104, 113, 92],
+            [49, 64, 78, 87, 103, 121, 120, 101],
+            [72, 92, 95, 98, 112, 100, 103, 99]
+        ]).float()
+
+        self.chroma_q_base = torch.tensor([
+            [17, 18, 24, 47, 99, 99, 99, 99],
+            [18, 21, 26, 66, 99, 99, 99, 99],
+            [24, 26, 56, 99, 99, 99, 99, 99],
+            [47, 66, 99, 99, 99, 99, 99, 99],
+            [99, 99, 99, 99, 99, 99, 99, 99],
+            [99, 99, 99, 99, 99, 99, 99, 99],
+            [99, 99, 99, 99, 99, 99, 99, 99],
+            [99, 99, 99, 99, 99, 99, 99, 99]
+        ]).float()
+
+        scale = 5000 / self.quality if self.quality < 50 else 200 - 2 * self.quality
+        def get_q_table(base_table):
+            q = torch.floor((base_table * scale + 50) / 100)
+            q[q <= 0] = 1
+            q[q > 255] = 255
+            return q.reshape(-1)
+            
+        self.register_buffer('luma_q', get_q_table(self.luma_q_base))
+        self.register_buffer('chroma_q', get_q_table(self.chroma_q_base))
+
+    def rgb_to_ycbcr(self, x):
+        y  = 0.299 * x[:, 0] + 0.587 * x[:, 1] + 0.114 * x[:, 2]
+        cb = -0.1687 * x[:, 0] - 0.3313 * x[:, 1] + 0.5 * x[:, 2] + 128
+        cr = 0.5 * x[:, 0] - 0.4187 * x[:, 1] - 0.0813 * x[:, 2] + 128
+        return y.unsqueeze(1), cb.unsqueeze(1), cr.unsqueeze(1)
+
+    def ycbcr_to_rgb(self, y, cb, cr):
+        cb = cb - 128
+        cr = cr - 128
+        r = y + 1.402 * cr
+        g = y - 0.34414 * cb - 0.71414 * cr
+        b = y + 1.772 * cb
+        return torch.cat([r, g, b], dim=1).clamp(0, 255)
+
+    def process_channel(self, x, q_table):
+        y = F.conv2d(x, self.filters, stride=self.size)
+        q = q_table.view(1, 64, 1, 1)
+        y_quantized = y + (torch.round(y / q) * q - y).detach()
+        out = F.conv_transpose2d(y_quantized, self.filters, stride=self.size)
+        return out
+
+    def jpeg_compression(self, x):
+        x = ((x + 1)/2) * 255
+        y, cb, cr = self.rgb_to_ycbcr(x)
         
-        # RGB <-> YUV 转换矩阵
-        self.register_buffer('rgb_to_yuv', torch.tensor([
-            [0.299, 0.587, 0.114],
-            [-0.14713, -0.28886, 0.436],
-            [0.615, -0.51499, -0.10001]
-        ]).float())
-        self.register_buffer('yuv_to_rgb', torch.tensor([
-            [1.0, 0.0, 1.13983],
-            [1.0, -0.39465, -0.58060],
-            [1.0, 2.03211, 0.0]
-        ]).float())
-    
-    def _create_dct_kernel(self):
-        """创建8x8 DCT变换卷积核，输出64通道"""
-        N = 8
-        kernel = torch.zeros(64, 1, 8, 8)
-        for u in range(N):
-            for v in range(N):
-                alpha_u = np.sqrt(1/N) if u == 0 else np.sqrt(2/N)
-                alpha_v = np.sqrt(1/N) if v == 0 else np.sqrt(2/N)
-                for x in range(N):
-                    for y in range(N):
-                        kernel[u * N + v, 0, x, y] = alpha_u * alpha_v * \
-                            np.cos(np.pi * u * (2*x + 1) / (2*N)) * \
-                            np.cos(np.pi * v * (2*y + 1) / (2*N))
-        return kernel
-    
-    def _create_idct_kernel(self):
-        """创建IDCT逆变换卷积核"""
-        N = 8
-        kernel = torch.zeros(1, 64, 8, 8)
-        for u in range(N):
-            for v in range(N):
-                alpha_u = np.sqrt(1/N) if u == 0 else np.sqrt(2/N)
-                alpha_v = np.sqrt(1/N) if v == 0 else np.sqrt(2/N)
-                for x in range(N):
-                    for y in range(N):
-                        kernel[0, u * N + v, x, y] = alpha_u * alpha_v * \
-                            np.cos(np.pi * u * (2*x + 1) / (2*N)) * \
-                            np.cos(np.pi * v * (2*y + 1) / (2*N))
-        return kernel
-    
-    def _create_freq_mask(self, n):
-        """创建低频掩码，保留前n个zigzag顺序的系数"""
-        # Zigzag顺序索引
-        zigzag_order = [
-            0,  1,  8, 16,  9,  2,  3, 10,
-           17, 24, 32, 25, 18, 11,  4,  5,
-           12, 19, 26, 33, 40, 48, 41, 34,
-           27, 20, 13,  6,  7, 14, 21, 28,
-           35, 42, 49, 56, 57, 50, 43, 36,
-           29, 22, 15, 23, 30, 37, 44, 51,
-           58, 59, 52, 45, 38, 31, 39, 46,
-           53, 60, 61, 54, 47, 55, 62, 63
-        ]
-        mask = torch.zeros(64)
-        for i in range(min(n, 64)):
-            mask[zigzag_order[i]] = 1.0
-        return mask.view(1, 64, 1, 1)
+        y_rec = self.process_channel(y, self.luma_q)
+        cb_rec = self.process_channel(cb, self.chroma_q)
+        cr_rec = self.process_channel(cr, self.chroma_q)
+        
+        out = self.ycbcr_to_rgb(y_rec, cb_rec, cr_rec)
+        return (out / 255.0)*2 -1
         
     #@torch.no_grad()
     def forward(self, encoded_image):
@@ -144,63 +150,7 @@ class Noisy(nn.Module):
         rgb = rgb_01 * 2 - 1
         return rgb.permute(0, 3, 1, 2)  # (B, 3, H, W)
 
-    def jpeg_compression(self, image):
-        """
-        使用DCT变换模拟JPEG压缩
-        1. RGB转YUV
-        2. 8x8块DCT变换（使用卷积实现）
-        3. Y通道保留DCT_Y个低频系数，UV通道保留DCT_UV个低频系数
-        4. IDCT逆变换
-        5. YUV转RGB
-        """
-        B, C, H, W = image.shape
-        
-        # RGB转YUV
-        if C == 3:
-            image_yuv = self._rgb_to_yuv(image)
-        else:
-            image_yuv = image
-        
-        # 确保尺寸是8的倍数，使用ZeroPad2d
-        pad_h = (8 - H % 8) % 8
-        pad_w = (8 - W % 8) % 8
-        if pad_h > 0 or pad_w > 0:
-            zero_pad = nn.ZeroPad2d((0, pad_w, 0, pad_h))
-            image_yuv = zero_pad(image_yuv)
-        
-        _, _, H_pad, W_pad = image_yuv.shape
-        
-        # 对每个通道分别处理，Y和UV使用不同的频率掩码
-        result_channels = []
-        for c in range(C):
-            channel = image_yuv[:, c:c+1, :, :]  # (B, 1, H, W)
-            
-            # DCT变换: 使用8x8卷积，步长8
-            dct_coef = F.conv2d(channel, self.dct_kernel, stride=8)  # (B, 64, H/8, W/8)
-            
-            # 根据通道选择频率掩码：Y通道用freq_mask_y，UV通道用freq_mask_uv
-            if c == 0:  # Y通道
-                dct_coef = dct_coef * self.freq_mask_y
-            else:  # U, V通道
-                dct_coef = dct_coef * self.freq_mask_uv
-            
-            # IDCT逆变换: 使用转置卷积
-            reconstructed = F.conv_transpose2d(dct_coef, self.idct_kernel.permute(1, 0, 2, 3), stride=8)
-            result_channels.append(reconstructed)
-        
-        result_yuv = torch.cat(result_channels, dim=1)  # (B, C, H, W)
-        
-        # 裁剪回原尺寸
-        if pad_h > 0 or pad_w > 0:
-            result_yuv = result_yuv[:, :, :H, :W]
-        
-        # YUV转RGB
-        if C == 3:
-            result = self._yuv_to_rgb(result_yuv)
-        else:
-            result = result_yuv
-        
-        return torch.clamp(result, -1, 1)
+
     
     def jpeg_real(self, image):
         """
@@ -248,7 +198,7 @@ class Noisy(nn.Module):
         result = torch.stack(result_list, dim=0).to(device)
         
         # 使用直通估计器保持梯度
-        result = image + (result - image).detach()
+        # result = image + (result - image).detach()
         
         return result
     

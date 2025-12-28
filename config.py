@@ -35,8 +35,7 @@ class Config:
     resume_epoch = 0
     
     # noisy
-    DCT_Y=25
-    DCT_UV=10
+    jpeg_quality=60
     gaussian_std = 0.03  # 高斯噪声标准差
     dropout_prob = 0.3  # dropout概率
     crop_ratio_min = 0.7  # 裁剪最小比例
@@ -47,7 +46,7 @@ class Config:
     # 混合噪声配置（按顺序应用）
     # 示例: ["gaussian", "jpeg", "cropout"] 会依次应用这三种噪声
     # 设置为 None 或空列表则使用单一随机噪声
-    noise_sequence = ["crop","gaussian"]  # 或者例如: ["gaussian", "jpeg"]
+    noise_sequence = ["jpeg"]  # 或者例如: ["gaussian", "jpeg"]
     
 config = Config()
 
@@ -89,8 +88,6 @@ class Config_test:
     resume_epoch = 0
     
     # noisy
-    DCT_Y=25
-    DCT_UV=10
     jpeg_quality=75
     gaussian_std = 0.03  # 高斯噪声标准差
     dropout_prob = 0.3  # dropout概率
@@ -102,6 +99,6 @@ class Config_test:
     # 混合噪声配置（按顺序应用）
     # 示例: ["gaussian", "jpeg", "cropout"] 会依次应用这三种噪声
     # 设置为 None 或空列表则使用单一随机噪声
-    noise_sequence = ["crop","gaussian"]  # 或者例如: ["gaussian", "jpeg"]
+    noise_sequence = ["jpeg_real"]  # 或者例如: ["gaussian", "jpeg"]
     
 config_test = Config_test()

@@ -1,7 +1,6 @@
 from .conv_bn_relu import ConvBNReLU
 from torch import nn
 import torch
-from tools import print_min_max
 
 class Encoder(nn.Module):
     def __init__(self, config):
