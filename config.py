@@ -19,18 +19,18 @@ class Config:
     decoder_block = 7
     message_length = 32
     
-    H = 100
-    W = 100
+    H = 128
+    W = 128
 
 
     # training
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    num_workers = 16
+    num_workers = 8
     batch_size = 24
     learning_rate = 1e-3
     num_epochs = 400
     log_interval_batch = 3
-    save_eval_number = 2
+    save_eval_number = 4
     save_interval_epoch = 3
     resume_epoch = 0
     
