@@ -69,7 +69,7 @@ class JpegSimulator(nn.Module):
     
     def rgb_to_yuv_transform(self, rgb):
         """
-        将RGB图像转换为YUV色彩空间
+        将RGB图像转换为YUV色彩空间（完全可微）
         rgb: [B, 3, H, W], 范围 [-1, 1]
         return: [B, 3, H, W], Y在[-1,1], U和V在[-1,1]左右
         """
@@ -82,8 +82,11 @@ class JpegSimulator(nn.Module):
         # 矩阵乘法进行色彩空间转换
         yuv_permuted = torch.matmul(rgb_permuted, self.rgb_to_yuv.T)
         
-        # U和V需要加0.5偏移到[0,1]范围
-        yuv_permuted[:, :, :, 1:] = yuv_permuted[:, :, :, 1:] + 0.5
+        # U和V需要加0.5偏移到[0,1]范围（避免原地操作，保持可微）
+        y = yuv_permuted[:, :, :, 0:1]
+        u = yuv_permuted[:, :, :, 1:2] + 0.5
+        v = yuv_permuted[:, :, :, 2:3] + 0.5
+        yuv_permuted = torch.cat([y, u, v], dim=-1)
         
         # [B, H, W, 3] -> [B, 3, H, W]
         yuv = yuv_permuted.permute(0, 3, 1, 2)
@@ -105,9 +108,11 @@ class JpegSimulator(nn.Module):
         # [B, 3, H, W] -> [B, H, W, 3]
         yuv_permuted = yuv_01.permute(0, 2, 3, 1)
         
-        # U和V需要减去0.5偏移
-        yuv_adjusted = yuv_permuted.clone()
-        yuv_adjusted[:, :, :, 1:] = yuv_adjusted[:, :, :, 1:] - 0.5
+        # U和V需要减去0.5偏移（避免原地操作，保持可微）
+        y = yuv_permuted[:, :, :, 0:1]
+        u = yuv_permuted[:, :, :, 1:2] - 0.5
+        v = yuv_permuted[:, :, :, 2:3] - 0.5
+        yuv_adjusted = torch.cat([y, u, v], dim=-1)
         
         # 矩阵乘法进行色彩空间转换
         rgb_permuted = torch.matmul(yuv_adjusted, self.yuv_to_rgb.T)
