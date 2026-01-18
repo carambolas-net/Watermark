@@ -1,389 +1,403 @@
-import os
-import io
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.utils.data import Dataset, DataLoader
-from torchvision.transforms import v2
-import torchvision
-from PIL import Image
-import sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from config import config
+import numpy as np
 
 
-class JpegSimulator(nn.Module):
+class DifferentiableJPEG(nn.Module):
     """
-    模拟JPEG压缩的神经网络
-    使用两个卷积层来模拟JPEG的块状压缩效果
-    包含YUV420色度子采样步骤
+    可微分的JPEG模拟器
+    流程: RGB -> YUV -> DCT -> Quantization -> IDCT -> YUV -> RGB
+    全程可微分，使用卷积实现DCT/IDCT
     """
-    def __init__(self, channels=3, block_size=8, use_yuv420=True):
-        super(JpegSimulator, self).__init__()
-        self.channels = channels
-        self.block_size = block_size
-        self.use_yuv420 = use_yuv420
-        
-        # RGB到YUV的转换矩阵 (BT.601标准)
-        # Y =  0.299*R + 0.587*G + 0.114*B
-        # U = -0.169*R - 0.331*G + 0.500*B + 0.5
-        # V =  0.500*R - 0.419*G - 0.081*B + 0.5
-        self.register_buffer('rgb_to_yuv', torch.tensor([
-            [0.299, 0.587, 0.114],
-            [-0.169, -0.331, 0.500],
-            [0.500, -0.419, -0.081]
-        ], dtype=torch.float32))
-        
-        # YUV到RGB的转换矩阵
-        # R = Y + 1.402*(V-0.5)
-        # G = Y - 0.344*(U-0.5) - 0.714*(V-0.5)
-        # B = Y + 1.772*(U-0.5)
-        self.register_buffer('yuv_to_rgb', torch.tensor([
-            [1.000, 0.000, 1.402],
-            [1.000, -0.344, -0.714],
-            [1.000, 1.772, 0.000]
-        ], dtype=torch.float32))
-        
-        # 第一个卷积层: [B,C,H,W] -> [B,C*64,H/8,W/8]
-        # 使用 kernel_size=8, stride=8 来分块
-        self.conv1 = nn.Conv2d(
-            in_channels=channels,
-            out_channels=channels * block_size * block_size,
-            kernel_size=block_size,
-            stride=block_size,
-            padding=0
-        )
-
-        # 使用ReLU引入非线性失真，近似量化带来的信息丢失/噪声
-        self.relu = nn.ReLU(inplace=True)
-        
-        # 第二个卷积层: [B,C*64,H/8,W/8] -> [B,C,H,W]
-        # 使用转置卷积来恢复原始尺寸
-        self.conv2 = nn.ConvTranspose2d(
-            in_channels=channels * block_size * block_size,
-            out_channels=channels,
-            kernel_size=block_size,
-            stride=block_size,
-            padding=0
-        )
     
-    def rgb_to_yuv_transform(self, rgb):
+    def __init__(self, block_size=8):
+        super(DifferentiableJPEG, self).__init__()
+        self.block_size = block_size
+        
+        # 初始化DCT卷积核
+        self.register_buffer('dct_kernel', self._create_dct_kernel())
+        # 初始化IDCT卷积核
+        self.register_buffer('idct_kernel', self._create_idct_kernel())
+        
+        # RGB to YUV 转换矩阵
+        # Y = 0.299*R + 0.587*G + 0.114*B
+        # U = -0.14713*R - 0.28886*G + 0.436*B + 0.5
+        # V = 0.615*R - 0.51499*G - 0.10001*B + 0.5
+        rgb_to_yuv_matrix = torch.tensor([
+            [0.299, 0.587, 0.114],
+            [-0.14713, -0.28886, 0.436],
+            [0.615, -0.51499, -0.10001]
+        ], dtype=torch.float32)
+        self.register_buffer('rgb_to_yuv_matrix', rgb_to_yuv_matrix)
+        
+        # YUV to RGB 转换矩阵 (逆矩阵)
+        yuv_to_rgb_matrix = torch.tensor([
+            [1.0, 0.0, 1.13983],
+            [1.0, -0.39465, -0.58060],
+            [1.0, 2.03211, 0.0]
+        ], dtype=torch.float32)
+        self.register_buffer('yuv_to_rgb_matrix', yuv_to_rgb_matrix)
+        
+    def _create_dct_kernel(self):
         """
-        将RGB图像转换为YUV色彩空间（完全可微）
-        rgb: [B, 3, H, W], 范围 [-1, 1]
-        return: [B, 3, H, W], Y在[-1,1], U和V在[-1,1]左右
+        创建DCT卷积核
+        DCT-II 公式: X[k] = sum_{n=0}^{N-1} x[n] * cos(pi/N * (n + 0.5) * k)
         """
-        # 先转换到[0, 1]范围
-        rgb_01 = (rgb + 1.0) / 2.0
+        block_size = self.block_size
+        # 创建1D DCT基函数
+        dct_basis = torch.zeros(block_size, block_size)
+        for k in range(block_size):
+            for n in range(block_size):
+                if k == 0:
+                    dct_basis[k, n] = 1.0 / np.sqrt(block_size)
+                else:
+                    dct_basis[k, n] = np.sqrt(2.0 / block_size) * np.cos(
+                        np.pi * (2 * n + 1) * k / (2 * block_size)
+                    )
         
-        # [B, 3, H, W] -> [B, H, W, 3]
-        rgb_permuted = rgb_01.permute(0, 2, 3, 1)
+        # 创建2D DCT核 [64, 1, 8, 8]
+        dct_kernel = torch.zeros(block_size * block_size, 1, block_size, block_size)
+        for i in range(block_size):
+            for j in range(block_size):
+                # 2D DCT基 = 外积 of 1D DCT基
+                basis_2d = torch.outer(dct_basis[i], dct_basis[j])
+                dct_kernel[i * block_size + j, 0] = basis_2d
+                
+        return dct_kernel
+    
+    def _create_idct_kernel(self):
+        """
+        创建IDCT卷积核
+        IDCT是DCT的转置
+        """
+        block_size = self.block_size
+        # 创建1D IDCT基函数 (DCT的转置)
+        idct_basis = torch.zeros(block_size, block_size)
+        for n in range(block_size):
+            for k in range(block_size):
+                if k == 0:
+                    idct_basis[n, k] = 1.0 / np.sqrt(block_size)
+                else:
+                    idct_basis[n, k] = np.sqrt(2.0 / block_size) * np.cos(
+                        np.pi * (2 * n + 1) * k / (2 * block_size)
+                    )
         
-        # 矩阵乘法进行色彩空间转换
-        yuv_permuted = torch.matmul(rgb_permuted, self.rgb_to_yuv.T)
-        
-        # U和V需要加0.5偏移到[0,1]范围（避免原地操作，保持可微）
-        y = yuv_permuted[:, :, :, 0:1]
-        u = yuv_permuted[:, :, :, 1:2] + 0.5
-        v = yuv_permuted[:, :, :, 2:3] + 0.5
-        yuv_permuted = torch.cat([y, u, v], dim=-1)
-        
-        # [B, H, W, 3] -> [B, 3, H, W]
-        yuv = yuv_permuted.permute(0, 3, 1, 2)
-        
-        # 转换回[-1, 1]范围
-        yuv = yuv * 2.0 - 1.0
-        
+        # 创建2D IDCT核 [64, 1, 8, 8] for transpose conv
+        idct_kernel = torch.zeros(block_size * block_size, 1, block_size, block_size)
+        for i in range(block_size):
+            for j in range(block_size):
+                basis_2d = torch.outer(idct_basis[:, i], idct_basis[:, j])
+                idct_kernel[i * block_size + j, 0] = basis_2d
+                
+        return idct_kernel
+    
+    def rgb_to_yuv(self, rgb):
+        """
+        RGB转YUV
+        输入: [B, 3, H, W] RGB图像，范围[-1, 1]
+        输出: [B, 3, H, W] YUV图像，范围[-1, 1]
+        """
+        B, C, H, W = rgb.shape
+        # 重排为 [B, H, W, 3]
+        rgb_hwc = rgb.permute(0, 2, 3, 1)
+        # 矩阵乘法转换
+        yuv_hwc = torch.matmul(rgb_hwc, self.rgb_to_yuv_matrix.T)
+        # 重排回 [B, 3, H, W]
+        yuv = yuv_hwc.permute(0, 3, 1, 2)
         return yuv
     
-    def yuv_to_rgb_transform(self, yuv):
+    def yuv_to_rgb(self, yuv):
         """
-        将YUV图像转换为RGB色彩空间（完全可微）
-        yuv: [B, 3, H, W], 范围 [-1, 1]
-        return: [B, 3, H, W], 范围 [-1, 1]
-        """
-        # 先转换到[0, 1]范围
-        yuv_01 = (yuv + 1.0) / 2.0
-        
-        # [B, 3, H, W] -> [B, H, W, 3]
-        yuv_permuted = yuv_01.permute(0, 2, 3, 1)
-        
-        # U和V需要减去0.5偏移（避免原地操作，保持可微）
-        y = yuv_permuted[:, :, :, 0:1]
-        u = yuv_permuted[:, :, :, 1:2] - 0.5
-        v = yuv_permuted[:, :, :, 2:3] - 0.5
-        yuv_adjusted = torch.cat([y, u, v], dim=-1)
-        
-        # 矩阵乘法进行色彩空间转换
-        rgb_permuted = torch.matmul(yuv_adjusted, self.yuv_to_rgb.T)
-        
-        # [B, H, W, 3] -> [B, 3, H, W]
-        rgb = rgb_permuted.permute(0, 3, 1, 2)
-        
-        # 转换到[-1, 1]范围（不使用clamp，保持完全可微）
-        rgb = rgb * 2.0 - 1.0
-        
-        return rgb
-    
-    def yuv420_subsample(self, yuv):
-        """
-        YUV420色度子采样
-        对U和V通道进行2x2下采样，然后上采样恢复原始分辨率
-        这会导致色度信息的损失，模拟JPEG的色度子采样
-        yuv: [B, 3, H, W]
-        return: [B, 3, H, W]
+        YUV转RGB
+        输入: [B, 3, H, W] YUV图像，范围[-1, 1]
+        输出: [B, 3, H, W] RGB图像，范围[-1, 1]
         """
         B, C, H, W = yuv.shape
-        
-        # 分离Y, U, V通道
-        y = yuv[:, 0:1, :, :]  # [B, 1, H, W]
-        u = yuv[:, 1:2, :, :]  # [B, 1, H, W]
-        v = yuv[:, 2:3, :, :]  # [B, 1, H, W]
-        
-        # 对U和V通道进行2x2平均池化下采样
-        u_down = F.avg_pool2d(u, kernel_size=2, stride=2)  # [B, 1, H/2, W/2]
-        v_down = F.avg_pool2d(v, kernel_size=2, stride=2)  # [B, 1, H/2, W/2]
-        
-        # 使用双线性插值上采样恢复原始分辨率
-        u_up = F.interpolate(u_down, size=(H, W), mode='bilinear', align_corners=False)
-        v_up = F.interpolate(v_down, size=(H, W), mode='bilinear', align_corners=False)
-        
-        # 合并通道
-        yuv_subsampled = torch.cat([y, u_up, v_up], dim=1)  # [B, 3, H, W]
-        
-        return yuv_subsampled
-        
-    def forward(self, x):
+        # 重排为 [B, H, W, 3]
+        yuv_hwc = yuv.permute(0, 2, 3, 1)
+        # 矩阵乘法转换
+        rgb_hwc = torch.matmul(yuv_hwc, self.yuv_to_rgb_matrix.T)
+        # 重排回 [B, 3, H, W]
+        rgb = rgb_hwc.permute(0, 3, 1, 2)
+        return rgb
+    
+    def dct_2d(self, x):
         """
-        前向传播
-        x: [B, C, H, W], RGB图像，范围 [-1, 1]
-        return: [B, C, H, W]
-        
-        处理流程:
-        RGB -> YUV -> YUV420子采样 -> 卷积(YUV空间) -> YUV -> RGB
+        使用卷积实现2D DCT
+        输入: [B, C, H, W] 
+        输出: [B, C, H, W] DCT系数 (按8x8块组织)
         """
-        if self.use_yuv420:
-            # 步骤1: RGB -> YUV
-            yuv = self.rgb_to_yuv_transform(x)
+        B, C, H, W = x.shape
+        block_size = self.block_size
+        
+        # 确保尺寸是block_size的倍数
+        assert H % block_size == 0 and W % block_size == 0, \
+            f"Image dimensions must be multiples of {block_size}"
+        
+        # 分离通道处理
+        outputs = []
+        for c in range(C):
+            # 取单通道 [B, 1, H, W]
+            x_c = x[:, c:c+1, :, :]
             
-            # 步骤2: YUV420色度子采样
-            yuv = self.yuv420_subsample(yuv)
+            # 使用卷积计算DCT，stride=8实现分块
+            # 输出: [B, 64, H//8, W//8]
+            dct_coeffs = F.conv2d(x_c, self.dct_kernel, stride=block_size)
             
-            # 步骤3: 卷积模拟DCT和量化（在YUV空间进行）
-            # 编码: [B,C,H,W] -> [B,C*64,H/8,W/8]
-            encoded = self.relu(self.conv1(yuv))
-            # 解码: [B,C*64,H/8,W/8] -> [B,C,H,W]
-            yuv_out = self.conv2(encoded)
+            # 重排DCT系数到空间域 [B, 64, H//8, W//8] -> [B, 1, H, W]
+            B_out, _, H_blocks, W_blocks = dct_coeffs.shape
+            # reshape to [B, 8, 8, H//8, W//8]
+            dct_coeffs = dct_coeffs.view(B_out, block_size, block_size, H_blocks, W_blocks)
+            # permute to [B, H//8, 8, W//8, 8]
+            dct_coeffs = dct_coeffs.permute(0, 3, 1, 4, 2)
+            # reshape to [B, 1, H, W]
+            dct_coeffs = dct_coeffs.reshape(B_out, 1, H, W)
             
-            # 步骤4: YUV -> RGB
-            decoded = self.yuv_to_rgb_transform(yuv_out)
+            outputs.append(dct_coeffs)
+        
+        # 合并通道 [B, C, H, W]
+        return torch.cat(outputs, dim=1)
+    
+    def idct_2d(self, x):
+        """
+        使用卷积实现2D IDCT
+        输入: [B, C, H, W] DCT系数
+        输出: [B, C, H, W] 空间域图像
+        """
+        B, C, H, W = x.shape
+        block_size = self.block_size
+        
+        outputs = []
+        for c in range(C):
+            x_c = x[:, c:c+1, :, :]
+            
+            H_blocks = H // block_size
+            W_blocks = W // block_size
+            
+            # 重排系数 [B, 1, H, W] -> [B, 64, H//8, W//8]
+            # reshape to [B, H//8, 8, W//8, 8]
+            x_reshaped = x_c.view(B, H_blocks, block_size, W_blocks, block_size)
+            # permute to [B, 8, 8, H//8, W//8]
+            x_reshaped = x_reshaped.permute(0, 2, 4, 1, 3)
+            # reshape to [B, 64, H//8, W//8]
+            x_reshaped = x_reshaped.reshape(B, block_size * block_size, H_blocks, W_blocks)
+            
+            # 使用转置卷积实现IDCT
+            # idct_kernel: [64, 1, 8, 8]
+            spatial = F.conv_transpose2d(x_reshaped, self.idct_kernel, stride=block_size)
+            
+            outputs.append(spatial)
+        
+        return torch.cat(outputs, dim=1)
+    
+    def apply_quantization(self, dct_coeffs, q_table):
+        """
+        应用量化表 (用户自定义接口)
+        输入: 
+            dct_coeffs: [B, C, H, W] DCT系数
+            q_table: 用户提供的量化表，可以是:
+                - [8, 8] 单个量化表，应用于所有通道
+                - [C, 8, 8] 每个通道一个量化表
+                - [B, C, 8, 8] 每个样本每个通道一个量化表
+                - 或者任何可微分的函数/模块
+        输出: [B, C, H, W] 量化后的系数
+        """
+        B, C, H, W = dct_coeffs.shape
+        block_size = self.block_size
+        H_blocks = H // block_size
+        W_blocks = W // block_size
+        
+        # 如果q_table是张量，进行除法操作
+        if isinstance(q_table, torch.Tensor):
+            # 扩展q_table到匹配的形状
+            if q_table.dim() == 2:
+                # [8, 8] -> [1, 1, 8, 8]
+                q_table = q_table.unsqueeze(0).unsqueeze(0)
+            elif q_table.dim() == 3:
+                # [C, 8, 8] -> [1, C, 8, 8]
+                q_table = q_table.unsqueeze(0)
+            
+            # 将q_table平铺到整个图像
+            # [B, C, 8, 8] -> [B, C, H, W]
+            q_table_tiled = q_table.repeat(1, 1, H_blocks, W_blocks)
+            
+            # 量化操作: 除以量化表
+            quantized = dct_coeffs / (q_table_tiled + 1e-10)
+            
+            return quantized
         else:
-            # 不使用YUV420时，直接在RGB空间进行卷积
-            encoded = self.relu(self.conv1(x))
-            decoded = self.conv2(encoded)
-        
-        return decoded
-
-
-def real_jpeg_compress(img_tensor, quality=60):
-    """
-    对图像张量进行真实的JPEG压缩
-    img_tensor: [B, C, H, W], 范围 [-1, 1]
-    quality: JPEG压缩质量 (1-100)
-    return: [B, C, H, W], 范围 [-1, 1]
-    """
-    batch_size = img_tensor.size(0)
-    compressed_imgs = []
+            # 如果是可调用对象(如nn.Module)，直接调用
+            return q_table(dct_coeffs)
     
-    for i in range(batch_size):
-        # 反归一化到 [0, 255]
-        img = img_tensor[i].cpu().clone()
-        img = (img + 1.0) / 2.0  # [-1,1] -> [0,1]
-        img = (img * 255).clamp(0, 255).byte()
+    def apply_dequantization(self, quantized_coeffs, q_table):
+        """
+        应用反量化 (用户自定义接口)
+        输入:
+            quantized_coeffs: [B, C, H, W] 量化后的系数
+            q_table: 量化表
+        输出: [B, C, H, W] 反量化后的DCT系数
+        """
+        B, C, H, W = quantized_coeffs.shape
+        block_size = self.block_size
+        H_blocks = H // block_size
+        W_blocks = W // block_size
         
-        # 转换为PIL图像
-        img_pil = Image.fromarray(img.permute(1, 2, 0).numpy(), mode='RGB')
-        
-        # JPEG压缩
-        buffer = io.BytesIO()
-        img_pil.save(buffer, format='JPEG', quality=quality)
-        buffer.seek(0)
-        
-        # 读取压缩后的图像
-        img_compressed = Image.open(buffer).convert('RGB')
-        
-        # 转回张量并归一化到 [-1, 1]
-        img_tensor_compressed = torch.from_numpy(
-            __import__('numpy').array(img_compressed)
-        ).permute(2, 0, 1).float() / 255.0
-        img_tensor_compressed = img_tensor_compressed * 2.0 - 1.0  # [0,1] -> [-1,1]
-        
-        compressed_imgs.append(img_tensor_compressed)
+        if isinstance(q_table, torch.Tensor):
+            if q_table.dim() == 2:
+                q_table = q_table.unsqueeze(0).unsqueeze(0)
+            elif q_table.dim() == 3:
+                q_table = q_table.unsqueeze(0)
+            
+            q_table_tiled = q_table.repeat(1, 1, H_blocks, W_blocks)
+            
+            # 反量化: 乘以量化表
+            dequantized = quantized_coeffs * q_table_tiled
+            
+            return dequantized
+        else:
+            return q_table(quantized_coeffs)
     
-    return torch.stack(compressed_imgs).to(img_tensor.device)
+    def forward(self, rgb_image, q_table):
+        """
+        完整的可微分JPEG流程
+        输入:
+            rgb_image: [B, 3, H, W] RGB图像，范围[-1, 1]
+            q_table: 量化表，用户提供
+        输出:
+            rgb_output: [B, 3, H, W] 处理后的RGB图像，范围[-1, 1]
+        """
+        # Step 1: RGB -> YUV
+        yuv = self.rgb_to_yuv(rgb_image)
+        
+        # Step 2: DCT (使用卷积实现)
+        A = self.dct_2d(yuv)
+        
+        # Step 3: 应用量化表 (用户接口)
+        B = self.apply_quantization(A, q_table)
+        
+        # Step 4: 应用反量化
+        C_dct = self.apply_dequantization(B, q_table)
+        
+        # Step 5: IDCT (使用卷积实现)
+        C = self.idct_2d(C_dct)
+        
+        # Step 6: YUV -> RGB
+        rgb_output = self.yuv_to_rgb(C)
+        
+        return rgb_output
+    
+    def forward_with_intermediate(self, rgb_image, q_table):
+        """
+        返回中间结果的forward，用于调试
+        """
+        yuv = self.rgb_to_yuv(rgb_image)
+        A = self.dct_2d(yuv)
+        B = self.apply_quantization(A, q_table)
+        C_dct = self.apply_dequantization(B, q_table)
+        C = self.idct_2d(C_dct)
+        rgb_output = self.yuv_to_rgb(C)
+        
+        return {
+            'yuv': yuv,
+            'A': A,  # DCT系数
+            'B': B,  # 量化后
+            'C_dct': C_dct,  # 反量化后
+            'C': C,  # IDCT后的YUV
+            'rgb_output': rgb_output
+        }
 
 
-class JpegDataset(Dataset):
-    """复用train.py的数据集加载方式"""
-    def __init__(self, data_path):
-        self.image_paths = [os.path.join(data_path, f) for f in os.listdir(data_path)]
-        self.transform = v2.Compose([
-            v2.ToImage(),
-            v2.ToDtype(torch.uint8, scale=True),
-            v2.RandomCrop(size=(config.H, config.W)),
-            v2.ToDtype(torch.float32, scale=True),
-            v2.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])
+class LearnableQuantizationTable(nn.Module):
+    """
+    可学习的量化表示例
+    用户可以参考此实现自定义q_table
+    """
+    def __init__(self, num_channels=3, init_quality=50):
+        super(LearnableQuantizationTable, self).__init__()
+        
+        # 标准JPEG亮度量化表
+        standard_luma_table = torch.tensor([
+            [16, 11, 10, 16, 24, 40, 51, 61],
+            [12, 12, 14, 19, 26, 58, 60, 55],
+            [14, 13, 16, 24, 40, 57, 69, 56],
+            [14, 17, 22, 29, 51, 87, 80, 62],
+            [18, 22, 37, 56, 68, 109, 103, 77],
+            [24, 35, 55, 64, 81, 104, 113, 92],
+            [49, 64, 78, 87, 103, 121, 120, 101],
+            [72, 92, 95, 98, 112, 100, 103, 99]
+        ], dtype=torch.float32)
+        
+        # 标准JPEG色度量化表
+        standard_chroma_table = torch.tensor([
+            [17, 18, 24, 47, 99, 99, 99, 99],
+            [18, 21, 26, 66, 99, 99, 99, 99],
+            [24, 26, 56, 99, 99, 99, 99, 99],
+            [47, 66, 99, 99, 99, 99, 99, 99],
+            [99, 99, 99, 99, 99, 99, 99, 99],
+            [99, 99, 99, 99, 99, 99, 99, 99],
+            [99, 99, 99, 99, 99, 99, 99, 99],
+            [99, 99, 99, 99, 99, 99, 99, 99]
+        ], dtype=torch.float32)
+        
+        # 根据质量调整
+        if init_quality < 50:
+            scale = 5000 / init_quality
+        else:
+            scale = 200 - 2 * init_quality
+        scale = scale / 100.0
+        
+        # 初始化可学习参数 [3, 8, 8]
+        init_tables = torch.stack([
+            standard_luma_table * scale,    # Y通道
+            standard_chroma_table * scale,  # U通道
+            standard_chroma_table * scale   # V通道
         ])
-
-    def __len__(self):
-        return len(self.image_paths)
-
-    def __getitem__(self, idx):
-        img = Image.open(self.image_paths[idx]).convert('RGB')
-        img = self.transform(img)
-        return img
-
-
-def train_jpeg_simulator():
-    """训练JPEG模拟器"""
-    # 创建数据集和数据加载器
-    train_dataset = JpegDataset(config.train_data_path)
-    val_dataset = JpegDataset(config.val_data_path)
-    train_loader = DataLoader(
-        train_dataset, 
-        batch_size=config.batch_size, 
-        shuffle=True, 
-        num_workers=config.num_workers
-    )
-    val_loader = DataLoader(
-        val_dataset, 
-        batch_size=config.batch_size, 
-        shuffle=False, 
-        num_workers=config.num_workers
-    )
-    
-    # 创建模型
-    model = JpegSimulator(channels=3, block_size=8)
-    model = model.to(config.device)
-    
-    # 损失函数和优化器
-    criterion = nn.MSELoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=config.learning_rate)
-    
-    # 检查点路径
-    jpeg_ckpt_path = os.path.join(config.checkpoint_path, "jpeg_simulator.pth")
-    
-    # 加载检查点（如果存在）
-    start_epoch = 0
-    if os.path.exists(jpeg_ckpt_path):
-        ckpt = torch.load(jpeg_ckpt_path, map_location=config.device)
-        model.load_state_dict(ckpt['model_state_dict'])
-        optimizer.load_state_dict(ckpt['optimizer_state_dict'])
-        start_epoch = ckpt['epoch']
-        print(f"从epoch {start_epoch} 恢复JPEG模拟器训练")
-    
-    # 训练循环
-    num_epochs = config.num_epochs  # JPEG模拟器训练的epoch数
-    for epoch in range(start_epoch, num_epochs):
-        # 训练阶段
-        model.train()
-        total_loss = 0.0
         
-        for batch_idx, img in enumerate(train_loader):
-            img = img.to(config.device)
-            
-            # 真实JPEG压缩
-            with torch.no_grad():
-                jpeg_img = real_jpeg_compress(img, quality=config.jpeg_quality)
-            
-            # 模拟JPEG压缩
-            simulated_img = model(img)
-            
-            # 计算损失: 模拟压缩与真实压缩的MSE
-            loss = criterion(simulated_img, jpeg_img)
-            
-            # 反向传播
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-            
-            total_loss += loss.item()
-            
-            if (batch_idx + 1) % config.log_interval_batch == 0:
-                print(f"Epoch [{epoch+1}/{num_epochs}] Batch [{batch_idx+1}/{len(train_loader)}] "
-                      f"Loss: {loss.item():.6f}")
-        
-        train_avg_loss = total_loss / len(train_loader)
-        print(f"Epoch [{epoch+1}/{num_epochs}] 训练平均损失: {train_avg_loss:.6f}")
-        
-        # 验证阶段
-        model.eval()
-        val_total_loss = 0.0
-        first_val_batch = None
-        with torch.no_grad():
-            for batch_idx, img in enumerate(val_loader):
-                img = img.to(config.device)
-                jpeg_img = real_jpeg_compress(img, quality=config.jpeg_quality)
-                simulated_img = model(img)
-                loss = criterion(simulated_img, jpeg_img)
-                val_total_loss += loss.item()
-
-                if batch_idx == 0:
-                    first_val_batch = (img.detach(), jpeg_img.detach(), simulated_img.detach())
-        
-        val_avg_loss = val_total_loss / len(val_loader)
-        print(f"Epoch [{epoch+1}/{num_epochs}] 验证平均损失: {val_avg_loss:.6f}")
-
-        # 保存本epoch的验证样例图片（png）
-        if first_val_batch is not None:
-            out_root = os.path.join("inference_results", "jpeg_simulator", f"epoch_{epoch+1}")
-            os.makedirs(out_root, exist_ok=True)
-
-            img, jpeg_img, simulated_img = first_val_batch
-            save_n = min(getattr(config, "save_eval_number", 2), img.size(0))
-            for i in range(save_n):
-                src = (img[i].cpu() + 1.0) / 2.0
-                tgt = (jpeg_img[i].cpu() + 1.0) / 2.0
-                pred = (simulated_img[i].cpu() + 1.0) / 2.0
-
-                torchvision.utils.save_image(src, os.path.join(out_root, f"src_{i}.png"), normalize=False)
-                torchvision.utils.save_image(tgt, os.path.join(out_root, f"jpeg_{i}.png"), normalize=False)
-                torchvision.utils.save_image(pred, os.path.join(out_root, f"sim_{i}.png"), normalize=False)
-        
-        # 保存检查点
-        if (epoch + 1) % 10 == 0:
-            torch.save({
-                'epoch': epoch + 1,
-                'model_state_dict': model.state_dict(),
-                'optimizer_state_dict': optimizer.state_dict(),
-                'train_loss': train_avg_loss,
-                'val_loss': val_avg_loss,
-            }, jpeg_ckpt_path)
-            print(f"保存检查点: {jpeg_ckpt_path}")
+        # 使用log空间参数化确保正值
+        self.log_q_table = nn.Parameter(torch.log(init_tables + 1e-10))
     
-    print("JPEG模拟器训练完成!")
-    return model
+    def forward(self):
+        """返回量化表"""
+        return torch.exp(self.log_q_table)
 
 
-def load_jpeg_simulator(device=None):
-    """加载预训练的JPEG模拟器"""
-    if device is None:
-        device = config.device
-    
-    model = JpegSimulator(channels=3, block_size=8)
-    jpeg_ckpt_path = os.path.join(config.checkpoint_path, "jpeg_simulator.pth")
-    
-    if os.path.exists(jpeg_ckpt_path):
-        ckpt = torch.load(jpeg_ckpt_path, map_location=device)
-        model.load_state_dict(ckpt['model_state_dict'])
-        print(f"加载JPEG模拟器: {jpeg_ckpt_path}")
-    else:
-        print("警告: 未找到预训练的JPEG模拟器，使用随机初始化")
-    
-    model = model.to(device)
-    model.eval()
-    return model
-
-
+# 使用示例
 if __name__ == "__main__":
-    train_jpeg_simulator()
+    # 创建模型
+    jpeg_layer = DifferentiableJPEG(block_size=8)
+    
+    # 创建测试输入 [B, C, H, W]，范围[-1, 1]
+    batch_size = 2
+    height, width = 64, 64  # 必须是8的倍数
+    test_input = torch.rand(batch_size, 3, height, width) * 2 - 1  # 范围[-1, 1]
+    
+    # 方法1: 使用固定量化表
+    q_table = torch.ones(8, 8) * 10.0  # 简单的均匀量化表
+    q_table.requires_grad = True  # 如果需要梯度
+    
+    output = jpeg_layer(test_input, q_table)
+    print(f"Input shape: {test_input.shape}")
+    print(f"Output shape: {output.shape}")
+    
+    # 验证可微分性
+    loss = output.mean()
+    loss.backward()
+    print(f"q_table gradient shape: {q_table.grad.shape}")
+    print(f"Gradient exists: {q_table.grad is not None}")
+    
+    # 方法2: 使用可学习量化表
+    learnable_q = LearnableQuantizationTable(num_channels=3, init_quality=75)
+    q_table_learned = learnable_q()
+    
+    output2 = jpeg_layer(test_input, q_table_learned)
+    loss2 = output2.mean()
+    loss2.backward()
+    print(f"\nLearnable q_table gradient exists: {learnable_q.log_q_table.grad is not None}")
+    
+    # 方法3: 获取中间结果
+    results = jpeg_layer.forward_with_intermediate(test_input, q_table)
+    
+    print("\n中间结果形状:")
+    for key, value in results.items():
+        print(f"  {key}: {value.shape}")

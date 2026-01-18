@@ -15,46 +15,76 @@ class Noisy(nn.Module):
         self.W = config.W
         self.noisy_sequence = config.noise_sequence
         self.quality = config.jpeg_quality
-     # 1. DCT Filters
+        
+        # 1. DCT Filters
         self.size = 8
-        u = torch.arange(self.size).float().unsqueeze(1)
-        x = torch.arange(self.size).float().unsqueeze(0)
-        mat = torch.cos((2 * x + 1) * u * math.pi / (2 * self.size)) * math.sqrt(2 / self.size)
-        mat[0] *= 1 / math.sqrt(2)
-        self.register_buffer('filters', torch.einsum('ax,by->abxy', mat, mat).reshape(-1, 1, self.size, self.size))
+        # 生成8x8 DCT的基函数并将其作为卷积核的权重
+        weights = torch.zeros(64, 1, 8, 8)
+        for u in range(8):
+            for v in range(8):
+                # 频率系数 u, v 对应的卷积核索引 (0-63)
+                filter_idx = u * 8 + v
+                
+                # 计算DCT系数
+                for x in range(8):
+                    for y in range(8):
+                        alpha_u = 1.0 / math.sqrt(2) if u == 0 else 1.0
+                        alpha_v = 1.0 / math.sqrt(2) if v == 0 else 1.0
+                        
+                        # DCT-II 公式
+                        val = 0.25 * alpha_u * alpha_v * \
+                              math.cos((2 * x + 1) * u * math.pi / 16) * \
+                              math.cos((2 * y + 1) * v * math.pi / 16)
+                              
+                        weights[filter_idx, 0, x, y] = val
+        self.register_buffer('filters', weights)
         
         # 2. Quantization Tables
-        self.luma_q_base = torch.tensor([
-            [16, 11, 10, 16, 24, 40, 51, 61],
-            [12, 12, 14, 19, 26, 58, 60, 55],
-            [14, 13, 16, 24, 40, 57, 69, 56],
-            [14, 17, 22, 29, 51, 87, 80, 62],
-            [18, 22, 37, 56, 68, 109, 103, 77],
-            [24, 35, 55, 64, 81, 104, 113, 92],
-            [49, 64, 78, 87, 103, 121, 120, 101],
-            [72, 92, 95, 98, 112, 100, 103, 99]
-        ]).float()
+        # 标准JPEG亮度量化表 (Standard Luminance Quantization Table) Q=50
+        self.std_quant_table_lum = torch.tensor([
+            16, 11, 10, 16, 24, 40, 51, 61,
+            12, 12, 14, 19, 26, 58, 60, 55,
+            14, 13, 16, 24, 40, 57, 69, 56,
+            14, 17, 22, 29, 51, 87, 80, 62,
+            18, 22, 37, 56, 68, 109, 103, 77,
+            24, 35, 55, 64, 81, 104, 113, 92,
+            49, 64, 78, 87, 103, 121, 120, 101,
+            72, 92, 95, 98, 112, 100, 103, 99
+        ], dtype=torch.float32).reshape(64, 1, 1)
 
-        self.chroma_q_base = torch.tensor([
-            [17, 18, 24, 47, 99, 99, 99, 99],
-            [18, 21, 26, 66, 99, 99, 99, 99],
-            [24, 26, 56, 99, 99, 99, 99, 99],
-            [47, 66, 99, 99, 99, 99, 99, 99],
-            [99, 99, 99, 99, 99, 99, 99, 99],
-            [99, 99, 99, 99, 99, 99, 99, 99],
-            [99, 99, 99, 99, 99, 99, 99, 99],
-            [99, 99, 99, 99, 99, 99, 99, 99]
-        ]).float()
-
-        scale = 5000 / self.quality if self.quality < 50 else 200 - 2 * self.quality
-        def get_q_table(base_table):
-            q = torch.floor((base_table * scale + 50) / 100)
-            q[q <= 0] = 1
-            q[q > 255] = 255
-            return q.reshape(-1)
+        # 标准JPEG色度量化表
+        self.std_quant_table_chrom = torch.tensor([
+            17, 18, 24, 47, 99, 99, 99, 99,
+            18, 21, 26, 66, 99, 99, 99, 99,
+            24, 26, 56, 99, 99, 99, 99, 99,
+            47, 66, 99, 99, 99, 99, 99, 99,
+            99, 99, 99, 99, 99, 99, 99, 99,
+            99, 99, 99, 99, 99, 99, 99, 99,
+            99, 99, 99, 99, 99, 99, 99, 99,
+            99, 99, 99, 99, 99, 99, 99, 99
+        ], dtype=torch.float32).reshape(64, 1, 1)
             
-        self.register_buffer('luma_q', get_q_table(self.luma_q_base))
-        self.register_buffer('chroma_q', get_q_table(self.chroma_q_base))
+        self.register_buffer('luma_q', self.get_quant_table(self.quality, self.std_quant_table_lum))
+        self.register_buffer('chroma_q', self.get_quant_table(self.quality, self.std_quant_table_chrom))
+
+    def get_quant_table(self, quality, std_table):
+        # 限制范围
+        if quality <= 0: quality = 1
+        if quality > 100: quality = 100
+        
+        # 1. 计算缩放系数 S
+        if quality < 50:
+            s = 5000 / quality
+        else:
+            s = 200 - 2 * quality
+            
+        # 2. 更新量化表
+        table = torch.floor((std_table * s + 50) / 100)
+        
+        # 限制在 [1, 255]
+        table = torch.clamp(table, min=1, max=255)
+        
+        return table
 
     def rgb_to_ycbcr(self, x):
         y  = 0.299 * x[:, 0] + 0.587 * x[:, 1] + 0.114 * x[:, 2]
@@ -70,23 +100,64 @@ class Noisy(nn.Module):
         b = y + 1.772 * cb
         return torch.cat([r, g, b], dim=1).clamp(0, 255)
 
-    def process_channel(self, x, q_table):
-        y = F.conv2d(x, self.filters, stride=self.size)
-        q = q_table.view(1, 64, 1, 1)
-        y_quantized = y + (torch.round(y / q) * q - y).detach()
-        out = F.conv_transpose2d(y_quantized, self.filters, stride=self.size)
-        return out
+    def process_channel(self, channel, q_table):
+        # 1. 减去 128 (Level Shift)
+        channel = channel - 128
+        
+        # 2. DCT变换
+        dct_coeffs = F.conv2d(channel, self.filters, stride=8)
+        
+        # 3. 量化
+        q = q_table.to(channel.device)
+        x = dct_coeffs / q
+        x_round = torch.round(x)
+        quantized = x_round + (x - x_round) ** 3
+        
+        # 4. 反量化
+        dequantized = quantized * q
+        
+        # 5. IDCT变换
+        recon_channel = F.conv_transpose2d(dequantized, self.filters, stride=8)
+        
+        # 6. 加回 128
+        recon_channel = recon_channel + 128
+        return recon_channel
 
     def jpeg_compression(self, x):
-        x = ((x + 1)/2) * 255
+        # x is in [-1, 1], convert to [0, 255]
+        x = ((x + 1.0) / 2.0) * 255.0
+        
+        # 填充图片使其长宽能被16整除 (Padding for 4:2:0)
+        b, c, h, w = x.shape
+        pad_h = (16 - h % 16) % 16
+        pad_w = (16 - w % 16) % 16
+        if pad_h > 0 or pad_w > 0:
+            x = F.pad(x, (0, pad_w, 0, pad_h), mode='reflect')
+            
+        # 1. RGB -> YCbCr
         y, cb, cr = self.rgb_to_ycbcr(x)
         
-        y_rec = self.process_channel(y, self.luma_q)
-        cb_rec = self.process_channel(cb, self.chroma_q)
-        cr_rec = self.process_channel(cr, self.chroma_q)
+        # 4:2:0 采样
+        cb_sub = F.avg_pool2d(cb, kernel_size=2, stride=2)
+        cr_sub = F.avg_pool2d(cr, kernel_size=2, stride=2)
         
-        out = self.ycbcr_to_rgb(y_rec, cb_rec, cr_rec)
-        return (out / 255.0)*2 -1
+        # 处理通道
+        rec_y = self.process_channel(y, self.luma_q)
+        rec_cb_sub = self.process_channel(cb_sub, self.chroma_q)
+        rec_cr_sub = self.process_channel(cr_sub, self.chroma_q)
+        
+        # 上采样
+        rec_cb = F.interpolate(rec_cb_sub, size=(rec_y.shape[2], rec_y.shape[3]), mode='bilinear', align_corners=False)
+        rec_cr = F.interpolate(rec_cr_sub, size=(rec_y.shape[2], rec_y.shape[3]), mode='bilinear', align_corners=False)
+        
+        # 2. YCbCr -> RGB
+        rec_rgb = self.ycbcr_to_rgb(rec_y, rec_cb, rec_cr)
+        
+        # Crop back
+        rec_rgb = rec_rgb[:, :, :h, :w]
+        
+        # Convert back to [-1, 1]
+        return (rec_rgb / 255.0) * 2.0 - 1.0
         
     #@torch.no_grad()
     def forward(self, encoded_image):
