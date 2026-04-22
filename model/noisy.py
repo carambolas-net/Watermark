@@ -194,6 +194,38 @@ class Noisy(nn.Module):
         noisy_image = image + noise
         return torch.clamp(noisy_image, -1, 1)
     
+    def dropout(self, image):
+        """随机dropout像素"""
+        if not self.training:
+            return image
+        
+        mask = torch.rand_like(image) > self.config.dropout_prob
+        return image * mask.float()
+    
+    def random_cropout(self, image):
+        """
+        随机遮挡一块区域（填充为0或随机值）
+        """
+        B, C, H, W = image.shape
+        result = image.clone()
+        
+        # 随机遮挡区域大小
+        cropout_ratio = np.random.uniform(self.config.cropout_ratio_min, self.config.cropout_ratio_max)
+        cropout_h = int(H * cropout_ratio)
+        cropout_w = int(W * cropout_ratio)
+        
+        # 随机起始位置
+        top = np.random.randint(0, H - cropout_h + 1)
+        left = np.random.randint(0, W - cropout_w + 1)
+        
+        # 遮挡区域填充为0或随机值（范围[-1,1]）
+        if np.random.rand() > 0.5:
+            result[:, :, top:top+cropout_h, left:left+cropout_w] = 0
+        else:
+            result[:, :, top:top+cropout_h, left:left+cropout_w] = torch.rand(B, C, cropout_h, cropout_w).to(image.device) * 2 - 1
+        
+        return result
+
     def _rgb_to_yuv(self, rgb):
         """RGB转YUV，输入输出范围[-1,1]"""
         # rgb: (B, 3, H, W) -> (B, H, W, 3)
@@ -273,13 +305,7 @@ class Noisy(nn.Module):
         
         return result
     
-    # def dropout(self, image):
-    #     """随机dropout像素"""
-    #     if not self.training:
-    #         return image
-        
-    #     mask = torch.rand_like(image) > self.config.dropout_prob
-    #     return image * mask.float()
+
     
     def random_crop(self, image):
         """
@@ -295,26 +321,6 @@ class Noisy(nn.Module):
         
         return cropped
     
-    # def random_cropout(self, image):
-    #     """
-    #     随机遮挡一块区域（填充为0或随机值）
-    #     """
-    #     B, C, H, W = image.shape
-    #     result = image.clone()
-        
-    #     # 随机遮挡区域大小
-    #     cropout_ratio = np.random.uniform(self.config.cropout_ratio_min, self.config.cropout_ratio_max)
-    #     cropout_h = int(H * cropout_ratio)
-    #     cropout_w = int(W * cropout_ratio)
-        
-    #     # 随机起始位置
-    #     top = np.random.randint(0, H - cropout_h + 1)
-    #     left = np.random.randint(0, W - cropout_w + 1)
-        
-    #     # 遮挡区域填充为0或随机值（范围[-1,1]）
-    #     if np.random.rand() > 0.5:
-    #         result[:, :, top:top+cropout_h, left:left+cropout_w] = 0
-    #     else:
-    #         result[:, :, top:top+cropout_h, left:left+cropout_w] = torch.rand(B, C, cropout_h, cropout_w).to(image.device) * 2 - 1
-        
-    #     return result
+    def I(self, image):
+        return image
+
