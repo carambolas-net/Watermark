@@ -1,0 +1,1545 @@
+分布式训练: rank=0, world_size=1, local_rank=0
+日志文件: logs/train_20260516_224758.log
+从epoch 102 恢复训练
+Epoch [103/400] 第1批数据获取耗时: 1.48s
+Epoch [103/400] Batch [20/925] G: 0.0917 (enc: 0.1999, dec: 0.0417, adv: 2.3476) D: (cover: 0.2870, enc: 0.1730) PSNR: 38.85dB
+Epoch [103/400] Batch [40/925] G: 0.0927 (enc: 0.1889, dec: 0.0422, adv: 2.6144) D: (cover: 0.2065, enc: 0.0673) PSNR: 38.93dB
+Epoch [103/400] Batch [60/925] G: 0.0907 (enc: 0.1959, dec: 0.0412, adv: 2.4595) D: (cover: 0.0813, enc: 0.0688) PSNR: 38.86dB
+Epoch [103/400] Batch [80/925] G: 0.1023 (enc: 0.1861, dec: 0.0474, adv: 1.7972) D: (cover: 0.0782, enc: 0.2295) PSNR: 38.90dB
+Epoch [103/400] Batch [100/925] G: 0.1025 (enc: 0.1875, dec: 0.0468, adv: 3.1774) D: (cover: 0.1648, enc: 0.0571) PSNR: 38.82dB
+Epoch [103/400] Batch [120/925] G: 0.0946 (enc: 0.1878, dec: 0.0431, adv: 2.8258) D: (cover: 0.1118, enc: 0.1087) PSNR: 38.93dB
+Epoch [103/400] Batch [140/925] G: 0.0896 (enc: 0.1931, dec: 0.0409, adv: 1.9906) D: (cover: 0.1554, enc: 0.0916) PSNR: 38.67dB
+Epoch [103/400] Batch [160/925] G: 0.0861 (enc: 0.1894, dec: 0.0392, adv: 2.0000) D: (cover: 0.0180, enc: 0.3967) PSNR: 38.59dB
+Epoch [103/400] Batch [180/925] G: 0.0870 (enc: 0.1936, dec: 0.0398, adv: 1.6655) D: (cover: 0.0781, enc: 0.2074) PSNR: 38.79dB
+Epoch [103/400] Batch [200/925] G: 0.0888 (enc: 0.1933, dec: 0.0403, adv: 2.4594) D: (cover: 0.1069, enc: 0.1363) PSNR: 38.87dB
+Epoch [103/400] Batch [220/925] G: 0.0963 (enc: 0.1880, dec: 0.0445, adv: 1.5792) D: (cover: 0.3419, enc: 0.2049) PSNR: 38.98dB
+Epoch [103/400] Batch [240/925] G: 0.0853 (enc: 0.1925, dec: 0.0387, adv: 2.1723) D: (cover: 0.0950, enc: 0.1949) PSNR: 38.92dB
+Epoch [103/400] Batch [260/925] G: 0.0980 (enc: 0.1955, dec: 0.0445, adv: 3.1437) D: (cover: 0.1430, enc: 0.0605) PSNR: 39.06dB
+Epoch [103/400] Batch [280/925] G: 0.0918 (enc: 0.1919, dec: 0.0419, adv: 2.3078) D: (cover: 0.0516, enc: 0.2545) PSNR: 38.83dB
+Epoch [103/400] Batch [300/925] G: 0.0861 (enc: 0.1882, dec: 0.0393, adv: 1.7793) D: (cover: 0.0386, enc: 0.2220) PSNR: 39.26dB
+Epoch [103/400] Batch [320/925] G: 0.0950 (enc: 0.1872, dec: 0.0435, adv: 2.3367) D: (cover: 0.1201, enc: 0.1470) PSNR: 39.17dB
+Epoch [103/400] Batch [340/925] G: 0.0888 (enc: 0.2020, dec: 0.0399, adv: 3.0208) D: (cover: 0.1748, enc: 0.0366) PSNR: 38.97dB
+Epoch [103/400] Batch [360/925] G: 0.0914 (enc: 0.1960, dec: 0.0412, adv: 3.1315) D: (cover: 0.0494, enc: 0.1762) PSNR: 38.99dB
+Epoch [103/400] Batch [380/925] G: 0.0889 (enc: 0.1905, dec: 0.0406, adv: 1.9608) D: (cover: 0.0260, enc: 0.2525) PSNR: 39.03dB
+Epoch [103/400] Batch [400/925] G: 0.0871 (enc: 0.1964, dec: 0.0395, adv: 2.2453) D: (cover: 0.0800, enc: 0.1924) PSNR: 38.78dB
+Epoch [103/400] Batch [420/925] G: 0.0898 (enc: 0.1936, dec: 0.0411, adv: 1.8903) D: (cover: 0.0488, enc: 0.2845) PSNR: 39.11dB
+Epoch [103/400] Batch [440/925] G: 0.0959 (enc: 0.1943, dec: 0.0441, adv: 1.7674) D: (cover: 0.0362, enc: 0.2095) PSNR: 39.12dB
+Epoch [103/400] Batch [460/925] G: 0.0899 (enc: 0.1939, dec: 0.0411, adv: 1.9173) D: (cover: 0.1033, enc: 0.1329) PSNR: 39.13dB
+Epoch [103/400] Batch [480/925] G: 0.0925 (enc: 0.1959, dec: 0.0418, adv: 3.0820) D: (cover: 0.1910, enc: 0.0570) PSNR: 38.92dB
+Epoch [103/400] Batch [500/925] G: 0.0927 (enc: 0.1975, dec: 0.0422, adv: 2.4139) D: (cover: 0.2381, enc: 0.0413) PSNR: 38.88dB
+Epoch [103/400] Batch [520/925] G: 0.0971 (enc: 0.1945, dec: 0.0443, adv: 2.7211) D: (cover: 0.1457, enc: 0.1748) PSNR: 39.02dB
+Epoch [103/400] Batch [540/925] G: 0.0966 (enc: 0.1928, dec: 0.0441, adv: 2.5724) D: (cover: 0.3198, enc: 0.1635) PSNR: 39.03dB
+Epoch [103/400] Batch [560/925] G: 0.0902 (enc: 0.1901, dec: 0.0409, adv: 2.7171) D: (cover: 0.3456, enc: 0.0607) PSNR: 38.98dB
+Epoch [103/400] Batch [580/925] G: 0.0887 (enc: 0.1997, dec: 0.0401, adv: 2.5518) D: (cover: 0.0850, enc: 0.1512) PSNR: 38.63dB
+Epoch [103/400] Batch [600/925] G: 0.0902 (enc: 0.1922, dec: 0.0411, adv: 2.2117) D: (cover: 0.1367, enc: 0.1637) PSNR: 39.03dB
+Epoch [103/400] Batch [620/925] G: 0.0901 (enc: 0.1901, dec: 0.0412, adv: 2.0088) D: (cover: 0.0813, enc: 0.1755) PSNR: 38.79dB
+Epoch [103/400] Batch [640/925] G: 0.0954 (enc: 0.2014, dec: 0.0429, adv: 3.5900) D: (cover: 0.0756, enc: 0.0314) PSNR: 38.78dB
+Epoch [103/400] Batch [660/925] G: 0.0890 (enc: 0.1915, dec: 0.0405, adv: 2.1699) D: (cover: 0.1279, enc: 0.2183) PSNR: 38.99dB
+Epoch [103/400] Batch [680/925] G: 0.0932 (enc: 0.1916, dec: 0.0422, adv: 3.0858) D: (cover: 0.2183, enc: 0.0401) PSNR: 39.00dB
+Epoch [103/400] Batch [700/925] G: 0.0974 (enc: 0.1826, dec: 0.0448, adv: 2.3223) D: (cover: 0.0284, enc: 0.1339) PSNR: 39.16dB
+Epoch [103/400] Batch [720/925] G: 0.0913 (enc: 0.1955, dec: 0.0411, adv: 3.1552) D: (cover: 0.1411, enc: 0.0862) PSNR: 38.91dB
+Epoch [103/400] Batch [740/925] G: 0.0979 (enc: 0.1844, dec: 0.0450, adv: 2.4904) D: (cover: 0.1356, enc: 0.1074) PSNR: 39.22dB
+Epoch [103/400] Batch [760/925] G: 0.0940 (enc: 0.1882, dec: 0.0429, adv: 2.6399) D: (cover: 0.1359, enc: 0.0862) PSNR: 38.99dB
+Epoch [103/400] Batch [780/925] G: 0.0947 (enc: 0.1899, dec: 0.0433, adv: 2.4890) D: (cover: 0.1058, enc: 0.0807) PSNR: 39.14dB
+Epoch [103/400] Batch [800/925] G: 0.0883 (enc: 0.1926, dec: 0.0402, adv: 2.1715) D: (cover: 0.0436, enc: 0.2914) PSNR: 38.94dB
+Epoch [103/400] Batch [820/925] G: 0.0985 (enc: 0.1931, dec: 0.0450, adv: 2.7174) D: (cover: 0.3048, enc: 0.0380) PSNR: 39.04dB
+Epoch [103/400] Batch [840/925] G: 0.0969 (enc: 0.1902, dec: 0.0441, adv: 2.9971) D: (cover: 0.1723, enc: 0.0453) PSNR: 39.03dB
+Epoch [103/400] Batch [860/925] G: 0.0947 (enc: 0.1844, dec: 0.0437, adv: 1.8021) D: (cover: 0.1340, enc: 0.1889) PSNR: 39.39dB
+Epoch [103/400] Batch [880/925] G: 0.0891 (enc: 0.1977, dec: 0.0400, adv: 3.2984) D: (cover: 0.1355, enc: 0.0373) PSNR: 38.93dB
+Epoch [103/400] Batch [900/925] G: 0.0960 (enc: 0.1913, dec: 0.0437, adv: 2.7794) D: (cover: 0.0709, enc: 0.1356) PSNR: 38.79dB
+Epoch [103/400] Batch [920/925] G: 0.0935 (enc: 0.1887, dec: 0.0425, adv: 2.7530) D: (cover: 0.4287, enc: 0.0480) PSNR: 38.60dB
+Epoch [103/400] 训练平均损失: 0.0927
+Epoch [103/400] 验证平均损失: 0.1064 enc: 0.2108, dec: 0.0421 PSNR: 38.82dB
+Epoch [103/400] 验证耗时: 10.16s
+Epoch [103/400] 保存验证输出耗时: 0.03s
+Epoch [103/400] 训练耗时: 472.54s
+Epoch [103/400] 保存检查点耗时: 0.00s
+Epoch [103/400] 总耗时: 482.73s
+Epoch [104/400] 第1批数据获取耗时: 0.95s
+Epoch [104/400] Batch [20/925] G: 0.0988 (enc: 0.1891, dec: 0.0458, adv: 1.5174) D: (cover: 0.2132, enc: 0.1138) PSNR: 38.89dB
+Epoch [104/400] Batch [40/925] G: 0.0893 (enc: 0.1962, dec: 0.0401, adv: 3.2316) D: (cover: 0.0805, enc: 0.1583) PSNR: 38.80dB
+Epoch [104/400] Batch [60/925] G: 0.0851 (enc: 0.1965, dec: 0.0387, adv: 1.9058) D: (cover: 0.0478, enc: 0.1758) PSNR: 38.86dB
+Epoch [104/400] Batch [80/925] G: 0.0881 (enc: 0.1951, dec: 0.0403, adv: 1.5528) D: (cover: 0.0311, enc: 0.2640) PSNR: 38.69dB
+Epoch [104/400] Batch [100/925] G: 0.0897 (enc: 0.2003, dec: 0.0408, adv: 2.2152) D: (cover: 0.1529, enc: 0.2438) PSNR: 38.75dB
+Epoch [104/400] Batch [120/925] G: 0.0900 (enc: 0.1971, dec: 0.0411, adv: 1.8910) D: (cover: 0.0395, enc: 0.3621) PSNR: 38.48dB
+Epoch [104/400] Batch [140/925] G: 0.0904 (enc: 0.1938, dec: 0.0409, adv: 2.6765) D: (cover: 0.1670, enc: 0.1100) PSNR: 39.12dB
+Epoch [104/400] Batch [160/925] G: 0.0920 (enc: 0.1938, dec: 0.0422, adv: 1.7895) D: (cover: 0.2560, enc: 0.1790) PSNR: 38.98dB
+Epoch [104/400] Batch [180/925] G: 0.0940 (enc: 0.1951, dec: 0.0429, adv: 2.2241) D: (cover: 0.1253, enc: 0.1189) PSNR: 38.79dB
+Epoch [104/400] Batch [200/925] G: 0.0927 (enc: 0.1948, dec: 0.0420, adv: 2.8995) D: (cover: 0.0468, enc: 0.0950) PSNR: 38.77dB
+Epoch [104/400] Batch [220/925] G: 0.0956 (enc: 0.1980, dec: 0.0435, adv: 2.6340) D: (cover: 0.0780, enc: 0.1360) PSNR: 38.82dB
+Epoch [104/400] Batch [240/925] G: 0.0882 (enc: 0.1955, dec: 0.0398, adv: 2.6891) D: (cover: 0.0693, enc: 0.1108) PSNR: 38.88dB
+Epoch [104/400] Batch [260/925] G: 0.0950 (enc: 0.1921, dec: 0.0439, adv: 1.5688) D: (cover: 0.0064, enc: 0.7646) PSNR: 39.00dB
+Epoch [104/400] Batch [280/925] G: 0.0942 (enc: 0.1917, dec: 0.0432, adv: 2.0404) D: (cover: 0.0343, enc: 0.3035) PSNR: 39.06dB
+Epoch [104/400] Batch [300/925] G: 0.0833 (enc: 0.1919, dec: 0.0375, adv: 2.6331) D: (cover: 0.2586, enc: 0.0660) PSNR: 38.82dB
+Epoch [104/400] Batch [320/925] G: 0.0977 (enc: 0.1913, dec: 0.0451, adv: 1.7451) D: (cover: 0.0492, enc: 0.1875) PSNR: 38.85dB
+Epoch [104/400] Batch [340/925] G: 0.0931 (enc: 0.1987, dec: 0.0424, adv: 2.2940) D: (cover: 0.1528, enc: 0.0643) PSNR: 39.17dB
+Epoch [104/400] Batch [360/925] G: 0.0903 (enc: 0.1980, dec: 0.0410, adv: 2.3339) D: (cover: 0.1127, enc: 0.1490) PSNR: 38.93dB
+Epoch [104/400] Batch [380/925] G: 0.0889 (enc: 0.1886, dec: 0.0403, adv: 2.7522) D: (cover: 0.2771, enc: 0.0519) PSNR: 39.00dB
+Epoch [104/400] Batch [400/925] G: 0.0878 (enc: 0.1993, dec: 0.0396, adv: 2.5914) D: (cover: 0.1900, enc: 0.0781) PSNR: 39.07dB
+Epoch [104/400] Batch [420/925] G: 0.0831 (enc: 0.1970, dec: 0.0369, adv: 3.4043) D: (cover: 0.2532, enc: 0.0378) PSNR: 38.98dB
+Epoch [104/400] Batch [440/925] G: 0.0832 (enc: 0.2000, dec: 0.0365, adv: 4.1673) D: (cover: 0.3001, enc: 0.0454) PSNR: 38.77dB
+Epoch [104/400] Batch [460/925] G: 0.0905 (enc: 0.1933, dec: 0.0412, adv: 2.2316) D: (cover: 0.0748, enc: 0.2025) PSNR: 39.06dB
+Epoch [104/400] Batch [480/925] G: 0.0878 (enc: 0.1969, dec: 0.0399, adv: 2.1211) D: (cover: 0.2092, enc: 0.0901) PSNR: 38.95dB
+Epoch [104/400] Batch [500/925] G: 0.0883 (enc: 0.2009, dec: 0.0400, adv: 2.3018) D: (cover: 0.1469, enc: 0.1159) PSNR: 38.94dB
+Epoch [104/400] Batch [520/925] G: 0.0905 (enc: 0.1971, dec: 0.0410, adv: 2.6056) D: (cover: 0.0743, enc: 0.1223) PSNR: 38.94dB
+Epoch [104/400] Batch [540/925] G: 0.0948 (enc: 0.1939, dec: 0.0433, adv: 2.5103) D: (cover: 0.2075, enc: 0.0773) PSNR: 38.91dB
+Epoch [104/400] Batch [560/925] G: 0.0875 (enc: 0.1921, dec: 0.0398, adv: 2.1080) D: (cover: 0.3183, enc: 0.0538) PSNR: 38.97dB
+Epoch [104/400] Batch [580/925] G: 0.0927 (enc: 0.1981, dec: 0.0424, adv: 2.0277) D: (cover: 0.2374, enc: 0.0980) PSNR: 38.81dB
+Epoch [104/400] Batch [600/925] G: 0.0810 (enc: 0.2048, dec: 0.0365, adv: 1.7637) D: (cover: 0.1368, enc: 0.2829) PSNR: 38.22dB
+Epoch [104/400] Batch [620/925] G: 0.0873 (enc: 0.2008, dec: 0.0395, adv: 2.2157) D: (cover: 0.0559, enc: 0.1952) PSNR: 38.73dB
+Epoch [104/400] Batch [640/925] G: 0.0881 (enc: 0.2031, dec: 0.0400, adv: 1.9200) D: (cover: 0.0219, enc: 0.2985) PSNR: 38.45dB
+Epoch [104/400] Batch [660/925] G: 0.0922 (enc: 0.2089, dec: 0.0414, adv: 3.1646) D: (cover: 0.4060, enc: 0.0421) PSNR: 38.58dB
+Epoch [104/400] Batch [680/925] G: 0.0822 (enc: 0.2060, dec: 0.0373, adv: 1.4771) D: (cover: 0.1553, enc: 0.1090) PSNR: 38.33dB
+Epoch [104/400] Batch [700/925] G: 0.0894 (enc: 0.1972, dec: 0.0404, adv: 2.6783) D: (cover: 0.0325, enc: 0.1766) PSNR: 38.54dB
+Epoch [104/400] Batch [720/925] G: 0.0914 (enc: 0.2018, dec: 0.0415, adv: 2.4171) D: (cover: 0.0166, enc: 0.1994) PSNR: 38.38dB
+Epoch [104/400] Batch [740/925] G: 0.0865 (enc: 0.1968, dec: 0.0389, adv: 2.9083) D: (cover: 0.0858, enc: 0.1040) PSNR: 38.76dB
+Epoch [104/400] Batch [760/925] G: 0.0856 (enc: 0.1988, dec: 0.0376, adv: 4.4897) D: (cover: 0.1284, enc: 0.0369) PSNR: 39.02dB
+Epoch [104/400] Batch [780/925] G: 0.0894 (enc: 0.1965, dec: 0.0407, adv: 2.0712) D: (cover: 0.0359, enc: 0.2394) PSNR: 38.93dB
+Epoch [104/400] Batch [800/925] G: 0.0915 (enc: 0.2045, dec: 0.0415, adv: 2.4037) D: (cover: 0.0941, enc: 0.1321) PSNR: 38.50dB
+Epoch [104/400] Batch [820/925] G: 0.0881 (enc: 0.2006, dec: 0.0400, adv: 2.0658) D: (cover: 0.1398, enc: 0.1427) PSNR: 38.50dB
+Epoch [104/400] Batch [840/925] G: 0.0842 (enc: 0.2055, dec: 0.0377, adv: 2.6518) D: (cover: 0.2934, enc: 0.0649) PSNR: 38.60dB
+Epoch [104/400] Batch [860/925] G: 0.0851 (enc: 0.1986, dec: 0.0387, adv: 1.7358) D: (cover: 0.0253, enc: 0.2088) PSNR: 38.93dB
+Epoch [104/400] Batch [880/925] G: 0.0937 (enc: 0.2004, dec: 0.0428, adv: 2.1750) D: (cover: 0.0649, enc: 0.1511) PSNR: 38.99dB
+Epoch [104/400] Batch [900/925] G: 0.0873 (enc: 0.1998, dec: 0.0391, adv: 3.0672) D: (cover: 0.1979, enc: 0.0538) PSNR: 38.82dB
+Epoch [104/400] Batch [920/925] G: 0.0905 (enc: 0.2028, dec: 0.0413, adv: 1.8869) D: (cover: 0.0202, enc: 0.2195) PSNR: 38.87dB
+Epoch [104/400] 训练平均损失: 0.0896
+Epoch [104/400] 验证平均损失: 0.1078 enc: 0.2124, dec: 0.0440 PSNR: 38.54dB
+Epoch [104/400] 验证耗时: 10.21s
+Epoch [104/400] 保存验证输出耗时: 0.03s
+Epoch [104/400] 训练耗时: 470.78s
+Epoch [104/400] 保存检查点耗时: 0.00s
+Epoch [104/400] 总耗时: 481.02s
+Epoch [105/400] 第1批数据获取耗时: 0.74s
+Epoch [105/400] Batch [20/925] G: 0.0889 (enc: 0.2044, dec: 0.0399, adv: 3.0227) D: (cover: 0.3928, enc: 0.0244) PSNR: 38.29dB
+Epoch [105/400] Batch [40/925] G: 0.0875 (enc: 0.2045, dec: 0.0390, adv: 3.3467) D: (cover: 0.2142, enc: 0.0304) PSNR: 38.74dB
+Epoch [105/400] Batch [60/925] G: 0.0802 (enc: 0.2009, dec: 0.0358, adv: 2.6818) D: (cover: 0.1616, enc: 0.0600) PSNR: 38.75dB
+Epoch [105/400] Batch [80/925] G: 0.0847 (enc: 0.2040, dec: 0.0383, adv: 1.9143) D: (cover: 0.0570, enc: 0.2639) PSNR: 38.64dB
+Epoch [105/400] Batch [100/925] G: 0.0851 (enc: 0.2010, dec: 0.0379, adv: 3.2630) D: (cover: 0.1536, enc: 0.0494) PSNR: 38.78dB
+Epoch [105/400] Batch [120/925] G: 0.0812 (enc: 0.1982, dec: 0.0362, adv: 2.7514) D: (cover: 0.3902, enc: 0.0278) PSNR: 38.57dB
+Epoch [105/400] Batch [140/925] G: 0.0898 (enc: 0.1972, dec: 0.0401, adv: 3.7217) D: (cover: 0.1984, enc: 0.0227) PSNR: 38.83dB
+Epoch [105/400] Batch [160/925] G: 0.0861 (enc: 0.1988, dec: 0.0385, adv: 3.1546) D: (cover: 0.1203, enc: 0.0633) PSNR: 38.47dB
+Epoch [105/400] Batch [180/925] G: 0.0899 (enc: 0.1979, dec: 0.0407, adv: 2.6061) D: (cover: 0.0805, enc: 0.0854) PSNR: 38.66dB
+Epoch [105/400] Batch [200/925] G: 0.0890 (enc: 0.2041, dec: 0.0397, adv: 3.4061) D: (cover: 0.5778, enc: 0.0394) PSNR: 38.56dB
+Epoch [105/400] Batch [220/925] G: 0.0868 (enc: 0.1985, dec: 0.0394, adv: 2.1727) D: (cover: 0.1998, enc: 0.1110) PSNR: 38.80dB
+Epoch [105/400] Batch [240/925] G: 0.1024 (enc: 0.2017, dec: 0.0469, adv: 2.6360) D: (cover: 0.2948, enc: 0.0509) PSNR: 38.96dB
+Epoch [105/400] Batch [260/925] G: 0.0919 (enc: 0.1929, dec: 0.0416, adv: 2.9073) D: (cover: 0.1110, enc: 0.0935) PSNR: 38.89dB
+Epoch [105/400] Batch [280/925] G: 0.0823 (enc: 0.1958, dec: 0.0374, adv: 1.6838) D: (cover: 0.0338, enc: 0.1942) PSNR: 38.70dB
+Epoch [105/400] Batch [300/925] G: 0.0812 (enc: 0.2020, dec: 0.0360, adv: 3.1428) D: (cover: 0.0717, enc: 0.0747) PSNR: 38.56dB
+Epoch [105/400] Batch [320/925] G: 0.0860 (enc: 0.1996, dec: 0.0384, adv: 3.1195) D: (cover: 0.0561, enc: 0.0735) PSNR: 38.68dB
+Epoch [105/400] Batch [340/925] G: 0.0866 (enc: 0.2057, dec: 0.0386, adv: 3.2946) D: (cover: 0.2683, enc: 0.0382) PSNR: 38.78dB
+Epoch [105/400] Batch [360/925] G: 0.0859 (enc: 0.1959, dec: 0.0387, adv: 2.5572) D: (cover: 0.0834, enc: 0.1104) PSNR: 39.07dB
+Epoch [105/400] Batch [380/925] G: 0.0809 (enc: 0.2033, dec: 0.0358, adv: 3.1549) D: (cover: 0.2591, enc: 0.0336) PSNR: 38.79dB
+Epoch [105/400] Batch [400/925] G: 0.0832 (enc: 0.2055, dec: 0.0369, adv: 3.2218) D: (cover: 0.0475, enc: 0.0450) PSNR: 38.86dB
+Epoch [105/400] Batch [420/925] G: 0.1184 (enc: 0.1975, dec: 0.0550, adv: 2.4858) D: (cover: 0.0710, enc: 0.1503) PSNR: 38.65dB
+Epoch [105/400] Batch [440/925] G: 0.0849 (enc: 0.1984, dec: 0.0381, adv: 2.7507) D: (cover: 0.1298, enc: 0.0818) PSNR: 38.62dB
+Epoch [105/400] Batch [460/925] G: 0.0892 (enc: 0.2014, dec: 0.0405, adv: 2.1622) D: (cover: 0.0623, enc: 0.1403) PSNR: 38.79dB
+Epoch [105/400] Batch [480/925] G: 0.0773 (enc: 0.2126, dec: 0.0349, adv: 1.1950) D: (cover: 0.0337, enc: 0.5498) PSNR: 38.79dB
+Epoch [105/400] Batch [500/925] G: 0.0785 (enc: 0.2049, dec: 0.0354, adv: 1.6095) D: (cover: 0.0195, enc: 1.2235) PSNR: 38.71dB
+Epoch [105/400] Batch [520/925] G: 0.0910 (enc: 0.2055, dec: 0.0411, adv: 2.6697) D: (cover: 0.2572, enc: 0.1494) PSNR: 38.27dB
+Epoch [105/400] Batch [540/925] G: 0.0833 (enc: 0.2080, dec: 0.0371, adv: 2.9124) D: (cover: 0.4934, enc: 0.0541) PSNR: 38.36dB
+Epoch [105/400] Batch [560/925] G: 0.0844 (enc: 0.2078, dec: 0.0379, adv: 2.4177) D: (cover: 0.0102, enc: 0.4272) PSNR: 38.36dB
+Epoch [105/400] Batch [580/925] G: 0.0871 (enc: 0.2026, dec: 0.0395, adv: 1.9245) D: (cover: 0.1422, enc: 0.1183) PSNR: 38.66dB
+Epoch [105/400] Batch [600/925] G: 0.0867 (enc: 0.2059, dec: 0.0390, adv: 2.4679) D: (cover: 0.0684, enc: 0.0735) PSNR: 38.79dB
+Epoch [105/400] Batch [620/925] G: 0.0838 (enc: 0.2085, dec: 0.0374, adv: 2.7064) D: (cover: 0.1486, enc: 0.0750) PSNR: 38.66dB
+Epoch [105/400] Batch [640/925] G: 0.0820 (enc: 0.1991, dec: 0.0365, adv: 2.9558) D: (cover: 0.4642, enc: 0.0283) PSNR: 38.74dB
+Epoch [105/400] Batch [660/925] G: 0.0874 (enc: 0.2029, dec: 0.0395, adv: 2.2215) D: (cover: 0.1686, enc: 0.1322) PSNR: 38.88dB
+Epoch [105/400] Batch [680/925] G: 0.0905 (enc: 0.1974, dec: 0.0412, adv: 2.2530) D: (cover: 0.0511, enc: 0.1454) PSNR: 39.01dB
+Epoch [105/400] Batch [700/925] G: 0.0866 (enc: 0.2000, dec: 0.0389, adv: 2.8708) D: (cover: 0.1172, enc: 0.0799) PSNR: 38.83dB
+Epoch [105/400] Batch [720/925] G: 0.0872 (enc: 0.1993, dec: 0.0389, adv: 3.4723) D: (cover: 0.0652, enc: 0.0696) PSNR: 38.88dB
+Epoch [105/400] Batch [740/925] G: 0.0856 (enc: 0.1983, dec: 0.0387, adv: 2.3295) D: (cover: 0.0938, enc: 0.0742) PSNR: 38.81dB
+Epoch [105/400] Batch [760/925] G: 0.0850 (enc: 0.2021, dec: 0.0383, adv: 2.4236) D: (cover: 0.1128, enc: 0.0958) PSNR: 38.85dB
+Epoch [105/400] Batch [780/925] G: 0.0880 (enc: 0.1915, dec: 0.0409, adv: 0.5478) D: (cover: 0.0138, enc: 0.7780) PSNR: 38.90dB
+Epoch [105/400] Batch [800/925] G: 0.0815 (enc: 0.2088, dec: 0.0362, adv: 2.7880) D: (cover: 0.1099, enc: 0.1149) PSNR: 38.41dB
+Epoch [105/400] Batch [820/925] G: 0.0807 (enc: 0.1977, dec: 0.0359, adv: 2.8804) D: (cover: 0.1960, enc: 0.0717) PSNR: 38.84dB
+Epoch [105/400] Batch [840/925] G: 0.0832 (enc: 0.1945, dec: 0.0378, adv: 1.8215) D: (cover: 0.0578, enc: 0.1882) PSNR: 38.80dB
+Epoch [105/400] Batch [860/925] G: 0.0759 (enc: 0.2059, dec: 0.0336, adv: 2.4256) D: (cover: 0.0139, enc: 0.1548) PSNR: 38.80dB
+Epoch [105/400] Batch [880/925] G: 0.0688 (enc: 0.2070, dec: 0.0302, adv: 2.1880) D: (cover: 0.0220, enc: 0.5589) PSNR: 38.72dB
+Epoch [105/400] Batch [900/925] G: 0.0872 (enc: 0.2040, dec: 0.0390, adv: 3.1744) D: (cover: 0.2506, enc: 0.0412) PSNR: 38.72dB
+Epoch [105/400] Batch [920/925] G: 0.0743 (enc: 0.2089, dec: 0.0333, adv: 1.3728) D: (cover: 0.0438, enc: 0.4010) PSNR: 38.93dB
+Epoch [105/400] 训练平均损失: 0.0849
+Epoch [105/400] 验证平均损失: 0.0900 enc: 0.2159, dec: 0.0375 PSNR: 38.45dB
+Epoch [105/400] 验证耗时: 10.20s
+Epoch [105/400] 保存验证输出耗时: 0.03s
+Epoch [105/400] 训练耗时: 471.08s
+Epoch [105/400] 保存检查点耗时: 0.01s
+Epoch [105/400] 总耗时: 481.33s
+Epoch [106/400] 第1批数据获取耗时: 1.24s
+Epoch [106/400] Batch [20/925] G: 0.0884 (enc: 0.2083, dec: 0.0397, adv: 2.8661) D: (cover: 0.2635, enc: 0.0783) PSNR: 38.51dB
+Epoch [106/400] Batch [40/925] G: 0.0784 (enc: 0.2050, dec: 0.0352, adv: 1.8468) D: (cover: 0.0213, enc: 0.3186) PSNR: 38.79dB
+Epoch [106/400] Batch [60/925] G: 0.0809 (enc: 0.2015, dec: 0.0364, adv: 2.1061) D: (cover: 0.0455, enc: 0.1946) PSNR: 38.95dB
+Epoch [106/400] Batch [80/925] G: 0.0847 (enc: 0.2026, dec: 0.0384, adv: 1.7569) D: (cover: 0.0843, enc: 0.1832) PSNR: 38.80dB
+Epoch [106/400] Batch [100/925] G: 0.0790 (enc: 0.1913, dec: 0.0357, adv: 1.7807) D: (cover: 0.1551, enc: 0.1628) PSNR: 38.95dB
+Epoch [106/400] Batch [120/925] G: 0.0784 (enc: 0.2098, dec: 0.0350, adv: 2.0710) D: (cover: 0.0387, enc: 0.1380) PSNR: 38.59dB
+Epoch [106/400] Batch [140/925] G: 0.0796 (enc: 0.2055, dec: 0.0358, adv: 1.7899) D: (cover: 0.0426, enc: 0.1415) PSNR: 38.84dB
+Epoch [106/400] Batch [160/925] G: 0.0806 (enc: 0.1976, dec: 0.0360, adv: 2.6925) D: (cover: 0.0258, enc: 0.1236) PSNR: 38.74dB
+Epoch [106/400] Batch [180/925] G: 0.0910 (enc: 0.1947, dec: 0.0416, adv: 2.0490) D: (cover: 0.0166, enc: 0.2503) PSNR: 38.92dB
+Epoch [106/400] Batch [200/925] G: 0.0839 (enc: 0.2002, dec: 0.0378, adv: 2.3275) D: (cover: 0.0157, enc: 0.2102) PSNR: 38.96dB
+Epoch [106/400] Batch [220/925] G: 0.0821 (enc: 0.2030, dec: 0.0366, adv: 2.9102) D: (cover: 0.1514, enc: 0.0541) PSNR: 38.78dB
+Epoch [106/400] Batch [240/925] G: 0.0850 (enc: 0.1962, dec: 0.0382, adv: 2.7632) D: (cover: 0.0599, enc: 0.1002) PSNR: 39.00dB
+Epoch [106/400] Batch [260/925] G: 0.0852 (enc: 0.1990, dec: 0.0385, adv: 2.2765) D: (cover: 0.0275, enc: 0.1679) PSNR: 39.04dB
+Epoch [106/400] Batch [280/925] G: 0.0808 (enc: 0.1963, dec: 0.0362, adv: 2.5439) D: (cover: 0.0637, enc: 0.0648) PSNR: 39.09dB
+Epoch [106/400] Batch [300/925] G: 0.0800 (enc: 0.2042, dec: 0.0352, adv: 3.5700) D: (cover: 0.1138, enc: 0.0319) PSNR: 38.72dB
+Epoch [106/400] Batch [320/925] G: 0.0845 (enc: 0.1979, dec: 0.0379, adv: 2.7780) D: (cover: 0.0426, enc: 0.0781) PSNR: 38.92dB
+Epoch [106/400] Batch [340/925] G: 0.0859 (enc: 0.2127, dec: 0.0379, adv: 3.7205) D: (cover: 0.0177, enc: 0.2098) PSNR: 38.71dB
+Epoch [106/400] Batch [360/925] G: 0.0850 (enc: 0.2030, dec: 0.0386, adv: 1.7704) D: (cover: 0.0510, enc: 0.3197) PSNR: 38.91dB
+Epoch [106/400] Batch [380/925] G: 0.0862 (enc: 0.1991, dec: 0.0389, adv: 2.3242) D: (cover: 0.0375, enc: 0.1389) PSNR: 38.82dB
+Epoch [106/400] Batch [400/925] G: 0.0800 (enc: 0.1977, dec: 0.0357, adv: 2.5447) D: (cover: 0.2797, enc: 0.0518) PSNR: 38.95dB
+Epoch [106/400] Batch [420/925] G: 0.0854 (enc: 0.2065, dec: 0.0385, adv: 2.3011) D: (cover: 0.0597, enc: 0.6248) PSNR: 38.72dB
+Epoch [106/400] Batch [440/925] G: 0.0835 (enc: 0.1993, dec: 0.0375, adv: 2.6167) D: (cover: 0.1827, enc: 0.1684) PSNR: 39.01dB
+Epoch [106/400] Batch [460/925] G: 0.0864 (enc: 0.1975, dec: 0.0388, adv: 2.9639) D: (cover: 0.0852, enc: 0.0941) PSNR: 38.84dB
+Epoch [106/400] Batch [480/925] G: 0.0792 (enc: 0.2064, dec: 0.0350, adv: 2.9137) D: (cover: 0.1567, enc: 0.0680) PSNR: 38.97dB
+Epoch [106/400] Batch [500/925] G: 0.0857 (enc: 0.1943, dec: 0.0384, adv: 3.1464) D: (cover: 0.1725, enc: 0.0387) PSNR: 38.79dB
+Epoch [106/400] Batch [520/925] G: 0.0850 (enc: 0.2002, dec: 0.0383, adv: 2.4193) D: (cover: 0.0817, enc: 0.0782) PSNR: 38.80dB
+Epoch [106/400] Batch [540/925] G: 0.0728 (enc: 0.2019, dec: 0.0329, adv: 0.9705) D: (cover: 0.0525, enc: 0.3880) PSNR: 38.89dB
+Epoch [106/400] Batch [560/925] G: 0.0814 (enc: 0.1936, dec: 0.0364, adv: 2.6635) D: (cover: 0.1857, enc: 0.0745) PSNR: 38.91dB
+Epoch [106/400] Batch [580/925] G: 0.0781 (enc: 0.2011, dec: 0.0346, adv: 2.8081) D: (cover: 0.0905, enc: 0.0781) PSNR: 38.66dB
+Epoch [106/400] Batch [600/925] G: 0.0765 (enc: 0.2075, dec: 0.0338, adv: 2.6002) D: (cover: 0.2045, enc: 0.0942) PSNR: 38.44dB
+Epoch [106/400] Batch [620/925] G: 0.0774 (enc: 0.2019, dec: 0.0346, adv: 2.0515) D: (cover: 0.0135, enc: 0.2084) PSNR: 38.82dB
+Epoch [106/400] Batch [640/925] G: 0.0811 (enc: 0.1968, dec: 0.0361, adv: 3.0004) D: (cover: 0.1270, enc: 0.0556) PSNR: 38.95dB
+Epoch [106/400] Batch [660/925] G: 0.0831 (enc: 0.2042, dec: 0.0373, adv: 2.4299) D: (cover: 0.3456, enc: 0.0465) PSNR: 38.61dB
+Epoch [106/400] Batch [680/925] G: 0.0809 (enc: 0.2030, dec: 0.0364, adv: 1.9426) D: (cover: 0.0952, enc: 0.1539) PSNR: 38.74dB
+Epoch [106/400] Batch [700/925] G: 0.0810 (enc: 0.1961, dec: 0.0365, adv: 2.1317) D: (cover: 0.0845, enc: 0.1418) PSNR: 38.90dB
+Epoch [106/400] Batch [720/925] G: 0.0812 (enc: 0.2102, dec: 0.0368, adv: 1.2773) D: (cover: 0.0597, enc: 0.1588) PSNR: 38.55dB
+Epoch [106/400] Batch [740/925] G: 0.0815 (enc: 0.2001, dec: 0.0367, adv: 2.0362) D: (cover: 0.0842, enc: 0.1596) PSNR: 38.60dB
+Epoch [106/400] Batch [760/925] G: 0.0849 (enc: 0.1973, dec: 0.0380, adv: 2.9311) D: (cover: 0.0504, enc: 0.1430) PSNR: 38.64dB
+Epoch [106/400] Batch [780/925] G: 0.0830 (enc: 0.2018, dec: 0.0372, adv: 2.4508) D: (cover: 0.0257, enc: 0.1898) PSNR: 38.89dB
+Epoch [106/400] Batch [800/925] G: 0.0782 (enc: 0.2046, dec: 0.0355, adv: 1.0684) D: (cover: 0.0145, enc: 0.6793) PSNR: 39.06dB
+Epoch [106/400] Batch [820/925] G: 0.0793 (enc: 0.2040, dec: 0.0347, adv: 3.7250) D: (cover: 0.5445, enc: 0.0234) PSNR: 38.75dB
+Epoch [106/400] Batch [840/925] G: 0.0789 (enc: 0.2047, dec: 0.0356, adv: 1.5926) D: (cover: 0.0977, enc: 0.1198) PSNR: 38.83dB
+Epoch [106/400] Batch [860/925] G: 0.0865 (enc: 0.2026, dec: 0.0394, adv: 1.6157) D: (cover: 0.0575, enc: 0.2805) PSNR: 38.94dB
+Epoch [106/400] Batch [880/925] G: 0.0798 (enc: 0.1945, dec: 0.0358, adv: 2.3233) D: (cover: 0.3948, enc: 0.0646) PSNR: 38.97dB
+Epoch [106/400] Batch [900/925] G: 0.0793 (enc: 0.2025, dec: 0.0356, adv: 2.1463) D: (cover: 0.0385, enc: 0.1349) PSNR: 38.90dB
+Epoch [106/400] Batch [920/925] G: 0.0802 (enc: 0.1996, dec: 0.0353, adv: 3.5681) D: (cover: 0.1423, enc: 0.0599) PSNR: 38.71dB
+Epoch [106/400] 训练平均损失: 0.0825
+Epoch [106/400] 验证平均损失: 0.0922 enc: 0.2131, dec: 0.0407 PSNR: 38.58dB
+Epoch [106/400] 验证耗时: 10.02s
+Epoch [106/400] 保存验证输出耗时: 0.03s
+Epoch [106/400] 训练耗时: 471.16s
+Epoch [106/400] 保存检查点耗时: 0.00s
+Epoch [106/400] 总耗时: 481.21s
+Epoch [107/400] 第1批数据获取耗时: 1.06s
+Epoch [107/400] Batch [20/925] G: 0.0816 (enc: 0.1968, dec: 0.0369, adv: 1.7891) D: (cover: 0.0480, enc: 0.2641) PSNR: 38.81dB
+Epoch [107/400] Batch [40/925] G: 0.0812 (enc: 0.2060, dec: 0.0360, adv: 2.9802) D: (cover: 0.2311, enc: 0.0717) PSNR: 38.80dB
+Epoch [107/400] Batch [60/925] G: 0.0871 (enc: 0.2010, dec: 0.0390, adv: 3.0488) D: (cover: 0.0168, enc: 0.3135) PSNR: 38.90dB
+Epoch [107/400] Batch [80/925] G: 0.0800 (enc: 0.2020, dec: 0.0359, adv: 2.0248) D: (cover: 0.2351, enc: 0.1022) PSNR: 38.67dB
+Epoch [107/400] Batch [100/925] G: 0.0815 (enc: 0.1971, dec: 0.0368, adv: 2.0527) D: (cover: 0.2214, enc: 0.1096) PSNR: 38.75dB
+Epoch [107/400] Batch [120/925] G: 0.0868 (enc: 0.2002, dec: 0.0396, adv: 1.4548) D: (cover: 0.0143, enc: 0.4149) PSNR: 38.94dB
+Epoch [107/400] Batch [140/925] G: 0.0853 (enc: 0.2018, dec: 0.0386, adv: 2.0507) D: (cover: 0.0347, enc: 0.1911) PSNR: 39.02dB
+Epoch [107/400] Batch [160/925] G: 0.0822 (enc: 0.2010, dec: 0.0371, adv: 1.9328) D: (cover: 0.0275, enc: 0.3227) PSNR: 38.71dB
+Epoch [107/400] Batch [180/925] G: 0.0853 (enc: 0.1989, dec: 0.0381, adv: 3.1783) D: (cover: 0.0192, enc: 0.0805) PSNR: 38.79dB
+Epoch [107/400] Batch [200/925] G: 0.0828 (enc: 0.1979, dec: 0.0366, adv: 3.7063) D: (cover: 0.6735, enc: 0.0177) PSNR: 38.58dB
+Epoch [107/400] Batch [220/925] G: 0.0832 (enc: 0.1989, dec: 0.0376, adv: 2.0857) D: (cover: 0.1050, enc: 0.0924) PSNR: 39.08dB
+Epoch [107/400] Batch [240/925] G: 0.0880 (enc: 0.1984, dec: 0.0401, adv: 1.9044) D: (cover: 0.1286, enc: 0.1280) PSNR: 39.01dB
+Epoch [107/400] Batch [260/925] G: 0.0804 (enc: 0.2019, dec: 0.0356, adv: 3.1393) D: (cover: 0.1541, enc: 0.0788) PSNR: 38.87dB
+Epoch [107/400] Batch [280/925] G: 0.0817 (enc: 0.2026, dec: 0.0372, adv: 1.2548) D: (cover: 0.2041, enc: 0.4259) PSNR: 38.79dB
+Epoch [107/400] Batch [300/925] G: 0.0774 (enc: 0.1992, dec: 0.0346, adv: 2.1231) D: (cover: 0.0719, enc: 0.2201) PSNR: 38.83dB
+Epoch [107/400] Batch [320/925] G: 0.0786 (enc: 0.2032, dec: 0.0353, adv: 1.8783) D: (cover: 0.3582, enc: 0.0535) PSNR: 38.74dB
+Epoch [107/400] Batch [340/925] G: 0.0864 (enc: 0.1944, dec: 0.0394, adv: 1.6388) D: (cover: 0.0843, enc: 0.2236) PSNR: 39.03dB
+Epoch [107/400] Batch [360/925] G: 0.0812 (enc: 0.1990, dec: 0.0364, adv: 2.4953) D: (cover: 0.1066, enc: 0.0865) PSNR: 38.87dB
+Epoch [107/400] Batch [380/925] G: 0.0792 (enc: 0.2044, dec: 0.0352, adv: 2.5888) D: (cover: 0.1332, enc: 0.1064) PSNR: 38.76dB
+Epoch [107/400] Batch [400/925] G: 0.0849 (enc: 0.1964, dec: 0.0380, adv: 2.9073) D: (cover: 0.1308, enc: 0.0604) PSNR: 38.94dB
+Epoch [107/400] Batch [420/925] G: 0.0779 (enc: 0.2035, dec: 0.0345, adv: 2.8373) D: (cover: 0.0950, enc: 0.0755) PSNR: 38.76dB
+Epoch [107/400] Batch [440/925] G: 0.0848 (enc: 0.2016, dec: 0.0386, adv: 1.5697) D: (cover: 0.0323, enc: 0.3517) PSNR: 38.85dB
+Epoch [107/400] Batch [460/925] G: 0.0773 (enc: 0.2029, dec: 0.0343, adv: 2.5740) D: (cover: 0.1679, enc: 0.2000) PSNR: 38.96dB
+Epoch [107/400] Batch [480/925] G: 0.0790 (enc: 0.2034, dec: 0.0352, adv: 2.4419) D: (cover: 0.4586, enc: 0.1223) PSNR: 38.88dB
+Epoch [107/400] Batch [500/925] G: 0.0812 (enc: 0.2007, dec: 0.0366, adv: 1.9794) D: (cover: 0.1115, enc: 0.1372) PSNR: 38.67dB
+Epoch [107/400] Batch [520/925] G: 0.0842 (enc: 0.2019, dec: 0.0377, adv: 2.8474) D: (cover: 0.2521, enc: 0.0530) PSNR: 38.87dB
+Epoch [107/400] Batch [540/925] G: 0.0841 (enc: 0.1992, dec: 0.0380, adv: 2.2329) D: (cover: 0.1405, enc: 0.0821) PSNR: 38.77dB
+Epoch [107/400] Batch [560/925] G: 0.0801 (enc: 0.1960, dec: 0.0358, adv: 2.5927) D: (cover: 0.3338, enc: 0.0343) PSNR: 38.56dB
+Epoch [107/400] Batch [580/925] G: 0.0697 (enc: 0.1989, dec: 0.0308, adv: 2.1575) D: (cover: 0.0438, enc: 0.1421) PSNR: 38.64dB
+Epoch [107/400] Batch [600/925] G: 0.0796 (enc: 0.1954, dec: 0.0360, adv: 1.8057) D: (cover: 0.0455, enc: 0.2009) PSNR: 39.03dB
+Epoch [107/400] Batch [620/925] G: 0.0801 (enc: 0.2021, dec: 0.0356, adv: 2.8314) D: (cover: 0.0465, enc: 0.0612) PSNR: 38.82dB
+Epoch [107/400] Batch [640/925] G: 0.0773 (enc: 0.1969, dec: 0.0347, adv: 1.9487) D: (cover: 0.0424, enc: 0.1979) PSNR: 39.12dB
+Epoch [107/400] Batch [660/925] G: 0.0775 (enc: 0.1910, dec: 0.0347, adv: 2.2896) D: (cover: 0.5770, enc: 0.0334) PSNR: 39.03dB
+Epoch [107/400] Batch [680/925] G: 0.0783 (enc: 0.1976, dec: 0.0347, adv: 2.8878) D: (cover: 0.2062, enc: 0.0699) PSNR: 39.07dB
+Epoch [107/400] Batch [700/925] G: 0.0801 (enc: 0.1990, dec: 0.0362, adv: 1.7593) D: (cover: 0.1584, enc: 0.1387) PSNR: 38.97dB
+Epoch [107/400] Batch [720/925] G: 0.0800 (enc: 0.1953, dec: 0.0357, adv: 2.8480) D: (cover: 0.0320, enc: 0.6311) PSNR: 39.08dB
+Epoch [107/400] Batch [740/925] G: 0.0867 (enc: 0.1970, dec: 0.0390, adv: 2.7209) D: (cover: 0.3858, enc: 0.0622) PSNR: 38.85dB
+Epoch [107/400] Batch [760/925] G: 0.0755 (enc: 0.2029, dec: 0.0339, adv: 1.5493) D: (cover: 0.0433, enc: 0.2139) PSNR: 38.44dB
+Epoch [107/400] Batch [780/925] G: 0.0852 (enc: 0.1915, dec: 0.0379, adv: 3.6641) D: (cover: 0.1718, enc: 0.0265) PSNR: 38.85dB
+Epoch [107/400] Batch [800/925] G: 0.0806 (enc: 0.1972, dec: 0.0359, adv: 2.9338) D: (cover: 0.0835, enc: 0.0706) PSNR: 38.85dB
+Epoch [107/400] Batch [820/925] G: 0.0837 (enc: 0.2003, dec: 0.0379, adv: 1.9264) D: (cover: 0.0471, enc: 0.1537) PSNR: 38.69dB
+Epoch [107/400] Batch [840/925] G: 0.0816 (enc: 0.1973, dec: 0.0366, adv: 2.6125) D: (cover: 0.1368, enc: 0.0735) PSNR: 38.84dB
+Epoch [107/400] Batch [860/925] G: 0.0822 (enc: 0.1951, dec: 0.0366, adv: 3.0469) D: (cover: 0.2321, enc: 0.0504) PSNR: 38.83dB
+Epoch [107/400] Batch [880/925] G: 0.0841 (enc: 0.1961, dec: 0.0378, adv: 2.6372) D: (cover: 0.0826, enc: 0.1120) PSNR: 38.94dB
+Epoch [107/400] Batch [900/925] G: 0.0799 (enc: 0.1982, dec: 0.0353, adv: 3.4196) D: (cover: 0.2651, enc: 0.0335) PSNR: 38.75dB
+Epoch [107/400] Batch [920/925] G: 0.0873 (enc: 0.1986, dec: 0.0396, adv: 2.1547) D: (cover: 0.0468, enc: 0.1350) PSNR: 38.80dB
+Epoch [107/400] 训练平均损失: 0.0815
+Epoch [107/400] 验证平均损失: 0.0911 enc: 0.2156, dec: 0.0386 PSNR: 38.83dB
+Epoch [107/400] 验证耗时: 10.24s
+Epoch [107/400] 保存验证输出耗时: 0.03s
+Epoch [107/400] 训练耗时: 470.94s
+Epoch [107/400] 保存检查点耗时: 0.00s
+Epoch [107/400] 总耗时: 481.20s
+Epoch [108/400] 第1批数据获取耗时: 0.94s
+Epoch [108/400] Batch [20/925] G: 0.0828 (enc: 0.2097, dec: 0.0373, adv: 1.8598) D: (cover: 0.0198, enc: 0.3493) PSNR: 38.92dB
+Epoch [108/400] Batch [40/925] G: 0.0802 (enc: 0.2033, dec: 0.0360, adv: 2.0213) D: (cover: 0.0942, enc: 0.0749) PSNR: 39.00dB
+Epoch [108/400] Batch [60/925] G: 0.0783 (enc: 0.2093, dec: 0.0341, adv: 3.8837) D: (cover: 0.4398, enc: 0.0350) PSNR: 38.81dB
+Epoch [108/400] Batch [80/925] G: 0.0758 (enc: 0.2036, dec: 0.0332, adv: 3.2677) D: (cover: 0.1668, enc: 0.0496) PSNR: 38.77dB
+Epoch [108/400] Batch [100/925] G: 0.0821 (enc: 0.1985, dec: 0.0368, adv: 2.6065) D: (cover: 0.0239, enc: 0.3592) PSNR: 38.97dB
+Epoch [108/400] Batch [120/925] G: 0.0780 (enc: 0.2034, dec: 0.0346, adv: 2.6950) D: (cover: 0.1396, enc: 0.1017) PSNR: 38.55dB
+Epoch [108/400] Batch [140/925] G: 0.0798 (enc: 0.1999, dec: 0.0360, adv: 1.7612) D: (cover: 0.0703, enc: 0.2934) PSNR: 38.79dB
+Epoch [108/400] Batch [160/925] G: 0.0864 (enc: 0.1993, dec: 0.0386, adv: 3.1705) D: (cover: 0.0517, enc: 0.0757) PSNR: 38.89dB
+Epoch [108/400] Batch [180/925] G: 0.0835 (enc: 0.2000, dec: 0.0372, adv: 3.0129) D: (cover: 0.0811, enc: 0.0754) PSNR: 38.97dB
+Epoch [108/400] Batch [200/925] G: 0.0862 (enc: 0.2030, dec: 0.0389, adv: 2.4006) D: (cover: 0.1028, enc: 0.1080) PSNR: 38.70dB
+Epoch [108/400] Batch [220/925] G: 0.0861 (enc: 0.1972, dec: 0.0386, adv: 3.0920) D: (cover: 0.1533, enc: 0.0650) PSNR: 38.99dB
+Epoch [108/400] Batch [240/925] G: 0.0796 (enc: 0.1978, dec: 0.0359, adv: 1.9882) D: (cover: 0.0975, enc: 0.0853) PSNR: 38.92dB
+Epoch [108/400] Batch [260/925] G: 0.0852 (enc: 0.1952, dec: 0.0383, adv: 2.7880) D: (cover: 0.0718, enc: 0.1130) PSNR: 38.95dB
+Epoch [108/400] Batch [280/925] G: 0.0781 (enc: 0.2010, dec: 0.0351, adv: 1.7842) D: (cover: 0.0092, enc: 0.4515) PSNR: 39.12dB
+Epoch [108/400] Batch [300/925] G: 0.0873 (enc: 0.1987, dec: 0.0399, adv: 1.4619) D: (cover: 0.0598, enc: 0.3387) PSNR: 39.11dB
+Epoch [108/400] Batch [320/925] G: 0.0734 (enc: 0.2054, dec: 0.0321, adv: 3.0652) D: (cover: 0.3537, enc: 0.1054) PSNR: 39.03dB
+Epoch [108/400] Batch [340/925] G: 0.0760 (enc: 0.1980, dec: 0.0335, adv: 2.9400) D: (cover: 0.4241, enc: 0.0348) PSNR: 39.10dB
+Epoch [108/400] Batch [360/925] G: 0.0831 (enc: 0.1962, dec: 0.0376, adv: 2.0717) D: (cover: 0.0273, enc: 0.2834) PSNR: 38.93dB
+Epoch [108/400] Batch [380/925] G: 0.0800 (enc: 0.1958, dec: 0.0357, adv: 2.8047) D: (cover: 0.1179, enc: 0.1532) PSNR: 39.06dB
+Epoch [108/400] Batch [400/925] G: 0.0766 (enc: 0.1979, dec: 0.0350, adv: 0.6081) D: (cover: 0.0319, enc: 1.1151) PSNR: 38.93dB
+Epoch [108/400] Batch [420/925] G: 0.0789 (enc: 0.2011, dec: 0.0359, adv: 1.1356) D: (cover: 0.1937, enc: 0.2589) PSNR: 38.79dB
+Epoch [108/400] Batch [440/925] G: 0.0806 (enc: 0.2080, dec: 0.0364, adv: 1.6264) D: (cover: 0.2262, enc: 0.2740) PSNR: 38.82dB
+Epoch [108/400] Batch [460/925] G: 0.0729 (enc: 0.2013, dec: 0.0325, adv: 1.8122) D: (cover: 0.0351, enc: 0.2986) PSNR: 38.86dB
+Epoch [108/400] Batch [480/925] G: 0.0851 (enc: 0.1954, dec: 0.0385, adv: 2.2212) D: (cover: 0.0510, enc: 0.1693) PSNR: 38.82dB
+Epoch [108/400] Batch [500/925] G: 0.0742 (enc: 0.2102, dec: 0.0326, adv: 2.5670) D: (cover: 0.0817, enc: 0.0610) PSNR: 38.73dB
+Epoch [108/400] Batch [520/925] G: 0.0769 (enc: 0.2013, dec: 0.0343, adv: 2.3139) D: (cover: 0.1332, enc: 0.0896) PSNR: 38.93dB
+Epoch [108/400] Batch [540/925] G: 0.0788 (enc: 0.2078, dec: 0.0354, adv: 1.8365) D: (cover: 0.0767, enc: 0.1318) PSNR: 38.76dB
+Epoch [108/400] Batch [560/925] G: 0.0823 (enc: 0.2041, dec: 0.0369, adv: 2.3315) D: (cover: 0.0429, enc: 0.2133) PSNR: 38.57dB
+Epoch [108/400] Batch [580/925] G: 0.0789 (enc: 0.2011, dec: 0.0353, adv: 2.1365) D: (cover: 0.0297, enc: 0.2016) PSNR: 38.78dB
+Epoch [108/400] Batch [600/925] G: 0.0838 (enc: 0.1971, dec: 0.0376, adv: 2.7095) D: (cover: 0.0701, enc: 0.0737) PSNR: 39.04dB
+Epoch [108/400] Batch [620/925] G: 0.0808 (enc: 0.1971, dec: 0.0362, adv: 2.3909) D: (cover: 0.0164, enc: 0.6519) PSNR: 39.12dB
+Epoch [108/400] Batch [640/925] G: 0.0775 (enc: 0.1993, dec: 0.0346, adv: 2.2936) D: (cover: 0.6057, enc: 0.0640) PSNR: 38.99dB
+Epoch [108/400] Batch [660/925] G: 0.0814 (enc: 0.1992, dec: 0.0365, adv: 2.3306) D: (cover: 0.0754, enc: 0.1871) PSNR: 39.11dB
+Epoch [108/400] Batch [680/925] G: 0.0829 (enc: 0.1962, dec: 0.0367, adv: 3.6470) D: (cover: 0.1431, enc: 0.0808) PSNR: 39.02dB
+Epoch [108/400] Batch [700/925] G: 0.0811 (enc: 0.1974, dec: 0.0363, adv: 2.4962) D: (cover: 0.1112, enc: 0.0844) PSNR: 38.90dB
+Epoch [108/400] Batch [720/925] G: 0.0876 (enc: 0.1958, dec: 0.0394, adv: 3.0363) D: (cover: 0.0618, enc: 0.0812) PSNR: 38.86dB
+Epoch [108/400] Batch [740/925] G: 0.0867 (enc: 0.2009, dec: 0.0392, adv: 2.3405) D: (cover: 0.0460, enc: 0.1043) PSNR: 38.80dB
+Epoch [108/400] Batch [760/925] G: 0.0807 (enc: 0.2018, dec: 0.0366, adv: 1.4933) D: (cover: 0.0433, enc: 0.2510) PSNR: 38.89dB
+Epoch [108/400] Batch [780/925] G: 0.0809 (enc: 0.2007, dec: 0.0366, adv: 1.7097) D: (cover: 0.0853, enc: 0.1590) PSNR: 38.91dB
+Epoch [108/400] Batch [800/925] G: 0.0811 (enc: 0.1995, dec: 0.0363, adv: 2.5207) D: (cover: 0.0821, enc: 0.1291) PSNR: 38.57dB
+Epoch [108/400] Batch [820/925] G: 0.0824 (enc: 0.1985, dec: 0.0367, adv: 3.1002) D: (cover: 0.1254, enc: 0.0620) PSNR: 39.10dB
+Epoch [108/400] Batch [840/925] G: 0.0839 (enc: 0.2003, dec: 0.0378, adv: 2.2135) D: (cover: 0.3849, enc: 0.0563) PSNR: 38.71dB
+Epoch [108/400] Batch [860/925] G: 0.0904 (enc: 0.1948, dec: 0.0410, adv: 2.6226) D: (cover: 0.2708, enc: 0.0819) PSNR: 39.06dB
+Epoch [108/400] Batch [880/925] G: 0.0838 (enc: 0.1919, dec: 0.0382, adv: 1.6975) D: (cover: 0.0793, enc: 0.2598) PSNR: 39.15dB
+Epoch [108/400] Batch [900/925] G: 0.0856 (enc: 0.2008, dec: 0.0385, adv: 2.4648) D: (cover: 0.0495, enc: 0.1460) PSNR: 39.02dB
+Epoch [108/400] Batch [920/925] G: 0.0912 (enc: 0.2006, dec: 0.0411, adv: 2.9804) D: (cover: 0.1549, enc: 0.1122) PSNR: 39.01dB
+Epoch [108/400] 训练平均损失: 0.0809
+Epoch [108/400] 验证平均损失: 0.0926 enc: 0.2187, dec: 0.0410 PSNR: 38.63dB
+Epoch [108/400] 验证耗时: 9.98s
+Epoch [108/400] 保存验证输出耗时: 0.03s
+Epoch [108/400] 训练耗时: 470.85s
+Epoch [108/400] 保存检查点耗时: 0.01s
+Epoch [108/400] 总耗时: 480.88s
+Epoch [109/400] 第1批数据获取耗时: 1.33s
+Epoch [109/400] Batch [20/925] G: 0.0797 (enc: 0.2076, dec: 0.0351, adv: 3.2698) D: (cover: 0.3931, enc: 0.1508) PSNR: 38.83dB
+Epoch [109/400] Batch [40/925] G: 0.0775 (enc: 0.2040, dec: 0.0344, adv: 2.6204) D: (cover: 1.2023, enc: 0.0507) PSNR: 38.84dB
+Epoch [109/400] Batch [60/925] G: 0.0780 (enc: 0.2076, dec: 0.0345, adv: 2.8088) D: (cover: 0.4119, enc: 0.0512) PSNR: 38.64dB
+Epoch [109/400] Batch [80/925] G: 0.0830 (enc: 0.2018, dec: 0.0370, adv: 2.9513) D: (cover: 0.2216, enc: 0.0831) PSNR: 38.81dB
+Epoch [109/400] Batch [100/925] G: 0.0848 (enc: 0.2003, dec: 0.0380, adv: 2.6993) D: (cover: 0.1748, enc: 0.0602) PSNR: 38.69dB
+Epoch [109/400] Batch [120/925] G: 0.0829 (enc: 0.1978, dec: 0.0370, adv: 3.0347) D: (cover: 0.0787, enc: 0.0978) PSNR: 38.91dB
+Epoch [109/400] Batch [140/925] G: 0.0783 (enc: 0.2015, dec: 0.0349, adv: 2.4159) D: (cover: 0.0685, enc: 0.1230) PSNR: 39.08dB
+Epoch [109/400] Batch [160/925] G: 0.0761 (enc: 0.1985, dec: 0.0337, adv: 2.6835) D: (cover: 0.1181, enc: 0.1300) PSNR: 39.22dB
+Epoch [109/400] Batch [180/925] G: 0.0814 (enc: 0.2065, dec: 0.0365, adv: 2.0821) D: (cover: 0.1381, enc: 0.1247) PSNR: 38.73dB
+Epoch [109/400] Batch [200/925] G: 0.0811 (enc: 0.1922, dec: 0.0368, adv: 1.6392) D: (cover: 0.0263, enc: 0.2977) PSNR: 38.67dB
+Epoch [109/400] Batch [220/925] G: 0.0824 (enc: 0.2049, dec: 0.0370, adv: 2.2236) D: (cover: 0.1136, enc: 0.1711) PSNR: 38.83dB
+Epoch [109/400] Batch [240/925] G: 0.0844 (enc: 0.1983, dec: 0.0374, adv: 3.6827) D: (cover: 0.1652, enc: 0.0305) PSNR: 38.75dB
+Epoch [109/400] Batch [260/925] G: 0.0762 (enc: 0.2001, dec: 0.0340, adv: 2.1631) D: (cover: 0.0981, enc: 0.1441) PSNR: 38.73dB
+Epoch [109/400] Batch [280/925] G: 0.0824 (enc: 0.2018, dec: 0.0371, adv: 2.2355) D: (cover: 0.0197, enc: 0.2672) PSNR: 39.02dB
+Epoch [109/400] Batch [300/925] G: 0.0809 (enc: 0.1979, dec: 0.0361, adv: 2.8677) D: (cover: 0.1374, enc: 0.0678) PSNR: 38.86dB
+Epoch [109/400] Batch [320/925] G: 0.0786 (enc: 0.1966, dec: 0.0352, adv: 2.2252) D: (cover: 0.1368, enc: 0.0746) PSNR: 38.86dB
+Epoch [109/400] Batch [340/925] G: 0.0730 (enc: 0.1993, dec: 0.0323, adv: 2.3306) D: (cover: 0.0397, enc: 0.1910) PSNR: 38.99dB
+Epoch [109/400] Batch [360/925] G: 0.0781 (enc: 0.2080, dec: 0.0345, adv: 2.8657) D: (cover: 0.1385, enc: 0.0694) PSNR: 38.65dB
+Epoch [109/400] Batch [380/925] G: 0.0801 (enc: 0.2007, dec: 0.0355, adv: 2.9839) D: (cover: 0.1784, enc: 0.0559) PSNR: 38.71dB
+Epoch [109/400] Batch [400/925] G: 0.0798 (enc: 0.1948, dec: 0.0361, adv: 1.7363) D: (cover: 0.0477, enc: 0.1758) PSNR: 38.91dB
+Epoch [109/400] Batch [420/925] G: 0.0812 (enc: 0.1959, dec: 0.0364, adv: 2.4315) D: (cover: 0.0732, enc: 0.0947) PSNR: 38.91dB
+Epoch [109/400] Batch [440/925] G: 0.0823 (enc: 0.1980, dec: 0.0368, adv: 2.7635) D: (cover: 0.6085, enc: 0.0214) PSNR: 38.80dB
+Epoch [109/400] Batch [460/925] G: 0.0762 (enc: 0.1985, dec: 0.0340, adv: 2.2663) D: (cover: 0.1065, enc: 0.1406) PSNR: 39.12dB
+Epoch [109/400] Batch [480/925] G: 0.0783 (enc: 0.2001, dec: 0.0348, adv: 2.7549) D: (cover: 0.1344, enc: 0.1272) PSNR: 38.66dB
+Epoch [109/400] Batch [500/925] G: 0.0756 (enc: 0.2003, dec: 0.0335, adv: 2.6800) D: (cover: 0.0579, enc: 0.1221) PSNR: 38.90dB
+Epoch [109/400] Batch [520/925] G: 0.0849 (enc: 0.1997, dec: 0.0386, adv: 1.7680) D: (cover: 0.0071, enc: 0.4628) PSNR: 39.01dB
+Epoch [109/400] Batch [540/925] G: 0.0747 (enc: 0.2036, dec: 0.0329, adv: 2.7848) D: (cover: 0.1160, enc: 0.0878) PSNR: 38.88dB
+Epoch [109/400] Batch [560/925] G: 0.0814 (enc: 0.2008, dec: 0.0364, adv: 2.5334) D: (cover: 0.1789, enc: 0.0615) PSNR: 38.91dB
+Epoch [109/400] Batch [580/925] G: 0.0812 (enc: 0.2039, dec: 0.0364, adv: 2.1834) D: (cover: 0.3190, enc: 0.1484) PSNR: 38.79dB
+Epoch [109/400] Batch [600/925] G: 0.0771 (enc: 0.1988, dec: 0.0347, adv: 1.6629) D: (cover: 0.2919, enc: 0.1634) PSNR: 38.85dB
+Epoch [109/400] Batch [620/925] G: 0.0774 (enc: 0.1974, dec: 0.0344, adv: 2.6814) D: (cover: 0.2940, enc: 0.0647) PSNR: 38.89dB
+Epoch [109/400] Batch [640/925] G: 0.0766 (enc: 0.2025, dec: 0.0345, adv: 1.5740) D: (cover: 0.1422, enc: 0.2180) PSNR: 38.57dB
+Epoch [109/400] Batch [660/925] G: 0.0777 (enc: 0.1942, dec: 0.0348, adv: 2.2850) D: (cover: 0.2486, enc: 0.0758) PSNR: 39.03dB
+Epoch [109/400] Batch [680/925] G: 0.0745 (enc: 0.2039, dec: 0.0326, adv: 3.1775) D: (cover: 0.0577, enc: 0.0841) PSNR: 38.89dB
+Epoch [109/400] Batch [700/925] G: 0.0760 (enc: 0.2012, dec: 0.0342, adv: 1.5936) D: (cover: 0.0888, enc: 0.0880) PSNR: 38.89dB
+Epoch [109/400] Batch [720/925] G: 0.0804 (enc: 0.2031, dec: 0.0353, adv: 3.6404) D: (cover: 0.1019, enc: 0.0547) PSNR: 38.54dB
+Epoch [109/400] Batch [740/925] G: 0.0811 (enc: 0.1959, dec: 0.0361, adv: 3.0238) D: (cover: 0.0150, enc: 0.3060) PSNR: 38.89dB
+Epoch [109/400] Batch [760/925] G: 0.0770 (enc: 0.1995, dec: 0.0344, adv: 2.1187) D: (cover: 0.1902, enc: 0.1152) PSNR: 38.94dB
+Epoch [109/400] Batch [780/925] G: 0.0815 (enc: 0.1980, dec: 0.0358, adv: 4.0097) D: (cover: 0.9772, enc: 0.0342) PSNR: 38.80dB
+Epoch [109/400] Batch [800/925] G: 0.0812 (enc: 0.2069, dec: 0.0364, adv: 2.1569) D: (cover: 0.4578, enc: 0.1475) PSNR: 38.62dB
+Epoch [109/400] Batch [820/925] G: 0.0785 (enc: 0.2048, dec: 0.0351, adv: 2.1922) D: (cover: 0.1235, enc: 0.2555) PSNR: 38.46dB
+Epoch [109/400] Batch [840/925] G: 0.0859 (enc: 0.1985, dec: 0.0385, adv: 3.0458) D: (cover: 0.2112, enc: 0.0903) PSNR: 38.88dB
+Epoch [109/400] Batch [860/925] G: 0.0685 (enc: 0.1978, dec: 0.0305, adv: 1.5596) D: (cover: 0.0803, enc: 0.1629) PSNR: 38.92dB
+Epoch [109/400] Batch [880/925] G: 0.0763 (enc: 0.1974, dec: 0.0338, adv: 2.8742) D: (cover: 0.2632, enc: 0.0492) PSNR: 38.87dB
+Epoch [109/400] Batch [900/925] G: 0.0817 (enc: 0.1998, dec: 0.0364, adv: 2.8136) D: (cover: 0.0613, enc: 0.1498) PSNR: 38.83dB
+Epoch [109/400] Batch [920/925] G: 0.0809 (enc: 0.1937, dec: 0.0365, adv: 2.0072) D: (cover: 0.0835, enc: 0.1725) PSNR: 38.93dB
+Epoch [109/400] 训练平均损失: 0.0806
+Epoch [109/400] 验证平均损失: 0.0932 enc: 0.2123, dec: 0.0359 PSNR: 39.09dB
+Epoch [109/400] 验证耗时: 10.27s
+Epoch [109/400] 保存验证输出耗时: 0.03s
+Epoch [109/400] 训练耗时: 471.22s
+Epoch [109/400] 保存检查点耗时: 0.00s
+Epoch [109/400] 总耗时: 481.52s
+Epoch [110/400] 第1批数据获取耗时: 1.51s
+Epoch [110/400] Batch [20/925] G: 0.0780 (enc: 0.2104, dec: 0.0349, adv: 1.9194) D: (cover: 0.0383, enc: 0.1974) PSNR: 38.77dB
+Epoch [110/400] Batch [40/925] G: 0.0820 (enc: 0.1942, dec: 0.0366, adv: 2.8915) D: (cover: 0.0917, enc: 0.0639) PSNR: 38.79dB
+Epoch [110/400] Batch [60/925] G: 0.0770 (enc: 0.2008, dec: 0.0341, adv: 2.7789) D: (cover: 0.0449, enc: 0.0701) PSNR: 38.70dB
+Epoch [110/400] Batch [80/925] G: 0.0915 (enc: 0.1911, dec: 0.0414, adv: 2.9798) D: (cover: 0.2084, enc: 0.0477) PSNR: 38.85dB
+Epoch [110/400] Batch [100/925] G: 0.0863 (enc: 0.1932, dec: 0.0392, adv: 2.0605) D: (cover: 0.0366, enc: 0.1603) PSNR: 38.92dB
+Epoch [110/400] Batch [120/925] G: 0.0766 (enc: 0.1984, dec: 0.0342, adv: 2.2049) D: (cover: 0.0760, enc: 0.1016) PSNR: 38.95dB
+Epoch [110/400] Batch [140/925] G: 0.0827 (enc: 0.1938, dec: 0.0373, adv: 2.1809) D: (cover: 0.0288, enc: 0.1567) PSNR: 39.18dB
+Epoch [110/400] Batch [160/925] G: 0.0789 (enc: 0.2012, dec: 0.0348, adv: 3.3235) D: (cover: 0.1088, enc: 0.0603) PSNR: 38.81dB
+Epoch [110/400] Batch [180/925] G: 0.0772 (enc: 0.1983, dec: 0.0343, adv: 2.7132) D: (cover: 0.1909, enc: 0.4788) PSNR: 39.02dB
+Epoch [110/400] Batch [200/925] G: 0.0740 (enc: 0.2052, dec: 0.0332, adv: 1.4351) D: (cover: 0.2086, enc: 0.2241) PSNR: 38.84dB
+Epoch [110/400] Batch [220/925] G: 0.0831 (enc: 0.2010, dec: 0.0374, adv: 2.3322) D: (cover: 0.1139, enc: 0.2333) PSNR: 38.88dB
+Epoch [110/400] Batch [240/925] G: 0.0790 (enc: 0.2001, dec: 0.0354, adv: 2.2042) D: (cover: 0.1112, enc: 0.1342) PSNR: 38.81dB
+Epoch [110/400] Batch [260/925] G: 0.0739 (enc: 0.1967, dec: 0.0329, adv: 2.1955) D: (cover: 0.2854, enc: 0.0666) PSNR: 38.70dB
+Epoch [110/400] Batch [280/925] G: 0.0854 (enc: 0.1996, dec: 0.0382, adv: 2.9608) D: (cover: 0.2911, enc: 0.0595) PSNR: 38.88dB
+Epoch [110/400] Batch [300/925] G: 0.0797 (enc: 0.1981, dec: 0.0353, adv: 3.0402) D: (cover: 0.1508, enc: 0.0502) PSNR: 38.76dB
+Epoch [110/400] Batch [320/925] G: 0.0723 (enc: 0.2018, dec: 0.0320, adv: 2.2312) D: (cover: 0.0900, enc: 0.1341) PSNR: 38.93dB
+Epoch [110/400] Batch [340/925] G: 0.0770 (enc: 0.1981, dec: 0.0344, adv: 2.3693) D: (cover: 0.0397, enc: 0.1322) PSNR: 38.97dB
+Epoch [110/400] Batch [360/925] G: 0.0738 (enc: 0.2055, dec: 0.0327, adv: 2.1289) D: (cover: 0.1811, enc: 0.1534) PSNR: 38.53dB
+Epoch [110/400] Batch [380/925] G: 0.0809 (enc: 0.1992, dec: 0.0360, adv: 2.8860) D: (cover: 0.0483, enc: 0.1648) PSNR: 38.65dB
+Epoch [110/400] Batch [400/925] G: 0.0839 (enc: 0.1966, dec: 0.0374, adv: 3.2674) D: (cover: 0.2751, enc: 0.0356) PSNR: 38.57dB
+Epoch [110/400] Batch [420/925] G: 0.0818 (enc: 0.1950, dec: 0.0366, adv: 2.8662) D: (cover: 0.0555, enc: 0.0789) PSNR: 39.02dB
+Epoch [110/400] Batch [440/925] G: 0.0832 (enc: 0.1973, dec: 0.0374, adv: 2.4456) D: (cover: 0.0392, enc: 0.1041) PSNR: 38.80dB
+Epoch [110/400] Batch [460/925] G: 0.0844 (enc: 0.2052, dec: 0.0381, adv: 2.1695) D: (cover: 0.1296, enc: 0.1391) PSNR: 38.78dB
+Epoch [110/400] Batch [480/925] G: 0.1148 (enc: 0.1986, dec: 0.0532, adv: 2.4898) D: (cover: 0.0322, enc: 0.1511) PSNR: 38.79dB
+Epoch [110/400] Batch [500/925] G: 0.0839 (enc: 0.2014, dec: 0.0374, adv: 3.1000) D: (cover: 1.2801, enc: 0.0115) PSNR: 38.84dB
+Epoch [110/400] Batch [520/925] G: 0.0708 (enc: 0.2097, dec: 0.0312, adv: 2.2249) D: (cover: 1.5419, enc: 0.1024) PSNR: 38.73dB
+Epoch [110/400] Batch [540/925] G: 0.0709 (enc: 0.2051, dec: 0.0311, adv: 2.5185) D: (cover: 0.2720, enc: 0.1767) PSNR: 38.62dB
+Epoch [110/400] Batch [560/925] G: 0.0793 (enc: 0.2064, dec: 0.0348, adv: 3.4690) D: (cover: 0.5207, enc: 0.0388) PSNR: 38.14dB
+Epoch [110/400] Batch [580/925] G: 0.0818 (enc: 0.2000, dec: 0.0365, adv: 2.7622) D: (cover: 0.5196, enc: 0.0753) PSNR: 38.88dB
+Epoch [110/400] Batch [600/925] G: 0.0755 (enc: 0.1984, dec: 0.0334, adv: 2.8050) D: (cover: 0.2149, enc: 0.1405) PSNR: 38.97dB
+Epoch [110/400] Batch [620/925] G: 0.0856 (enc: 0.1980, dec: 0.0385, adv: 2.6355) D: (cover: 0.1252, enc: 0.1123) PSNR: 38.99dB
+Epoch [110/400] Batch [640/925] G: 0.0805 (enc: 0.2024, dec: 0.0362, adv: 2.0543) D: (cover: 0.1865, enc: 0.1248) PSNR: 38.91dB
+Epoch [110/400] Batch [660/925] G: 0.0774 (enc: 0.1969, dec: 0.0348, adv: 1.8623) D: (cover: 0.0926, enc: 0.3039) PSNR: 38.77dB
+Epoch [110/400] Batch [680/925] G: 0.0808 (enc: 0.1960, dec: 0.0364, adv: 2.1492) D: (cover: 0.0284, enc: 0.1652) PSNR: 39.01dB
+Epoch [110/400] Batch [700/925] G: 0.0802 (enc: 0.2007, dec: 0.0356, adv: 2.9594) D: (cover: 0.1277, enc: 0.0531) PSNR: 38.86dB
+Epoch [110/400] Batch [720/925] G: 0.0780 (enc: 0.1991, dec: 0.0354, adv: 1.1933) D: (cover: 0.0481, enc: 0.4204) PSNR: 38.95dB
+Epoch [110/400] Batch [740/925] G: 0.0765 (enc: 0.2000, dec: 0.0345, adv: 1.5420) D: (cover: 0.0143, enc: 0.5641) PSNR: 38.61dB
+Epoch [110/400] Batch [760/925] G: 0.0852 (enc: 0.1969, dec: 0.0379, adv: 3.5733) D: (cover: 0.5241, enc: 0.0259) PSNR: 38.92dB
+Epoch [110/400] Batch [780/925] G: 0.0822 (enc: 0.1968, dec: 0.0370, adv: 2.2304) D: (cover: 0.0502, enc: 0.1287) PSNR: 38.47dB
+Epoch [110/400] Batch [800/925] G: 0.0791 (enc: 0.2002, dec: 0.0349, adv: 3.3777) D: (cover: 0.2229, enc: 0.0325) PSNR: 39.09dB
+Epoch [110/400] Batch [820/925] G: 0.0862 (enc: 0.1980, dec: 0.0386, adv: 2.9868) D: (cover: 0.1047, enc: 0.0831) PSNR: 39.11dB
+Epoch [110/400] Batch [840/925] G: 0.0787 (enc: 0.1957, dec: 0.0350, adv: 2.7806) D: (cover: 0.1154, enc: 0.0929) PSNR: 38.85dB
+Epoch [110/400] Batch [860/925] G: 0.0715 (enc: 0.1991, dec: 0.0318, adv: 1.9358) D: (cover: 0.0582, enc: 0.2279) PSNR: 38.49dB
+Epoch [110/400] Batch [880/925] G: 0.0794 (enc: 0.1991, dec: 0.0357, adv: 2.0861) D: (cover: 0.0746, enc: 0.2790) PSNR: 38.57dB
+Epoch [110/400] Batch [900/925] G: 0.0823 (enc: 0.1958, dec: 0.0369, adv: 2.5229) D: (cover: 0.0863, enc: 0.1271) PSNR: 39.00dB
+Epoch [110/400] Batch [920/925] G: 0.0772 (enc: 0.1950, dec: 0.0344, adv: 2.4806) D: (cover: 0.0614, enc: 0.1898) PSNR: 39.09dB
+Epoch [110/400] 训练平均损失: 0.0803
+Epoch [110/400] 验证平均损失: 0.0910 enc: 0.2180, dec: 0.0300 PSNR: 38.97dB
+Epoch [110/400] 验证耗时: 10.18s
+Epoch [110/400] 保存验证输出耗时: 0.03s
+Epoch [110/400] 训练耗时: 471.44s
+Epoch [110/400] 保存检查点耗时: 0.00s
+Epoch [110/400] 总耗时: 481.65s
+Epoch [111/400] 第1批数据获取耗时: 1.46s
+Epoch [111/400] Batch [20/925] G: 0.0806 (enc: 0.1964, dec: 0.0355, adv: 3.8108) D: (cover: 0.0327, enc: 0.0691) PSNR: 39.04dB
+Epoch [111/400] Batch [40/925] G: 0.0848 (enc: 0.1996, dec: 0.0378, adv: 3.1597) D: (cover: 1.0558, enc: 0.0152) PSNR: 38.79dB
+Epoch [111/400] Batch [60/925] G: 0.0735 (enc: 0.2023, dec: 0.0329, adv: 1.6991) D: (cover: 0.1252, enc: 0.1838) PSNR: 38.85dB
+Epoch [111/400] Batch [80/925] G: 0.0815 (enc: 0.1996, dec: 0.0368, adv: 1.8834) D: (cover: 0.0485, enc: 0.3118) PSNR: 38.92dB
+Epoch [111/400] Batch [100/925] G: 0.0753 (enc: 0.2014, dec: 0.0330, adv: 3.2891) D: (cover: 0.1257, enc: 0.0701) PSNR: 38.89dB
+Epoch [111/400] Batch [120/925] G: 0.0822 (enc: 0.1999, dec: 0.0366, adv: 2.9615) D: (cover: 0.1991, enc: 0.0590) PSNR: 39.10dB
+Epoch [111/400] Batch [140/925] G: 0.0799 (enc: 0.2012, dec: 0.0355, adv: 2.9262) D: (cover: 0.1955, enc: 0.0711) PSNR: 38.93dB
+Epoch [111/400] Batch [160/925] G: 0.0926 (enc: 0.1970, dec: 0.0422, adv: 2.3639) D: (cover: 0.0570, enc: 0.1395) PSNR: 39.10dB
+Epoch [111/400] Batch [180/925] G: 0.0825 (enc: 0.1989, dec: 0.0371, adv: 2.3269) D: (cover: 0.0181, enc: 0.1747) PSNR: 38.66dB
+Epoch [111/400] Batch [200/925] G: 0.0783 (enc: 0.1930, dec: 0.0348, adv: 2.9369) D: (cover: 0.0453, enc: 0.0509) PSNR: 39.10dB
+Epoch [111/400] Batch [220/925] G: 0.0790 (enc: 0.1976, dec: 0.0357, adv: 1.6550) D: (cover: 0.0210, enc: 0.3476) PSNR: 38.86dB
+Epoch [111/400] Batch [240/925] G: 0.0788 (enc: 0.2028, dec: 0.0354, adv: 1.9234) D: (cover: 0.1590, enc: 0.2740) PSNR: 38.82dB
+Epoch [111/400] Batch [260/925] G: 0.0789 (enc: 0.1962, dec: 0.0357, adv: 1.7098) D: (cover: 0.7709, enc: 0.0450) PSNR: 39.07dB
+Epoch [111/400] Batch [280/925] G: 0.0805 (enc: 0.1969, dec: 0.0366, adv: 1.4719) D: (cover: 0.1727, enc: 0.2539) PSNR: 38.87dB
+Epoch [111/400] Batch [300/925] G: 0.0861 (enc: 0.1940, dec: 0.0390, adv: 2.2493) D: (cover: 0.2431, enc: 0.1363) PSNR: 38.77dB
+Epoch [111/400] Batch [320/925] G: 0.0819 (enc: 0.1976, dec: 0.0369, adv: 2.1982) D: (cover: 0.0885, enc: 0.1678) PSNR: 38.56dB
+Epoch [111/400] Batch [340/925] G: 0.0738 (enc: 0.1992, dec: 0.0325, adv: 2.8423) D: (cover: 0.1494, enc: 0.0807) PSNR: 38.96dB
+Epoch [111/400] Batch [360/925] G: 0.0760 (enc: 0.2002, dec: 0.0340, adv: 1.9844) D: (cover: 0.1943, enc: 0.1725) PSNR: 38.86dB
+Epoch [111/400] Batch [380/925] G: 0.0787 (enc: 0.1989, dec: 0.0349, adv: 2.9497) D: (cover: 0.2651, enc: 0.0946) PSNR: 39.10dB
+Epoch [111/400] Batch [400/925] G: 0.0740 (enc: 0.1970, dec: 0.0324, adv: 3.2623) D: (cover: 0.2036, enc: 0.0772) PSNR: 38.98dB
+Epoch [111/400] Batch [420/925] G: 0.0816 (enc: 0.1974, dec: 0.0364, adv: 2.9256) D: (cover: 0.1146, enc: 0.0982) PSNR: 38.92dB
+Epoch [111/400] Batch [440/925] G: 0.0823 (enc: 0.1976, dec: 0.0367, adv: 3.0682) D: (cover: 0.2901, enc: 0.0402) PSNR: 38.92dB
+Epoch [111/400] Batch [460/925] G: 0.0761 (enc: 0.1987, dec: 0.0342, adv: 1.7477) D: (cover: 0.1112, enc: 0.1286) PSNR: 38.90dB
+Epoch [111/400] Batch [480/925] G: 0.0809 (enc: 0.1913, dec: 0.0363, adv: 2.5212) D: (cover: 0.0591, enc: 0.2253) PSNR: 39.17dB
+Epoch [111/400] Batch [500/925] G: 0.0799 (enc: 0.2026, dec: 0.0353, adv: 3.2339) D: (cover: 0.0610, enc: 0.0692) PSNR: 38.92dB
+Epoch [111/400] Batch [520/925] G: 0.0798 (enc: 0.1959, dec: 0.0358, adv: 2.3386) D: (cover: 0.0269, enc: 0.2053) PSNR: 39.09dB
+Epoch [111/400] Batch [540/925] G: 0.0797 (enc: 0.2006, dec: 0.0359, adv: 1.9371) D: (cover: 0.0241, enc: 0.1788) PSNR: 38.85dB
+Epoch [111/400] Batch [560/925] G: 0.0829 (enc: 0.1983, dec: 0.0370, adv: 3.0149) D: (cover: 0.1137, enc: 0.0581) PSNR: 38.78dB
+Epoch [111/400] Batch [580/925] G: 0.0740 (enc: 0.2010, dec: 0.0329, adv: 2.0781) D: (cover: 0.0261, enc: 0.1593) PSNR: 39.01dB
+Epoch [111/400] Batch [600/925] G: 0.0893 (enc: 0.1985, dec: 0.0406, adv: 2.2405) D: (cover: 0.0389, enc: 0.3044) PSNR: 38.54dB
+Epoch [111/400] Batch [620/925] G: 0.0777 (enc: 0.1946, dec: 0.0347, adv: 2.4295) D: (cover: 0.1045, enc: 0.1402) PSNR: 39.02dB
+Epoch [111/400] Batch [640/925] G: 0.0793 (enc: 0.1990, dec: 0.0354, adv: 2.6081) D: (cover: 0.0426, enc: 0.0917) PSNR: 38.92dB
+Epoch [111/400] Batch [660/925] G: 0.0770 (enc: 0.1979, dec: 0.0338, adv: 3.4713) D: (cover: 0.2436, enc: 0.0275) PSNR: 38.73dB
+Epoch [111/400] Batch [680/925] G: 0.0830 (enc: 0.1933, dec: 0.0372, adv: 2.7226) D: (cover: 0.0425, enc: 0.1492) PSNR: 38.96dB
+Epoch [111/400] Batch [700/925] G: 0.0905 (enc: 0.1961, dec: 0.0411, adv: 2.3955) D: (cover: 0.4312, enc: 0.0327) PSNR: 38.91dB
+Epoch [111/400] Batch [720/925] G: 0.0777 (enc: 0.1984, dec: 0.0346, adv: 2.4592) D: (cover: 0.1486, enc: 0.1643) PSNR: 39.12dB
+Epoch [111/400] Batch [740/925] G: 0.0824 (enc: 0.1966, dec: 0.0372, adv: 2.0008) D: (cover: 0.1450, enc: 0.0992) PSNR: 39.12dB
+Epoch [111/400] Batch [760/925] G: 0.0792 (enc: 0.1976, dec: 0.0357, adv: 1.8717) D: (cover: 0.1686, enc: 0.1026) PSNR: 39.03dB
+Epoch [111/400] Batch [780/925] G: 0.0765 (enc: 0.1988, dec: 0.0344, adv: 1.6526) D: (cover: 0.0879, enc: 0.3740) PSNR: 38.98dB
+Epoch [111/400] Batch [800/925] G: 0.0810 (enc: 0.1950, dec: 0.0363, adv: 2.5685) D: (cover: 0.3365, enc: 0.0592) PSNR: 38.93dB
+Epoch [111/400] Batch [820/925] G: 0.0799 (enc: 0.1963, dec: 0.0359, adv: 2.1813) D: (cover: 0.2136, enc: 0.0536) PSNR: 38.92dB
+Epoch [111/400] Batch [840/925] G: 0.0826 (enc: 0.1987, dec: 0.0373, adv: 2.1258) D: (cover: 0.0103, enc: 0.3250) PSNR: 38.93dB
+Epoch [111/400] Batch [860/925] G: 0.0845 (enc: 0.2055, dec: 0.0377, adv: 2.9880) D: (cover: 0.2406, enc: 0.0726) PSNR: 39.07dB
+Epoch [111/400] Batch [880/925] G: 0.0811 (enc: 0.1942, dec: 0.0367, adv: 1.7381) D: (cover: 0.0848, enc: 0.2704) PSNR: 39.04dB
+Epoch [111/400] Batch [900/925] G: 0.0796 (enc: 0.2005, dec: 0.0352, adv: 3.1034) D: (cover: 0.1285, enc: 0.0749) PSNR: 38.75dB
+Epoch [111/400] Batch [920/925] G: 0.0769 (enc: 0.1935, dec: 0.0343, adv: 2.4415) D: (cover: 0.0461, enc: 0.1326) PSNR: 39.13dB
+Epoch [111/400] 训练平均损失: 0.0802
+Epoch [111/400] 验证平均损失: 0.0904 enc: 0.2080, dec: 0.0374 PSNR: 38.63dB
+Epoch [111/400] 验证耗时: 10.21s
+Epoch [111/400] 保存验证输出耗时: 0.03s
+Epoch [111/400] 训练耗时: 471.33s
+Epoch [111/400] 保存检查点耗时: 0.01s
+Epoch [111/400] 总耗时: 481.59s
+Epoch [112/400] 第1批数据获取耗时: 1.40s
+Epoch [112/400] Batch [20/925] G: 0.0759 (enc: 0.1962, dec: 0.0339, adv: 2.1805) D: (cover: 0.0422, enc: 0.1158) PSNR: 39.08dB
+Epoch [112/400] Batch [40/925] G: 0.0812 (enc: 0.1972, dec: 0.0361, adv: 3.0419) D: (cover: 0.1166, enc: 0.0505) PSNR: 38.66dB
+Epoch [112/400] Batch [60/925] G: 0.0790 (enc: 0.1929, dec: 0.0357, adv: 1.9030) D: (cover: 0.6111, enc: 0.0369) PSNR: 39.06dB
+Epoch [112/400] Batch [80/925] G: 0.0737 (enc: 0.2039, dec: 0.0326, adv: 2.4622) D: (cover: 0.2294, enc: 0.1101) PSNR: 38.84dB
+Epoch [112/400] Batch [100/925] G: 0.0782 (enc: 0.1999, dec: 0.0349, adv: 2.3924) D: (cover: 0.1081, enc: 0.2473) PSNR: 38.86dB
+Epoch [112/400] Batch [120/925] G: 0.0852 (enc: 0.1977, dec: 0.0381, adv: 2.9983) D: (cover: 0.0813, enc: 0.0997) PSNR: 39.08dB
+Epoch [112/400] Batch [140/925] G: 0.0815 (enc: 0.1999, dec: 0.0364, adv: 2.7065) D: (cover: 0.0853, enc: 0.2241) PSNR: 38.98dB
+Epoch [112/400] Batch [160/925] G: 0.0803 (enc: 0.2003, dec: 0.0358, adv: 2.7028) D: (cover: 0.1259, enc: 0.1328) PSNR: 38.91dB
+Epoch [112/400] Batch [180/925] G: 0.0819 (enc: 0.1907, dec: 0.0372, adv: 1.7775) D: (cover: 0.1660, enc: 0.1591) PSNR: 38.92dB
+Epoch [112/400] Batch [200/925] G: 0.0808 (enc: 0.2031, dec: 0.0360, adv: 2.7823) D: (cover: 0.0420, enc: 0.0939) PSNR: 38.86dB
+Epoch [112/400] Batch [220/925] G: 0.0819 (enc: 0.1983, dec: 0.0368, adv: 2.4180) D: (cover: 0.0181, enc: 0.1104) PSNR: 38.94dB
+Epoch [112/400] Batch [240/925] G: 0.0868 (enc: 0.1968, dec: 0.0391, adv: 2.7094) D: (cover: 0.0344, enc: 0.1018) PSNR: 39.00dB
+Epoch [112/400] Batch [260/925] G: 0.0861 (enc: 0.1921, dec: 0.0389, adv: 2.6377) D: (cover: 0.0803, enc: 0.1298) PSNR: 39.19dB
+Epoch [112/400] Batch [280/925] G: 0.0858 (enc: 0.1996, dec: 0.0388, adv: 2.2481) D: (cover: 0.0319, enc: 0.0892) PSNR: 39.02dB
+Epoch [112/400] Batch [300/925] G: 0.0722 (enc: 0.1939, dec: 0.0319, adv: 2.5595) D: (cover: 0.0722, enc: 0.1465) PSNR: 39.00dB
+Epoch [112/400] Batch [320/925] G: 0.0869 (enc: 0.1956, dec: 0.0390, adv: 2.9943) D: (cover: 0.1055, enc: 0.0659) PSNR: 38.94dB
+Epoch [112/400] Batch [340/925] G: 0.0786 (enc: 0.1974, dec: 0.0354, adv: 1.9549) D: (cover: 0.0198, enc: 0.2731) PSNR: 38.81dB
+Epoch [112/400] Batch [360/925] G: 0.0806 (enc: 0.1953, dec: 0.0360, adv: 2.7214) D: (cover: 0.0265, enc: 0.0913) PSNR: 39.13dB
+Epoch [112/400] Batch [380/925] G: 0.0795 (enc: 0.1945, dec: 0.0353, adv: 3.0832) D: (cover: 0.0628, enc: 0.0780) PSNR: 39.16dB
+Epoch [112/400] Batch [400/925] G: 0.0756 (enc: 0.1992, dec: 0.0341, adv: 1.5339) D: (cover: 0.0558, enc: 0.3201) PSNR: 38.79dB
+Epoch [112/400] Batch [420/925] G: 0.0774 (enc: 0.2023, dec: 0.0344, adv: 2.5824) D: (cover: 0.1101, enc: 0.1230) PSNR: 38.81dB
+Epoch [112/400] Batch [440/925] G: 0.0808 (enc: 0.2010, dec: 0.0360, adv: 2.7406) D: (cover: 0.1445, enc: 0.0737) PSNR: 38.69dB
+Epoch [112/400] Batch [460/925] G: 0.0848 (enc: 0.2029, dec: 0.0378, adv: 3.1083) D: (cover: 0.1979, enc: 0.0513) PSNR: 38.73dB
+Epoch [112/400] Batch [480/925] G: 0.0799 (enc: 0.1991, dec: 0.0358, adv: 2.3762) D: (cover: 0.0247, enc: 0.1244) PSNR: 38.89dB
+Epoch [112/400] Batch [500/925] G: 0.0791 (enc: 0.1951, dec: 0.0349, adv: 3.4429) D: (cover: 0.1096, enc: 0.0377) PSNR: 39.03dB
+Epoch [112/400] Batch [520/925] G: 0.0783 (enc: 0.2014, dec: 0.0349, adv: 2.4578) D: (cover: 0.1652, enc: 0.0785) PSNR: 38.74dB
+Epoch [112/400] Batch [540/925] G: 0.0799 (enc: 0.1985, dec: 0.0357, adv: 2.5521) D: (cover: 0.5009, enc: 0.0257) PSNR: 38.79dB
+Epoch [112/400] Batch [560/925] G: 0.0853 (enc: 0.1935, dec: 0.0382, adv: 3.0167) D: (cover: 0.1520, enc: 0.0730) PSNR: 38.99dB
+Epoch [112/400] Batch [580/925] G: 0.0760 (enc: 0.2002, dec: 0.0332, adv: 3.5202) D: (cover: 1.0113, enc: 0.0158) PSNR: 38.94dB
+Epoch [112/400] Batch [600/925] G: 0.0773 (enc: 0.2086, dec: 0.0349, adv: 1.2763) D: (cover: 0.0408, enc: 0.4521) PSNR: 38.75dB
+Epoch [112/400] Batch [620/925] G: 0.0740 (enc: 0.1967, dec: 0.0333, adv: 1.3854) D: (cover: 0.0154, enc: 0.6024) PSNR: 38.88dB
+Epoch [112/400] Batch [640/925] G: 0.0768 (enc: 0.1982, dec: 0.0341, adv: 2.6729) D: (cover: 0.1927, enc: 0.0773) PSNR: 38.92dB
+Epoch [112/400] Batch [660/925] G: 0.0785 (enc: 0.2023, dec: 0.0352, adv: 1.9849) D: (cover: 0.0579, enc: 0.1780) PSNR: 38.84dB
+Epoch [112/400] Batch [680/925] G: 0.0761 (enc: 0.1963, dec: 0.0340, adv: 2.2211) D: (cover: 0.0338, enc: 0.1385) PSNR: 39.06dB
+Epoch [112/400] Batch [700/925] G: 0.0818 (enc: 0.1972, dec: 0.0373, adv: 1.3147) D: (cover: 0.0022, enc: 1.4265) PSNR: 39.07dB
+Epoch [112/400] Batch [720/925] G: 0.0797 (enc: 0.2046, dec: 0.0361, adv: 1.4532) D: (cover: 0.1476, enc: 0.2756) PSNR: 38.61dB
+Epoch [112/400] Batch [740/925] G: 0.0788 (enc: 0.2039, dec: 0.0355, adv: 1.6640) D: (cover: 0.2613, enc: 0.3020) PSNR: 38.71dB
+Epoch [112/400] Batch [760/925] G: 0.0803 (enc: 0.2043, dec: 0.0361, adv: 2.0230) D: (cover: 0.0910, enc: 0.1920) PSNR: 38.88dB
+Epoch [112/400] Batch [780/925] G: 0.0799 (enc: 0.2049, dec: 0.0359, adv: 1.9944) D: (cover: 0.0422, enc: 0.1588) PSNR: 38.88dB
+Epoch [112/400] Batch [800/925] G: 0.0754 (enc: 0.1976, dec: 0.0337, adv: 1.9590) D: (cover: 0.0785, enc: 0.2554) PSNR: 38.86dB
+Epoch [112/400] Batch [820/925] G: 0.0792 (enc: 0.1999, dec: 0.0352, adv: 2.7976) D: (cover: 0.1074, enc: 0.0722) PSNR: 38.66dB
+Epoch [112/400] Batch [840/925] G: 0.0774 (enc: 0.2043, dec: 0.0346, adv: 2.0513) D: (cover: 0.0407, enc: 0.2097) PSNR: 38.51dB
+Epoch [112/400] Batch [860/925] G: 0.0791 (enc: 0.2034, dec: 0.0349, adv: 3.1189) D: (cover: 0.0612, enc: 0.0724) PSNR: 39.04dB
+Epoch [112/400] Batch [880/925] G: 0.0808 (enc: 0.1956, dec: 0.0365, adv: 1.9449) D: (cover: 0.0792, enc: 0.2027) PSNR: 38.83dB
+Epoch [112/400] Batch [900/925] G: 0.0868 (enc: 0.1934, dec: 0.0394, adv: 2.2090) D: (cover: 0.0126, enc: 0.5210) PSNR: 38.92dB
+Epoch [112/400] Batch [920/925] G: 0.0730 (enc: 0.1946, dec: 0.0323, adv: 2.6078) D: (cover: 0.1250, enc: 0.0990) PSNR: 38.81dB
+Epoch [112/400] 训练平均损失: 0.0801
+Epoch [112/400] 验证平均损失: 0.0896 enc: 0.2017, dec: 0.0318 PSNR: 38.67dB
+Epoch [112/400] 验证耗时: 10.25s
+Epoch [112/400] 保存验证输出耗时: 0.03s
+Epoch [112/400] 训练耗时: 471.34s
+Epoch [112/400] 保存检查点耗时: 0.00s
+Epoch [112/400] 总耗时: 481.62s
+Epoch [113/400] 第1批数据获取耗时: 0.56s
+Epoch [113/400] Batch [20/925] G: 0.0789 (enc: 0.2098, dec: 0.0353, adv: 2.0370) D: (cover: 0.0396, enc: 0.3268) PSNR: 38.64dB
+Epoch [113/400] Batch [40/925] G: 0.0747 (enc: 0.1968, dec: 0.0339, adv: 1.0980) D: (cover: 0.0435, enc: 0.7563) PSNR: 38.83dB
+Epoch [113/400] Batch [60/925] G: 0.0787 (enc: 0.1958, dec: 0.0355, adv: 1.7951) D: (cover: 0.0533, enc: 0.2617) PSNR: 39.04dB
+Epoch [113/400] Batch [80/925] G: 0.0781 (enc: 0.2021, dec: 0.0344, adv: 3.2311) D: (cover: 0.1557, enc: 0.0459) PSNR: 38.95dB
+Epoch [113/400] Batch [100/925] G: 0.0787 (enc: 0.1988, dec: 0.0352, adv: 2.4115) D: (cover: 0.0970, enc: 0.1206) PSNR: 38.97dB
+Epoch [113/400] Batch [120/925] G: 0.0791 (enc: 0.1894, dec: 0.0354, adv: 2.6174) D: (cover: 0.1641, enc: 0.0544) PSNR: 39.20dB
+Epoch [113/400] Batch [140/925] G: 0.0874 (enc: 0.1992, dec: 0.0392, adv: 2.9075) D: (cover: 0.3236, enc: 0.0336) PSNR: 38.79dB
+Epoch [113/400] Batch [160/925] G: 0.0798 (enc: 0.1980, dec: 0.0359, adv: 2.0652) D: (cover: 0.0388, enc: 0.1316) PSNR: 39.06dB
+Epoch [113/400] Batch [180/925] G: 0.0818 (enc: 0.1924, dec: 0.0366, adv: 2.7175) D: (cover: 0.0613, enc: 0.0904) PSNR: 39.17dB
+Epoch [113/400] Batch [200/925] G: 0.0792 (enc: 0.2036, dec: 0.0356, adv: 1.8978) D: (cover: 0.1206, enc: 0.1311) PSNR: 38.92dB
+Epoch [113/400] Batch [220/925] G: 0.0756 (enc: 0.2005, dec: 0.0338, adv: 2.0817) D: (cover: 0.1874, enc: 0.1115) PSNR: 38.85dB
+Epoch [113/400] Batch [240/925] G: 0.0796 (enc: 0.1921, dec: 0.0360, adv: 1.8793) D: (cover: 0.0793, enc: 0.1463) PSNR: 39.08dB
+Epoch [113/400] Batch [260/925] G: 0.0850 (enc: 0.2046, dec: 0.0383, adv: 2.2292) D: (cover: 0.2085, enc: 0.0999) PSNR: 38.97dB
+Epoch [113/400] Batch [280/925] G: 0.0811 (enc: 0.1934, dec: 0.0366, adv: 2.0223) D: (cover: 0.0165, enc: 0.4098) PSNR: 38.99dB
+Epoch [113/400] Batch [300/925] G: 0.0878 (enc: 0.2035, dec: 0.0397, adv: 2.2287) D: (cover: 0.0261, enc: 0.1804) PSNR: 38.36dB
+Epoch [113/400] Batch [320/925] G: 0.0747 (enc: 0.1958, dec: 0.0330, adv: 2.8543) D: (cover: 0.1446, enc: 0.0951) PSNR: 38.99dB
+Epoch [113/400] Batch [340/925] G: 0.0792 (enc: 0.2030, dec: 0.0351, adv: 2.8382) D: (cover: 0.1120, enc: 0.0542) PSNR: 38.72dB
+Epoch [113/400] Batch [360/925] G: 0.0780 (enc: 0.1892, dec: 0.0354, adv: 1.6242) D: (cover: 0.0419, enc: 0.2556) PSNR: 39.26dB
+Epoch [113/400] Batch [380/925] G: 0.0721 (enc: 0.1955, dec: 0.0322, adv: 1.8754) D: (cover: 0.0113, enc: 1.2011) PSNR: 38.67dB
+Epoch [113/400] Batch [400/925] G: 0.0761 (enc: 0.1956, dec: 0.0345, adv: 1.2973) D: (cover: 0.4687, enc: 0.0837) PSNR: 38.95dB
+Epoch [113/400] Batch [420/925] G: 0.0783 (enc: 0.2048, dec: 0.0350, adv: 2.0975) D: (cover: 0.2515, enc: 0.1432) PSNR: 38.84dB
+Epoch [113/400] Batch [440/925] G: 0.0771 (enc: 0.1974, dec: 0.0349, adv: 1.3637) D: (cover: 0.0398, enc: 0.5096) PSNR: 39.17dB
+Epoch [113/400] Batch [460/925] G: 0.0805 (enc: 0.1940, dec: 0.0365, adv: 1.6493) D: (cover: 0.0613, enc: 0.2050) PSNR: 38.87dB
+Epoch [113/400] Batch [480/925] G: 0.0738 (enc: 0.2034, dec: 0.0324, adv: 2.9732) D: (cover: 0.2870, enc: 0.0274) PSNR: 38.72dB
+Epoch [113/400] Batch [500/925] G: 0.0792 (enc: 0.1989, dec: 0.0355, adv: 2.2381) D: (cover: 0.0297, enc: 0.1887) PSNR: 39.04dB
+Epoch [113/400] Batch [520/925] G: 0.0840 (enc: 0.1938, dec: 0.0370, adv: 4.1235) D: (cover: 2.4488, enc: 0.0077) PSNR: 39.08dB
+Epoch [113/400] Batch [540/925] G: 0.0782 (enc: 0.2036, dec: 0.0349, adv: 2.3345) D: (cover: 0.1938, enc: 0.1548) PSNR: 38.79dB
+Epoch [113/400] Batch [560/925] G: 0.0736 (enc: 0.2025, dec: 0.0330, adv: 1.5428) D: (cover: 0.1198, enc: 0.3460) PSNR: 38.56dB
+Epoch [113/400] Batch [580/925] G: 0.0807 (enc: 0.2029, dec: 0.0361, adv: 2.3643) D: (cover: 0.0959, enc: 0.1322) PSNR: 38.68dB
+Epoch [113/400] Batch [600/925] G: 0.0819 (enc: 0.1962, dec: 0.0368, adv: 2.3674) D: (cover: 0.0601, enc: 0.0939) PSNR: 38.80dB
+Epoch [113/400] Batch [620/925] G: 0.0778 (enc: 0.1948, dec: 0.0348, adv: 2.2941) D: (cover: 0.2211, enc: 0.0642) PSNR: 38.93dB
+Epoch [113/400] Batch [640/925] G: 0.0848 (enc: 0.1951, dec: 0.0384, adv: 2.0670) D: (cover: 0.1110, enc: 0.1059) PSNR: 38.90dB
+Epoch [113/400] Batch [660/925] G: 0.0831 (enc: 0.1976, dec: 0.0375, adv: 2.2512) D: (cover: 0.0584, enc: 0.1743) PSNR: 38.74dB
+Epoch [113/400] Batch [680/925] G: 0.0798 (enc: 0.1999, dec: 0.0358, adv: 2.2321) D: (cover: 0.0190, enc: 0.1613) PSNR: 38.88dB
+Epoch [113/400] Batch [700/925] G: 0.0842 (enc: 0.1981, dec: 0.0376, adv: 3.0553) D: (cover: 0.4326, enc: 0.0336) PSNR: 38.86dB
+Epoch [113/400] Batch [720/925] G: 0.0761 (enc: 0.1952, dec: 0.0337, adv: 2.8741) D: (cover: 0.3108, enc: 0.0375) PSNR: 38.96dB
+Epoch [113/400] Batch [740/925] G: 0.0835 (enc: 0.2001, dec: 0.0372, adv: 3.0156) D: (cover: 0.0686, enc: 0.0708) PSNR: 38.92dB
+Epoch [113/400] Batch [760/925] G: 0.0748 (enc: 0.1964, dec: 0.0332, adv: 2.4934) D: (cover: 0.0413, enc: 0.1574) PSNR: 39.02dB
+Epoch [113/400] Batch [780/925] G: 0.0833 (enc: 0.1955, dec: 0.0378, adv: 1.7283) D: (cover: 0.0757, enc: 0.1325) PSNR: 38.90dB
+Epoch [113/400] Batch [800/925] G: 0.0757 (enc: 0.1979, dec: 0.0331, adv: 3.4908) D: (cover: 0.5832, enc: 0.0252) PSNR: 38.94dB
+Epoch [113/400] Batch [820/925] G: 0.0838 (enc: 0.1937, dec: 0.0377, adv: 2.6265) D: (cover: 0.1386, enc: 0.0898) PSNR: 39.07dB
+Epoch [113/400] Batch [840/925] G: 0.0870 (enc: 0.1896, dec: 0.0392, adv: 2.8048) D: (cover: 0.0284, enc: 0.0628) PSNR: 39.00dB
+Epoch [113/400] Batch [860/925] G: 0.0811 (enc: 0.1908, dec: 0.0361, adv: 3.2031) D: (cover: 0.2820, enc: 0.0446) PSNR: 38.95dB
+Epoch [113/400] Batch [880/925] G: 0.0748 (enc: 0.1963, dec: 0.0336, adv: 1.6712) D: (cover: 0.0411, enc: 0.1535) PSNR: 38.97dB
+Epoch [113/400] Batch [900/925] G: 0.0796 (enc: 0.2004, dec: 0.0358, adv: 2.0838) D: (cover: 0.0923, enc: 0.0898) PSNR: 38.97dB
+Epoch [113/400] Batch [920/925] G: 0.0923 (enc: 0.1950, dec: 0.0417, adv: 3.0891) D: (cover: 0.1599, enc: 0.0805) PSNR: 39.01dB
+Epoch [113/400] 训练平均损失: 0.0798
+Epoch [113/400] 验证平均损失: 0.0924 enc: 0.2185, dec: 0.0481 PSNR: 38.80dB
+Epoch [113/400] 验证耗时: 10.15s
+Epoch [113/400] 保存验证输出耗时: 0.03s
+Epoch [113/400] 训练耗时: 471.16s
+Epoch [113/400] 保存检查点耗时: 0.00s
+Epoch [113/400] 总耗时: 481.34s
+Epoch [114/400] 第1批数据获取耗时: 1.00s
+Epoch [114/400] Batch [20/925] G: 0.0842 (enc: 0.2018, dec: 0.0380, adv: 2.2190) D: (cover: 0.0438, enc: 0.1700) PSNR: 38.85dB
+Epoch [114/400] Batch [40/925] G: 0.0769 (enc: 0.2008, dec: 0.0339, adv: 3.1621) D: (cover: 0.1145, enc: 0.0488) PSNR: 38.88dB
+Epoch [114/400] Batch [60/925] G: 0.0801 (enc: 0.1919, dec: 0.0358, adv: 2.7317) D: (cover: 0.1294, enc: 0.0833) PSNR: 39.05dB
+Epoch [114/400] Batch [80/925] G: 0.0748 (enc: 0.1981, dec: 0.0332, adv: 2.4839) D: (cover: 0.0943, enc: 0.1119) PSNR: 39.03dB
+Epoch [114/400] Batch [100/925] G: 0.0848 (enc: 0.1926, dec: 0.0380, adv: 2.9531) D: (cover: 0.0464, enc: 0.0793) PSNR: 39.15dB
+Epoch [114/400] Batch [120/925] G: 0.0790 (enc: 0.2002, dec: 0.0354, adv: 2.2375) D: (cover: 0.2701, enc: 0.0725) PSNR: 38.82dB
+Epoch [114/400] Batch [140/925] G: 0.0777 (enc: 0.2034, dec: 0.0346, adv: 2.3285) D: (cover: 0.0887, enc: 0.1389) PSNR: 38.86dB
+Epoch [114/400] Batch [160/925] G: 0.0824 (enc: 0.1955, dec: 0.0371, adv: 2.2327) D: (cover: 0.1048, enc: 0.2328) PSNR: 39.13dB
+Epoch [114/400] Batch [180/925] G: 0.0791 (enc: 0.2054, dec: 0.0349, adv: 3.1001) D: (cover: 0.0495, enc: 0.1858) PSNR: 38.46dB
+Epoch [114/400] Batch [200/925] G: 0.0848 (enc: 0.1957, dec: 0.0384, adv: 2.1427) D: (cover: 0.0217, enc: 0.2520) PSNR: 39.09dB
+Epoch [114/400] Batch [220/925] G: 0.0754 (enc: 0.1967, dec: 0.0339, adv: 1.5838) D: (cover: 0.1015, enc: 0.1479) PSNR: 38.92dB
+Epoch [114/400] Batch [240/925] G: 0.0844 (enc: 0.1920, dec: 0.0379, adv: 2.8551) D: (cover: 0.2666, enc: 0.0439) PSNR: 39.07dB
+Epoch [114/400] Batch [260/925] G: 0.0725 (enc: 0.1984, dec: 0.0320, adv: 2.5608) D: (cover: 0.0417, enc: 0.1448) PSNR: 38.94dB
+Epoch [114/400] Batch [280/925] G: 0.0785 (enc: 0.1888, dec: 0.0353, adv: 2.2847) D: (cover: 0.0626, enc: 0.1053) PSNR: 39.14dB
+Epoch [114/400] Batch [300/925] G: 0.0807 (enc: 0.1991, dec: 0.0364, adv: 1.9561) D: (cover: 0.1371, enc: 0.0959) PSNR: 38.90dB
+Epoch [114/400] Batch [320/925] G: 0.0819 (enc: 0.1956, dec: 0.0364, adv: 3.2710) D: (cover: 0.1364, enc: 0.0550) PSNR: 38.99dB
+Epoch [114/400] Batch [340/925] G: 0.0798 (enc: 0.2021, dec: 0.0357, adv: 2.2440) D: (cover: 0.0134, enc: 0.4105) PSNR: 38.52dB
+Epoch [114/400] Batch [360/925] G: 0.0794 (enc: 0.2024, dec: 0.0360, adv: 1.2688) D: (cover: 0.0517, enc: 0.4179) PSNR: 38.70dB
+Epoch [114/400] Batch [380/925] G: 0.0785 (enc: 0.1964, dec: 0.0351, adv: 2.3778) D: (cover: 0.2691, enc: 0.0769) PSNR: 39.04dB
+Epoch [114/400] Batch [400/925] G: 0.0755 (enc: 0.1991, dec: 0.0338, adv: 2.0274) D: (cover: 0.0663, enc: 0.2474) PSNR: 38.76dB
+Epoch [114/400] Batch [420/925] G: 0.0840 (enc: 0.1946, dec: 0.0381, adv: 1.9484) D: (cover: 0.1034, enc: 0.1562) PSNR: 39.04dB
+Epoch [114/400] Batch [440/925] G: 0.0769 (enc: 0.1995, dec: 0.0342, adv: 2.4634) D: (cover: 0.4095, enc: 0.0465) PSNR: 38.83dB
+Epoch [114/400] Batch [460/925] G: 0.0758 (enc: 0.1977, dec: 0.0346, adv: 0.7826) D: (cover: 0.0154, enc: 1.1687) PSNR: 38.89dB
+Epoch [114/400] Batch [480/925] G: 0.0770 (enc: 0.1977, dec: 0.0342, adv: 2.7043) D: (cover: 0.1087, enc: 0.1642) PSNR: 38.96dB
+Epoch [114/400] Batch [500/925] G: 0.0773 (enc: 0.1997, dec: 0.0338, adv: 3.7695) D: (cover: 0.2421, enc: 0.0456) PSNR: 38.96dB
+Epoch [114/400] Batch [520/925] G: 0.0834 (enc: 0.1980, dec: 0.0375, adv: 2.4783) D: (cover: 0.0498, enc: 0.2400) PSNR: 39.06dB
+Epoch [114/400] Batch [540/925] G: 0.0839 (enc: 0.1927, dec: 0.0377, adv: 2.6245) D: (cover: 0.1325, enc: 0.1275) PSNR: 39.11dB
+Epoch [114/400] Batch [560/925] G: 0.0756 (enc: 0.2033, dec: 0.0336, adv: 2.2063) D: (cover: 0.1018, enc: 0.1290) PSNR: 38.94dB
+Epoch [114/400] Batch [580/925] G: 0.0785 (enc: 0.2006, dec: 0.0347, adv: 3.0881) D: (cover: 0.3309, enc: 0.0313) PSNR: 39.16dB
+Epoch [114/400] Batch [600/925] G: 0.0792 (enc: 0.1969, dec: 0.0356, adv: 2.0870) D: (cover: 0.0655, enc: 0.2024) PSNR: 38.89dB
+Epoch [114/400] Batch [620/925] G: 0.0771 (enc: 0.2023, dec: 0.0342, adv: 2.7213) D: (cover: 0.2715, enc: 0.0659) PSNR: 38.84dB
+Epoch [114/400] Batch [640/925] G: 0.0833 (enc: 0.2018, dec: 0.0377, adv: 1.8718) D: (cover: 0.1187, enc: 0.1498) PSNR: 38.88dB
+Epoch [114/400] Batch [660/925] G: 0.0776 (enc: 0.1984, dec: 0.0345, adv: 2.6181) D: (cover: 0.1286, enc: 0.0663) PSNR: 39.03dB
+Epoch [114/400] Batch [680/925] G: 0.0796 (enc: 0.1965, dec: 0.0355, adv: 2.6295) D: (cover: 0.0376, enc: 0.0933) PSNR: 39.14dB
+Epoch [114/400] Batch [700/925] G: 0.0824 (enc: 0.1940, dec: 0.0371, adv: 2.4483) D: (cover: 0.0654, enc: 0.1089) PSNR: 38.90dB
+Epoch [114/400] Batch [720/925] G: 0.0777 (enc: 0.1925, dec: 0.0354, adv: 1.0416) D: (cover: 0.0141, enc: 0.8158) PSNR: 39.15dB
+Epoch [114/400] Batch [740/925] G: 0.0832 (enc: 0.1926, dec: 0.0377, adv: 1.9892) D: (cover: 0.1403, enc: 0.1168) PSNR: 38.96dB
+Epoch [114/400] Batch [760/925] G: 0.0758 (enc: 0.1965, dec: 0.0337, adv: 2.4842) D: (cover: 0.1123, enc: 0.0648) PSNR: 38.96dB
+Epoch [114/400] Batch [780/925] G: 0.0790 (enc: 0.1955, dec: 0.0352, adv: 2.7251) D: (cover: 0.2830, enc: 0.0373) PSNR: 39.11dB
+Epoch [114/400] Batch [800/925] G: 0.0819 (enc: 0.1981, dec: 0.0365, adv: 3.0008) D: (cover: 0.3247, enc: 0.0340) PSNR: 38.93dB
+Epoch [114/400] Batch [820/925] G: 0.0744 (enc: 0.1968, dec: 0.0327, adv: 3.1501) D: (cover: 0.0985, enc: 0.0488) PSNR: 38.92dB
+Epoch [114/400] Batch [840/925] G: 0.0778 (enc: 0.1951, dec: 0.0348, adv: 2.3047) D: (cover: 0.0405, enc: 0.1425) PSNR: 38.89dB
+Epoch [114/400] Batch [860/925] G: 0.0852 (enc: 0.1979, dec: 0.0382, adv: 2.9547) D: (cover: 0.1097, enc: 0.0464) PSNR: 38.70dB
+Epoch [114/400] Batch [880/925] G: 0.0788 (enc: 0.1932, dec: 0.0350, adv: 2.9902) D: (cover: 0.0925, enc: 0.0500) PSNR: 38.89dB
+Epoch [114/400] Batch [900/925] G: 0.0849 (enc: 0.1942, dec: 0.0383, adv: 2.4362) D: (cover: 0.3573, enc: 0.0718) PSNR: 38.96dB
+Epoch [114/400] Batch [920/925] G: 0.0848 (enc: 0.2013, dec: 0.0379, adv: 2.9020) D: (cover: 0.0901, enc: 0.1017) PSNR: 38.92dB
+Epoch [114/400] 训练平均损失: 0.0801
+Epoch [114/400] 验证平均损失: 0.0909 enc: 0.2046, dec: 0.0324 PSNR: 38.48dB
+Epoch [114/400] 验证耗时: 10.08s
+Epoch [114/400] 保存验证输出耗时: 0.03s
+Epoch [114/400] 训练耗时: 470.94s
+Epoch [114/400] 保存检查点耗时: 0.01s
+Epoch [114/400] 总耗时: 481.07s
+Epoch [115/400] 第1批数据获取耗时: 0.92s
+Epoch [115/400] Batch [20/925] G: 0.0872 (enc: 0.1907, dec: 0.0391, adv: 3.3055) D: (cover: 0.3821, enc: 0.0409) PSNR: 38.78dB
+Epoch [115/400] Batch [40/925] G: 0.0826 (enc: 0.1907, dec: 0.0371, adv: 2.7094) D: (cover: 0.1858, enc: 0.0596) PSNR: 38.95dB
+Epoch [115/400] Batch [60/925] G: 0.0784 (enc: 0.1972, dec: 0.0352, adv: 2.0879) D: (cover: 0.0072, enc: 0.5168) PSNR: 38.90dB
+Epoch [115/400] Batch [80/925] G: 0.0778 (enc: 0.1949, dec: 0.0345, adv: 2.9266) D: (cover: 0.1709, enc: 0.0940) PSNR: 38.80dB
+Epoch [115/400] Batch [100/925] G: 0.0802 (enc: 0.2007, dec: 0.0354, adv: 3.3278) D: (cover: 0.1364, enc: 0.0748) PSNR: 38.83dB
+Epoch [115/400] Batch [120/925] G: 0.0773 (enc: 0.1983, dec: 0.0348, adv: 1.6876) D: (cover: 0.1294, enc: 0.3432) PSNR: 38.74dB
+Epoch [115/400] Batch [140/925] G: 0.0722 (enc: 0.1973, dec: 0.0317, adv: 2.9098) D: (cover: 0.1681, enc: 0.0956) PSNR: 38.80dB
+Epoch [115/400] Batch [160/925] G: 0.0759 (enc: 0.1961, dec: 0.0337, adv: 2.6346) D: (cover: 0.1673, enc: 0.0660) PSNR: 38.78dB
+Epoch [115/400] Batch [180/925] G: 0.0757 (enc: 0.2020, dec: 0.0340, adv: 1.6599) D: (cover: 0.0534, enc: 0.2352) PSNR: 38.79dB
+Epoch [115/400] Batch [200/925] G: 0.0828 (enc: 0.1984, dec: 0.0368, adv: 3.1156) D: (cover: 0.3449, enc: 0.0459) PSNR: 39.03dB
+Epoch [115/400] Batch [220/925] G: 0.0840 (enc: 0.1966, dec: 0.0375, adv: 3.1992) D: (cover: 0.0790, enc: 0.0736) PSNR: 39.15dB
+Epoch [115/400] Batch [240/925] G: 0.0762 (enc: 0.1921, dec: 0.0341, adv: 2.3256) D: (cover: 0.1160, enc: 0.1121) PSNR: 39.04dB
+Epoch [115/400] Batch [260/925] G: 0.0787 (enc: 0.1981, dec: 0.0349, adv: 2.8879) D: (cover: 0.0876, enc: 0.0989) PSNR: 38.84dB
+Epoch [115/400] Batch [280/925] G: 0.0802 (enc: 0.1888, dec: 0.0359, adv: 2.6793) D: (cover: 0.4622, enc: 0.0535) PSNR: 39.01dB
+Epoch [115/400] Batch [300/925] G: 0.0729 (enc: 0.2038, dec: 0.0325, adv: 1.7638) D: (cover: 0.1172, enc: 0.0810) PSNR: 38.95dB
+Epoch [115/400] Batch [320/925] G: 0.0799 (enc: 0.1944, dec: 0.0355, adv: 2.9599) D: (cover: 0.2183, enc: 0.0537) PSNR: 38.76dB
+Epoch [115/400] Batch [340/925] G: 0.0818 (enc: 0.1939, dec: 0.0371, adv: 1.8242) D: (cover: 0.0227, enc: 0.2866) PSNR: 39.06dB
+Epoch [115/400] Batch [360/925] G: 0.0792 (enc: 0.2037, dec: 0.0353, adv: 2.5110) D: (cover: 0.0681, enc: 0.0890) PSNR: 38.66dB
+Epoch [115/400] Batch [380/925] G: 0.0798 (enc: 0.1958, dec: 0.0360, adv: 1.9779) D: (cover: 0.0694, enc: 0.1813) PSNR: 38.85dB
+Epoch [115/400] Batch [400/925] G: 0.0790 (enc: 0.1967, dec: 0.0355, adv: 2.1901) D: (cover: 0.2012, enc: 0.0762) PSNR: 38.86dB
+Epoch [115/400] Batch [420/925] G: 0.0819 (enc: 0.1972, dec: 0.0370, adv: 1.9841) D: (cover: 0.2366, enc: 0.1356) PSNR: 39.02dB
+Epoch [115/400] Batch [440/925] G: 0.0774 (enc: 0.2010, dec: 0.0345, adv: 2.4515) D: (cover: 0.0287, enc: 0.1421) PSNR: 38.68dB
+Epoch [115/400] Batch [460/925] G: 0.0768 (enc: 0.1998, dec: 0.0340, adv: 2.7559) D: (cover: 0.2217, enc: 0.0939) PSNR: 38.79dB
+Epoch [115/400] Batch [480/925] G: 0.0767 (enc: 0.2026, dec: 0.0348, adv: 1.1017) D: (cover: 0.0526, enc: 0.3823) PSNR: 38.70dB
+Epoch [115/400] Batch [500/925] G: 0.0806 (enc: 0.2039, dec: 0.0357, adv: 3.0809) D: (cover: 0.1652, enc: 0.0858) PSNR: 38.68dB
+Epoch [115/400] Batch [520/925] G: 0.0787 (enc: 0.1950, dec: 0.0351, adv: 2.6900) D: (cover: 0.0909, enc: 0.0871) PSNR: 38.83dB
+Epoch [115/400] Batch [540/925] G: 0.0781 (enc: 0.1883, dec: 0.0348, adv: 2.7787) D: (cover: 0.1350, enc: 0.0630) PSNR: 39.17dB
+Epoch [115/400] Batch [560/925] G: 0.0801 (enc: 0.1926, dec: 0.0353, adv: 3.7065) D: (cover: 0.2636, enc: 0.0213) PSNR: 38.92dB
+Epoch [115/400] Batch [580/925] G: 0.0771 (enc: 0.1989, dec: 0.0344, adv: 2.3643) D: (cover: 0.1222, enc: 0.0667) PSNR: 38.78dB
+Epoch [115/400] Batch [600/925] G: 0.0822 (enc: 0.1980, dec: 0.0371, adv: 2.0109) D: (cover: 0.4861, enc: 0.0833) PSNR: 38.58dB
+Epoch [115/400] Batch [620/925] G: 0.0775 (enc: 0.2045, dec: 0.0355, adv: 0.3792) D: (cover: 0.1054, enc: 0.9598) PSNR: 38.85dB
+Epoch [115/400] Batch [640/925] G: 0.0765 (enc: 0.2107, dec: 0.0341, adv: 1.9022) D: (cover: 0.6426, enc: 0.1430) PSNR: 38.49dB
+Epoch [115/400] Batch [660/925] G: 0.0776 (enc: 0.2018, dec: 0.0348, adv: 1.9175) D: (cover: 0.4226, enc: 0.1200) PSNR: 38.36dB
+Epoch [115/400] Batch [680/925] G: 0.0783 (enc: 0.2044, dec: 0.0350, adv: 2.1746) D: (cover: 0.3835, enc: 0.1148) PSNR: 38.71dB
+Epoch [115/400] Batch [700/925] G: 0.0742 (enc: 0.2033, dec: 0.0333, adv: 1.5599) D: (cover: 0.0935, enc: 0.1699) PSNR: 38.94dB
+Epoch [115/400] Batch [720/925] G: 0.0837 (enc: 0.1980, dec: 0.0377, adv: 2.3926) D: (cover: 0.2660, enc: 0.0888) PSNR: 38.87dB
+Epoch [115/400] Batch [740/925] G: 0.0774 (enc: 0.1923, dec: 0.0348, adv: 1.9462) D: (cover: 0.0371, enc: 0.2158) PSNR: 38.98dB
+Epoch [115/400] Batch [760/925] G: 0.0763 (enc: 0.2033, dec: 0.0344, adv: 1.4439) D: (cover: 0.0323, enc: 0.3817) PSNR: 38.91dB
+Epoch [115/400] Batch [780/925] G: 0.0782 (enc: 0.2015, dec: 0.0347, adv: 2.6527) D: (cover: 0.1367, enc: 0.1041) PSNR: 38.84dB
+Epoch [115/400] Batch [800/925] G: 0.0738 (enc: 0.2001, dec: 0.0333, adv: 1.0930) D: (cover: 0.0353, enc: 0.6107) PSNR: 38.90dB
+Epoch [115/400] Batch [820/925] G: 0.0767 (enc: 0.1969, dec: 0.0343, adv: 2.0780) D: (cover: 0.1131, enc: 0.1246) PSNR: 38.95dB
+Epoch [115/400] Batch [840/925] G: 0.0832 (enc: 0.1999, dec: 0.0373, adv: 2.5502) D: (cover: 0.1001, enc: 0.1358) PSNR: 38.86dB
+Epoch [115/400] Batch [860/925] G: 0.0818 (enc: 0.1936, dec: 0.0367, adv: 2.5690) D: (cover: 0.1121, enc: 0.0756) PSNR: 38.93dB
+Epoch [115/400] Batch [880/925] G: 0.0782 (enc: 0.1955, dec: 0.0352, adv: 1.8979) D: (cover: 0.0158, enc: 0.3660) PSNR: 38.85dB
+Epoch [115/400] Batch [900/925] G: 0.0737 (enc: 0.1976, dec: 0.0324, adv: 2.9868) D: (cover: 0.0754, enc: 0.0685) PSNR: 38.98dB
+Epoch [115/400] Batch [920/925] G: 0.0755 (enc: 0.1997, dec: 0.0335, adv: 2.5745) D: (cover: 0.0320, enc: 0.1407) PSNR: 38.72dB
+Epoch [115/400] 训练平均损失: 0.0794
+Epoch [115/400] 验证平均损失: 0.0986 enc: 0.2071, dec: 0.0420 PSNR: 38.26dB
+Epoch [115/400] 验证耗时: 10.27s
+Epoch [115/400] 保存验证输出耗时: 0.03s
+Epoch [115/400] 训练耗时: 470.87s
+Epoch [115/400] 保存检查点耗时: 0.00s
+Epoch [115/400] 总耗时: 481.17s
+Epoch [116/400] 第1批数据获取耗时: 1.51s
+Epoch [116/400] Batch [20/925] G: 0.0819 (enc: 0.2024, dec: 0.0364, adv: 2.9674) D: (cover: 0.1250, enc: 0.0620) PSNR: 38.84dB
+Epoch [116/400] Batch [40/925] G: 0.0740 (enc: 0.1996, dec: 0.0327, adv: 2.4859) D: (cover: 0.1156, enc: 0.0921) PSNR: 38.65dB
+Epoch [116/400] Batch [60/925] G: 0.0774 (enc: 0.2032, dec: 0.0345, adv: 2.3738) D: (cover: 0.4125, enc: 0.0513) PSNR: 39.04dB
+Epoch [116/400] Batch [80/925] G: 0.0730 (enc: 0.1979, dec: 0.0321, adv: 2.8861) D: (cover: 0.3489, enc: 0.0495) PSNR: 38.81dB
+Epoch [116/400] Batch [100/925] G: 0.0726 (enc: 0.1996, dec: 0.0319, adv: 2.7350) D: (cover: 0.5580, enc: 0.0265) PSNR: 38.90dB
+Epoch [116/400] Batch [120/925] G: 0.0781 (enc: 0.1974, dec: 0.0352, adv: 1.9191) D: (cover: 0.0611, enc: 0.2001) PSNR: 38.80dB
+Epoch [116/400] Batch [140/925] G: 0.0782 (enc: 0.2026, dec: 0.0346, adv: 2.9830) D: (cover: 0.0492, enc: 0.0887) PSNR: 38.85dB
+Epoch [116/400] Batch [160/925] G: 0.0830 (enc: 0.1956, dec: 0.0374, adv: 2.3473) D: (cover: 0.3472, enc: 0.0635) PSNR: 38.85dB
+Epoch [116/400] Batch [180/925] G: 0.0786 (enc: 0.1970, dec: 0.0346, adv: 3.4176) D: (cover: 0.2264, enc: 0.0373) PSNR: 38.82dB
+Epoch [116/400] Batch [200/925] G: 0.0744 (enc: 0.2001, dec: 0.0325, adv: 3.3945) D: (cover: 0.1703, enc: 0.1038) PSNR: 39.01dB
+Epoch [116/400] Batch [220/925] G: 0.0805 (enc: 0.1975, dec: 0.0361, adv: 2.3385) D: (cover: 0.1033, enc: 0.0888) PSNR: 38.86dB
+Epoch [116/400] Batch [240/925] G: 0.0847 (enc: 0.1889, dec: 0.0385, adv: 1.9928) D: (cover: 0.0275, enc: 0.1729) PSNR: 39.10dB
+Epoch [116/400] Batch [260/925] G: 0.0818 (enc: 0.1909, dec: 0.0366, adv: 2.7917) D: (cover: 0.1364, enc: 0.0871) PSNR: 39.01dB
+Epoch [116/400] Batch [280/925] G: 0.0845 (enc: 0.2019, dec: 0.0377, adv: 3.0142) D: (cover: 0.9840, enc: 0.0221) PSNR: 38.82dB
+Epoch [116/400] Batch [300/925] G: 0.0828 (enc: 0.1963, dec: 0.0375, adv: 1.8835) D: (cover: 0.1561, enc: 0.2207) PSNR: 38.91dB
+Epoch [116/400] Batch [320/925] G: 0.0852 (enc: 0.1956, dec: 0.0381, adv: 3.2168) D: (cover: 0.9140, enc: 0.0247) PSNR: 38.85dB
+Epoch [116/400] Batch [340/925] G: 0.0757 (enc: 0.1995, dec: 0.0340, adv: 1.6378) D: (cover: 0.0598, enc: 0.3159) PSNR: 38.55dB
+Epoch [116/400] Batch [360/925] G: 0.0763 (enc: 0.1996, dec: 0.0338, adv: 2.7649) D: (cover: 0.0978, enc: 0.1366) PSNR: 38.97dB
+Epoch [116/400] Batch [380/925] G: 0.0863 (enc: 0.2031, dec: 0.0386, adv: 2.9222) D: (cover: 0.0774, enc: 0.0916) PSNR: 38.74dB
+Epoch [116/400] Batch [400/925] G: 0.0765 (enc: 0.1967, dec: 0.0337, adv: 3.1295) D: (cover: 0.1991, enc: 0.0340) PSNR: 38.89dB
+Epoch [116/400] Batch [420/925] G: 0.0753 (enc: 0.1946, dec: 0.0333, adv: 2.7623) D: (cover: 0.0346, enc: 0.1217) PSNR: 38.78dB
+Epoch [116/400] Batch [440/925] G: 0.0785 (enc: 0.1959, dec: 0.0351, adv: 2.4789) D: (cover: 0.2757, enc: 0.0783) PSNR: 38.48dB
+Epoch [116/400] Batch [460/925] G: 0.0837 (enc: 0.1883, dec: 0.0378, adv: 2.5157) D: (cover: 0.2288, enc: 0.0721) PSNR: 38.35dB
+Epoch [116/400] Batch [480/925] G: 0.0754 (enc: 0.1937, dec: 0.0344, adv: 0.7842) D: (cover: 0.0596, enc: 0.4508) PSNR: 38.85dB
+Epoch [116/400] Batch [500/925] G: 0.0760 (enc: 0.1957, dec: 0.0339, adv: 2.4080) D: (cover: 0.2709, enc: 0.1566) PSNR: 38.76dB
+Epoch [116/400] Batch [520/925] G: 0.0740 (enc: 0.1990, dec: 0.0325, adv: 3.0528) D: (cover: 0.2918, enc: 0.0410) PSNR: 38.97dB
+Epoch [116/400] Batch [540/925] G: 0.0819 (enc: 0.1935, dec: 0.0370, adv: 2.1335) D: (cover: 0.0715, enc: 0.1707) PSNR: 38.78dB
+Epoch [116/400] Batch [560/925] G: 0.0837 (enc: 0.1917, dec: 0.0375, adv: 2.8826) D: (cover: 0.1999, enc: 0.0657) PSNR: 39.07dB
+Epoch [116/400] Batch [580/925] G: 0.0775 (enc: 0.1979, dec: 0.0342, adv: 3.1119) D: (cover: 0.0532, enc: 0.1711) PSNR: 38.96dB
+Epoch [116/400] Batch [600/925] G: 0.0757 (enc: 0.1958, dec: 0.0340, adv: 1.8595) D: (cover: 0.0174, enc: 0.3676) PSNR: 39.07dB
+Epoch [116/400] Batch [620/925] G: 0.0730 (enc: 0.1931, dec: 0.0325, adv: 2.2766) D: (cover: 0.0325, enc: 0.1457) PSNR: 38.78dB
+Epoch [116/400] Batch [640/925] G: 0.0856 (enc: 0.1962, dec: 0.0385, adv: 2.7252) D: (cover: 0.0472, enc: 0.1437) PSNR: 38.73dB
+Epoch [116/400] Batch [660/925] G: 0.0799 (enc: 0.1930, dec: 0.0362, adv: 1.6021) D: (cover: 0.1434, enc: 0.1224) PSNR: 39.00dB
+Epoch [116/400] Batch [680/925] G: 0.0789 (enc: 0.1975, dec: 0.0357, adv: 1.6300) D: (cover: 0.1291, enc: 0.1345) PSNR: 38.70dB
+Epoch [116/400] Batch [700/925] G: 0.0784 (enc: 0.1981, dec: 0.0345, adv: 3.5209) D: (cover: 0.3478, enc: 0.0386) PSNR: 38.86dB
+Epoch [116/400] Batch [720/925] G: 0.0795 (enc: 0.1938, dec: 0.0359, adv: 2.0182) D: (cover: 0.0463, enc: 0.1708) PSNR: 38.98dB
+Epoch [116/400] Batch [740/925] G: 0.0791 (enc: 0.1948, dec: 0.0354, adv: 2.3712) D: (cover: 0.0609, enc: 0.2091) PSNR: 38.98dB
+Epoch [116/400] Batch [760/925] G: 0.0805 (enc: 0.1927, dec: 0.0358, adv: 3.1726) D: (cover: 0.1005, enc: 0.0766) PSNR: 38.83dB
+Epoch [116/400] Batch [780/925] G: 0.0736 (enc: 0.1964, dec: 0.0328, adv: 2.0393) D: (cover: 0.4558, enc: 0.0677) PSNR: 38.94dB
+Epoch [116/400] Batch [800/925] G: 0.0842 (enc: 0.1989, dec: 0.0383, adv: 1.6662) D: (cover: 0.0205, enc: 0.3839) PSNR: 38.68dB
+Epoch [116/400] Batch [820/925] G: 0.0737 (enc: 0.1989, dec: 0.0326, adv: 2.4599) D: (cover: 0.0822, enc: 0.1215) PSNR: 38.83dB
+Epoch [116/400] Batch [840/925] G: 0.0789 (enc: 0.1934, dec: 0.0354, adv: 2.2246) D: (cover: 0.2265, enc: 0.0510) PSNR: 38.87dB
+Epoch [116/400] Batch [860/925] G: 0.0853 (enc: 0.1971, dec: 0.0384, adv: 2.5877) D: (cover: 0.1040, enc: 0.1434) PSNR: 38.45dB
+Epoch [116/400] Batch [880/925] G: 0.0806 (enc: 0.1905, dec: 0.0362, adv: 2.3936) D: (cover: 0.1490, enc: 0.1064) PSNR: 39.00dB
+Epoch [116/400] Batch [900/925] G: 0.0801 (enc: 0.1972, dec: 0.0364, adv: 1.2857) D: (cover: 0.0770, enc: 0.1558) PSNR: 38.80dB
+Epoch [116/400] Batch [920/925] G: 0.0792 (enc: 0.2028, dec: 0.0356, adv: 1.8866) D: (cover: 0.0222, enc: 0.2682) PSNR: 38.72dB
+Epoch [116/400] 训练平均损失: 0.0794
+Epoch [116/400] 验证平均损失: 0.0881 enc: 0.2022, dec: 0.0336 PSNR: 38.92dB
+Epoch [116/400] 验证耗时: 9.94s
+Epoch [116/400] 保存验证输出耗时: 0.03s
+Epoch [116/400] 训练耗时: 471.45s
+Epoch [116/400] 保存检查点耗时: 0.00s
+Epoch [116/400] 总耗时: 481.42s
+Epoch [117/400] 第1批数据获取耗时: 1.78s
+Epoch [117/400] Batch [20/925] G: 0.0790 (enc: 0.1946, dec: 0.0349, adv: 3.3211) D: (cover: 0.4777, enc: 0.0158) PSNR: 38.72dB
+Epoch [117/400] Batch [40/925] G: 0.0795 (enc: 0.1992, dec: 0.0355, adv: 2.5927) D: (cover: 0.0847, enc: 0.0877) PSNR: 38.83dB
+Epoch [117/400] Batch [60/925] G: 0.0797 (enc: 0.2011, dec: 0.0356, adv: 2.4653) D: (cover: 0.1881, enc: 0.0652) PSNR: 38.95dB
+Epoch [117/400] Batch [80/925] G: 0.0789 (enc: 0.1942, dec: 0.0355, adv: 2.1586) D: (cover: 0.0668, enc: 0.1620) PSNR: 39.04dB
+Epoch [117/400] Batch [100/925] G: 0.0805 (enc: 0.2028, dec: 0.0357, adv: 3.1246) D: (cover: 0.1116, enc: 0.1051) PSNR: 38.84dB
+Epoch [117/400] Batch [120/925] G: 0.0798 (enc: 0.1922, dec: 0.0356, adv: 2.8092) D: (cover: 0.0883, enc: 0.0752) PSNR: 39.07dB
+Epoch [117/400] Batch [140/925] G: 0.0803 (enc: 0.1932, dec: 0.0363, adv: 1.9545) D: (cover: 0.0684, enc: 0.2196) PSNR: 38.96dB
+Epoch [117/400] Batch [160/925] G: 0.0814 (enc: 0.1940, dec: 0.0368, adv: 1.9018) D: (cover: 0.0247, enc: 0.3654) PSNR: 39.16dB
+Epoch [117/400] Batch [180/925] G: 0.0830 (enc: 0.1992, dec: 0.0374, adv: 2.2850) D: (cover: 0.2082, enc: 0.0825) PSNR: 39.04dB
+Epoch [117/400] Batch [200/925] G: 0.0797 (enc: 0.1923, dec: 0.0357, adv: 2.5330) D: (cover: 0.0373, enc: 0.0962) PSNR: 38.87dB
+Epoch [117/400] Batch [220/925] G: 0.0755 (enc: 0.1997, dec: 0.0333, adv: 2.9717) D: (cover: 0.1248, enc: 0.0540) PSNR: 38.83dB
+Epoch [117/400] Batch [240/925] G: 0.0797 (enc: 0.1940, dec: 0.0361, adv: 1.6741) D: (cover: 0.0199, enc: 0.2532) PSNR: 38.61dB
+Epoch [117/400] Batch [260/925] G: 0.0775 (enc: 0.1956, dec: 0.0343, adv: 3.1019) D: (cover: 0.0839, enc: 0.1778) PSNR: 38.81dB
+Epoch [117/400] Batch [280/925] G: 0.0744 (enc: 0.1967, dec: 0.0332, adv: 2.1607) D: (cover: 0.1249, enc: 0.4068) PSNR: 39.07dB
+Epoch [117/400] Batch [300/925] G: 0.0790 (enc: 0.1981, dec: 0.0357, adv: 1.6193) D: (cover: 0.1485, enc: 0.1948) PSNR: 38.94dB
+Epoch [117/400] Batch [320/925] G: 0.0765 (enc: 0.1937, dec: 0.0347, adv: 1.2031) D: (cover: 0.0469, enc: 0.3646) PSNR: 39.11dB
+Epoch [117/400] Batch [340/925] G: 0.0773 (enc: 0.1953, dec: 0.0344, adv: 2.7387) D: (cover: 0.4066, enc: 0.0580) PSNR: 38.94dB
+Epoch [117/400] Batch [360/925] G: 0.0766 (enc: 0.1933, dec: 0.0343, adv: 2.2381) D: (cover: 0.0254, enc: 0.2301) PSNR: 38.77dB
+Epoch [117/400] Batch [380/925] G: 0.0795 (enc: 0.1958, dec: 0.0356, adv: 2.4644) D: (cover: 0.0383, enc: 0.1265) PSNR: 38.99dB
+Epoch [117/400] Batch [400/925] G: 0.0827 (enc: 0.1984, dec: 0.0378, adv: 1.0650) D: (cover: 0.0574, enc: 0.1887) PSNR: 39.02dB
+Epoch [117/400] Batch [420/925] G: 0.0771 (enc: 0.2029, dec: 0.0345, adv: 2.0531) D: (cover: 0.5623, enc: 0.1083) PSNR: 38.75dB
+Epoch [117/400] Batch [440/925] G: 0.0766 (enc: 0.2043, dec: 0.0343, adv: 1.8625) D: (cover: 0.0883, enc: 0.2690) PSNR: 38.86dB
+Epoch [117/400] Batch [460/925] G: 0.0820 (enc: 0.1943, dec: 0.0366, adv: 2.9893) D: (cover: 0.3728, enc: 0.0310) PSNR: 39.04dB
+Epoch [117/400] Batch [480/925] G: 0.0822 (enc: 0.1964, dec: 0.0372, adv: 1.8437) D: (cover: 0.0197, enc: 0.2794) PSNR: 38.96dB
+Epoch [117/400] Batch [500/925] G: 0.0843 (enc: 0.1966, dec: 0.0375, adv: 3.4232) D: (cover: 0.2571, enc: 0.0512) PSNR: 38.88dB
+Epoch [117/400] Batch [520/925] G: 0.0841 (enc: 0.1907, dec: 0.0373, adv: 3.7144) D: (cover: 0.3683, enc: 0.0381) PSNR: 39.07dB
+Epoch [117/400] Batch [540/925] G: 0.0808 (enc: 0.1957, dec: 0.0363, adv: 2.3929) D: (cover: 0.0352, enc: 0.1819) PSNR: 38.93dB
+Epoch [117/400] Batch [560/925] G: 0.0778 (enc: 0.1970, dec: 0.0344, adv: 3.1341) D: (cover: 0.0863, enc: 0.0584) PSNR: 38.94dB
+Epoch [117/400] Batch [580/925] G: 0.0808 (enc: 0.1896, dec: 0.0366, adv: 2.0071) D: (cover: 0.1609, enc: 0.0971) PSNR: 38.78dB
+Epoch [117/400] Batch [600/925] G: 0.0793 (enc: 0.2024, dec: 0.0350, adv: 3.1886) D: (cover: 0.5965, enc: 0.0300) PSNR: 38.38dB
+Epoch [117/400] Batch [620/925] G: 0.0849 (enc: 0.1962, dec: 0.0384, adv: 2.2683) D: (cover: 0.0558, enc: 0.1591) PSNR: 38.79dB
+Epoch [117/400] Batch [640/925] G: 0.0814 (enc: 0.1983, dec: 0.0364, adv: 2.7076) D: (cover: 0.0893, enc: 0.1220) PSNR: 38.96dB
+Epoch [117/400] Batch [660/925] G: 0.0747 (enc: 0.1925, dec: 0.0336, adv: 1.8087) D: (cover: 0.1691, enc: 0.1658) PSNR: 39.05dB
+Epoch [117/400] Batch [680/925] G: 0.0842 (enc: 0.1982, dec: 0.0371, adv: 4.0410) D: (cover: 0.2035, enc: 0.0318) PSNR: 39.01dB
+Epoch [117/400] Batch [700/925] G: 0.0800 (enc: 0.1943, dec: 0.0360, adv: 2.1647) D: (cover: 0.2341, enc: 0.0826) PSNR: 38.93dB
+Epoch [117/400] Batch [720/925] G: 0.0821 (enc: 0.1974, dec: 0.0366, adv: 3.0337) D: (cover: 0.0717, enc: 0.0866) PSNR: 38.92dB
+Epoch [117/400] Batch [740/925] G: 0.0738 (enc: 0.1988, dec: 0.0326, adv: 2.6878) D: (cover: 0.0126, enc: 0.3641) PSNR: 38.84dB
+Epoch [117/400] Batch [760/925] G: 0.0787 (enc: 0.2026, dec: 0.0358, adv: 1.1555) D: (cover: 0.1743, enc: 0.1062) PSNR: 38.85dB
+Epoch [117/400] Batch [780/925] G: 0.0740 (enc: 0.2055, dec: 0.0327, adv: 2.4268) D: (cover: 0.2782, enc: 0.1959) PSNR: 38.76dB
+Epoch [117/400] Batch [800/925] G: 0.0780 (enc: 0.1964, dec: 0.0348, adv: 2.4372) D: (cover: 0.3260, enc: 0.1393) PSNR: 38.94dB
+Epoch [117/400] Batch [820/925] G: 0.0797 (enc: 0.1933, dec: 0.0353, adv: 3.3413) D: (cover: 0.1777, enc: 0.0687) PSNR: 39.14dB
+Epoch [117/400] Batch [840/925] G: 0.0761 (enc: 0.1939, dec: 0.0336, adv: 3.0866) D: (cover: 0.1170, enc: 0.0615) PSNR: 38.70dB
+Epoch [117/400] Batch [860/925] G: 0.0799 (enc: 0.1979, dec: 0.0359, adv: 2.1035) D: (cover: 0.0575, enc: 0.2022) PSNR: 38.61dB
+Epoch [117/400] Batch [880/925] G: 0.0816 (enc: 0.1996, dec: 0.0361, adv: 3.4198) D: (cover: 0.3616, enc: 0.0562) PSNR: 39.02dB
+Epoch [117/400] Batch [900/925] G: 0.0765 (enc: 0.1976, dec: 0.0340, adv: 2.5982) D: (cover: 0.0451, enc: 0.1166) PSNR: 38.89dB
+Epoch [117/400] Batch [920/925] G: 0.0733 (enc: 0.1979, dec: 0.0320, adv: 3.4910) D: (cover: 0.3748, enc: 0.0200) PSNR: 38.91dB
+Epoch [117/400] 训练平均损失: 0.0794
+Epoch [117/400] 验证平均损失: 0.0902 enc: 0.2048, dec: 0.0468 PSNR: 38.58dB
+Epoch [117/400] 验证耗时: 10.16s
+Epoch [117/400] 保存验证输出耗时: 0.03s
+Epoch [117/400] 训练耗时: 471.77s
+Epoch [117/400] 保存检查点耗时: 0.01s
+Epoch [117/400] 总耗时: 481.98s
+Epoch [118/400] 第1批数据获取耗时: 1.16s
+Epoch [118/400] Batch [20/925] G: 0.0805 (enc: 0.1995, dec: 0.0360, adv: 2.5370) D: (cover: 0.0681, enc: 0.2560) PSNR: 38.76dB
+Epoch [118/400] Batch [40/925] G: 0.0771 (enc: 0.1984, dec: 0.0339, adv: 3.3307) D: (cover: 0.4749, enc: 0.0392) PSNR: 38.92dB
+Epoch [118/400] Batch [60/925] G: 0.0738 (enc: 0.2044, dec: 0.0327, adv: 2.1920) D: (cover: 0.0483, enc: 0.1295) PSNR: 38.81dB
+Epoch [118/400] Batch [80/925] G: 0.0758 (enc: 0.2061, dec: 0.0337, adv: 2.3167) D: (cover: 0.1228, enc: 0.0730) PSNR: 39.07dB
+Epoch [118/400] Batch [100/925] G: 0.0813 (enc: 0.1989, dec: 0.0360, adv: 3.2756) D: (cover: 0.1882, enc: 0.0973) PSNR: 38.95dB
+Epoch [118/400] Batch [120/925] G: 0.0730 (enc: 0.1960, dec: 0.0325, adv: 2.0472) D: (cover: 0.1699, enc: 0.0909) PSNR: 39.04dB
+Epoch [118/400] Batch [140/925] G: 0.0738 (enc: 0.1982, dec: 0.0327, adv: 2.3233) D: (cover: 0.1405, enc: 0.0602) PSNR: 39.01dB
+Epoch [118/400] Batch [160/925] G: 0.0771 (enc: 0.1971, dec: 0.0343, adv: 2.5563) D: (cover: 0.0571, enc: 0.1167) PSNR: 38.81dB
+Epoch [118/400] Batch [180/925] G: 0.0803 (enc: 0.1989, dec: 0.0358, adv: 2.7375) D: (cover: 0.0884, enc: 0.1184) PSNR: 38.87dB
+Epoch [118/400] Batch [200/925] G: 0.0816 (enc: 0.1929, dec: 0.0365, adv: 2.8316) D: (cover: 0.0497, enc: 0.1167) PSNR: 38.86dB
+Epoch [118/400] Batch [220/925] G: 0.0846 (enc: 0.1877, dec: 0.0385, adv: 1.8560) D: (cover: 0.1255, enc: 0.1122) PSNR: 38.93dB
+Epoch [118/400] Batch [240/925] G: 0.0767 (enc: 0.2016, dec: 0.0341, adv: 2.4013) D: (cover: 0.1222, enc: 0.0660) PSNR: 38.61dB
+Epoch [118/400] Batch [260/925] G: 0.1031 (enc: 0.1944, dec: 0.0475, adv: 2.2262) D: (cover: 0.0258, enc: 0.1564) PSNR: 39.05dB
+Epoch [118/400] Batch [280/925] G: 0.0829 (enc: 0.1924, dec: 0.0373, adv: 2.4734) D: (cover: 0.0815, enc: 0.0832) PSNR: 38.96dB
+Epoch [118/400] Batch [300/925] G: 0.0862 (enc: 0.1916, dec: 0.0390, adv: 2.4534) D: (cover: 0.2609, enc: 0.0695) PSNR: 39.08dB
+Epoch [118/400] Batch [320/925] G: 0.0808 (enc: 0.1890, dec: 0.0363, adv: 2.6039) D: (cover: 0.1141, enc: 0.0781) PSNR: 39.09dB
+Epoch [118/400] Batch [340/925] G: 0.0759 (enc: 0.1955, dec: 0.0345, adv: 1.0828) D: (cover: 0.0137, enc: 0.4374) PSNR: 39.02dB
+Epoch [118/400] Batch [360/925] G: 0.0748 (enc: 0.1962, dec: 0.0335, adv: 1.8965) D: (cover: 0.1234, enc: 0.1424) PSNR: 38.88dB
+Epoch [118/400] Batch [380/925] G: 0.0840 (enc: 0.2002, dec: 0.0373, adv: 3.4832) D: (cover: 0.5694, enc: 0.0376) PSNR: 38.84dB
+Epoch [118/400] Batch [400/925] G: 0.0824 (enc: 0.2000, dec: 0.0371, adv: 2.1802) D: (cover: 0.1915, enc: 0.1155) PSNR: 38.94dB
+Epoch [118/400] Batch [420/925] G: 0.0808 (enc: 0.2012, dec: 0.0363, adv: 2.0671) D: (cover: 0.0429, enc: 0.1727) PSNR: 38.86dB
+Epoch [118/400] Batch [440/925] G: 0.0792 (enc: 0.1945, dec: 0.0353, adv: 2.7488) D: (cover: 0.2036, enc: 0.0587) PSNR: 38.77dB
+Epoch [118/400] Batch [460/925] G: 0.0717 (enc: 0.1985, dec: 0.0317, adv: 2.3619) D: (cover: 0.0468, enc: 0.1100) PSNR: 39.16dB
+Epoch [118/400] Batch [480/925] G: 0.0810 (enc: 0.1976, dec: 0.0357, adv: 3.6476) D: (cover: 0.0908, enc: 0.2260) PSNR: 39.04dB
+Epoch [118/400] Batch [500/925] G: 0.0740 (enc: 0.2028, dec: 0.0330, adv: 1.9075) D: (cover: 0.0644, enc: 0.5597) PSNR: 38.82dB
+Epoch [118/400] Batch [520/925] G: 0.0791 (enc: 0.2033, dec: 0.0353, adv: 2.4919) D: (cover: 0.4387, enc: 0.0844) PSNR: 38.82dB
+Epoch [118/400] Batch [540/925] G: 0.0838 (enc: 0.1965, dec: 0.0377, adv: 2.4493) D: (cover: 0.2482, enc: 0.0565) PSNR: 38.82dB
+Epoch [118/400] Batch [560/925] G: 0.0725 (enc: 0.1974, dec: 0.0319, adv: 2.6473) D: (cover: 0.0827, enc: 0.1538) PSNR: 38.95dB
+Epoch [118/400] Batch [580/925] G: 0.0795 (enc: 0.1930, dec: 0.0355, adv: 2.7361) D: (cover: 0.1262, enc: 0.1131) PSNR: 39.01dB
+Epoch [118/400] Batch [600/925] G: 0.0808 (enc: 0.2009, dec: 0.0362, adv: 2.2799) D: (cover: 0.3193, enc: 0.0596) PSNR: 38.73dB
+Epoch [118/400] Batch [620/925] G: 0.0818 (enc: 0.1961, dec: 0.0367, adv: 2.5742) D: (cover: 0.2561, enc: 0.0616) PSNR: 38.93dB
+Epoch [118/400] Batch [640/925] G: 0.0770 (enc: 0.1970, dec: 0.0347, adv: 1.6346) D: (cover: 0.0393, enc: 0.1985) PSNR: 38.81dB
+Epoch [118/400] Batch [660/925] G: 0.0897 (enc: 0.1964, dec: 0.0410, adv: 1.7557) D: (cover: 0.0548, enc: 0.1988) PSNR: 39.24dB
+Epoch [118/400] Batch [680/925] G: 0.0802 (enc: 0.1940, dec: 0.0361, adv: 2.0695) D: (cover: 0.1167, enc: 0.1324) PSNR: 39.06dB
+Epoch [118/400] Batch [700/925] G: 0.0784 (enc: 0.1945, dec: 0.0351, adv: 2.3456) D: (cover: 0.0483, enc: 0.1053) PSNR: 38.84dB
+Epoch [118/400] Batch [720/925] G: 0.0757 (enc: 0.1967, dec: 0.0338, adv: 2.1563) D: (cover: 0.0308, enc: 0.1790) PSNR: 39.06dB
+Epoch [118/400] Batch [740/925] G: 0.0745 (enc: 0.2009, dec: 0.0330, adv: 2.4983) D: (cover: 0.0271, enc: 0.1638) PSNR: 39.07dB
+Epoch [118/400] Batch [760/925] G: 0.0834 (enc: 0.1904, dec: 0.0380, adv: 1.8028) D: (cover: 0.0581, enc: 0.3106) PSNR: 38.89dB
+Epoch [118/400] Batch [780/925] G: 0.0846 (enc: 0.1919, dec: 0.0377, adv: 3.4907) D: (cover: 0.1932, enc: 0.0576) PSNR: 39.13dB
+Epoch [118/400] Batch [800/925] G: 0.0838 (enc: 0.1984, dec: 0.0370, adv: 3.9145) D: (cover: 0.9042, enc: 0.0384) PSNR: 39.10dB
+Epoch [118/400] Batch [820/925] G: 0.0778 (enc: 0.2002, dec: 0.0350, adv: 1.7543) D: (cover: 0.0742, enc: 0.2379) PSNR: 38.72dB
+Epoch [118/400] Batch [840/925] G: 0.0786 (enc: 0.2037, dec: 0.0352, adv: 2.1400) D: (cover: 0.5042, enc: 0.0375) PSNR: 38.84dB
+Epoch [118/400] Batch [860/925] G: 0.0746 (enc: 0.2117, dec: 0.0334, adv: 1.4975) D: (cover: 0.0769, enc: 0.4607) PSNR: 38.71dB
+Epoch [118/400] Batch [880/925] G: 0.0800 (enc: 0.1962, dec: 0.0361, adv: 2.0200) D: (cover: 0.0661, enc: 0.3158) PSNR: 39.14dB
+Epoch [118/400] Batch [900/925] G: 0.0786 (enc: 0.1998, dec: 0.0355, adv: 1.5561) D: (cover: 0.0833, enc: 0.2359) PSNR: 38.82dB
+Epoch [118/400] Batch [920/925] G: 0.1130 (enc: 0.1970, dec: 0.0520, adv: 3.1273) D: (cover: 0.5291, enc: 0.0307) PSNR: 39.01dB
+Epoch [118/400] 训练平均损失: 0.0793
+Epoch [118/400] 验证平均损失: 0.0873 enc: 0.1980, dec: 0.0432 PSNR: 38.78dB
+Epoch [118/400] 验证耗时: 10.15s
+Epoch [118/400] 保存验证输出耗时: 0.03s
+Epoch [118/400] 训练耗时: 471.10s
+Epoch [118/400] 保存检查点耗时: 0.00s
+Epoch [118/400] 总耗时: 481.29s
+Epoch [119/400] 第1批数据获取耗时: 1.21s
+Epoch [119/400] Batch [20/925] G: 0.0705 (enc: 0.2003, dec: 0.0315, adv: 1.5696) D: (cover: 0.0754, enc: 0.3730) PSNR: 38.97dB
+Epoch [119/400] Batch [40/925] G: 0.0770 (enc: 0.1970, dec: 0.0341, adv: 2.9749) D: (cover: 0.2224, enc: 0.0548) PSNR: 38.76dB
+Epoch [119/400] Batch [60/925] G: 0.0799 (enc: 0.1956, dec: 0.0357, adv: 2.6354) D: (cover: 0.0151, enc: 0.1467) PSNR: 38.94dB
+Epoch [119/400] Batch [80/925] G: 0.0771 (enc: 0.1984, dec: 0.0341, adv: 3.0088) D: (cover: 0.0344, enc: 0.0624) PSNR: 38.95dB
+Epoch [119/400] Batch [100/925] G: 0.0774 (enc: 0.1959, dec: 0.0344, adv: 2.6874) D: (cover: 0.1243, enc: 0.0699) PSNR: 38.76dB
+Epoch [119/400] Batch [120/925] G: 0.0800 (enc: 0.1938, dec: 0.0354, adv: 3.3370) D: (cover: 0.1605, enc: 0.0454) PSNR: 38.50dB
+Epoch [119/400] Batch [140/925] G: 0.0774 (enc: 0.1934, dec: 0.0346, adv: 2.3407) D: (cover: 0.1756, enc: 0.0821) PSNR: 38.87dB
+Epoch [119/400] Batch [160/925] G: 0.0857 (enc: 0.1879, dec: 0.0386, adv: 2.8599) D: (cover: 0.1691, enc: 0.0644) PSNR: 38.93dB
+Epoch [119/400] Batch [180/925] G: 0.0743 (enc: 0.2030, dec: 0.0323, adv: 3.5495) D: (cover: 1.5090, enc: 0.0491) PSNR: 38.53dB
+Epoch [119/400] Batch [200/925] G: 0.0767 (enc: 0.1959, dec: 0.0339, adv: 3.0611) D: (cover: 0.1105, enc: 0.1441) PSNR: 38.94dB
+Epoch [119/400] Batch [220/925] G: 0.0796 (enc: 0.2036, dec: 0.0357, adv: 2.0917) D: (cover: 0.1847, enc: 0.1195) PSNR: 38.77dB
+Epoch [119/400] Batch [240/925] G: 0.0750 (enc: 0.1889, dec: 0.0331, adv: 3.1166) D: (cover: 0.2370, enc: 0.0527) PSNR: 39.12dB
+Epoch [119/400] Batch [260/925] G: 0.0833 (enc: 0.1930, dec: 0.0374, adv: 2.6781) D: (cover: 0.0305, enc: 0.1662) PSNR: 38.97dB
+Epoch [119/400] Batch [280/925] G: 0.0819 (enc: 0.1970, dec: 0.0370, adv: 1.9034) D: (cover: 0.0895, enc: 0.1860) PSNR: 38.78dB
+Epoch [119/400] Batch [300/925] G: 0.0791 (enc: 0.1921, dec: 0.0351, adv: 3.1971) D: (cover: 0.1148, enc: 0.0899) PSNR: 38.55dB
+Epoch [119/400] Batch [320/925] G: 0.0738 (enc: 0.1949, dec: 0.0324, adv: 3.0820) D: (cover: 0.0520, enc: 0.0532) PSNR: 38.70dB
+Epoch [119/400] Batch [340/925] G: 0.0810 (enc: 0.1933, dec: 0.0360, adv: 3.2007) D: (cover: 0.2814, enc: 0.0246) PSNR: 38.86dB
+Epoch [119/400] Batch [360/925] G: 0.0807 (enc: 0.1999, dec: 0.0364, adv: 1.9478) D: (cover: 0.0162, enc: 0.1997) PSNR: 38.66dB
+Epoch [119/400] Batch [380/925] G: 0.0799 (enc: 0.1932, dec: 0.0355, adv: 3.1073) D: (cover: 0.0607, enc: 0.0668) PSNR: 39.09dB
+Epoch [119/400] Batch [400/925] G: 0.0790 (enc: 0.1889, dec: 0.0354, adv: 2.4532) D: (cover: 0.0214, enc: 0.2020) PSNR: 39.08dB
+Epoch [119/400] Batch [420/925] G: 0.0819 (enc: 0.1928, dec: 0.0361, adv: 3.8836) D: (cover: 0.2531, enc: 0.0293) PSNR: 38.87dB
+Epoch [119/400] Batch [440/925] G: 0.0844 (enc: 0.1935, dec: 0.0383, adv: 2.0318) D: (cover: 0.0538, enc: 0.1176) PSNR: 38.80dB
+Epoch [119/400] Batch [460/925] G: 0.0783 (enc: 0.1977, dec: 0.0344, adv: 3.5626) D: (cover: 0.1105, enc: 0.0496) PSNR: 39.26dB
+Epoch [119/400] Batch [480/925] G: 0.0741 (enc: 0.2063, dec: 0.0336, adv: 0.8314) D: (cover: 0.0125, enc: 1.9092) PSNR: 38.90dB
+Epoch [119/400] Batch [500/925] G: 0.0764 (enc: 0.1974, dec: 0.0343, adv: 1.8308) D: (cover: 0.3889, enc: 0.1527) PSNR: 39.00dB
+Epoch [119/400] Batch [520/925] G: 0.0739 (enc: 0.1995, dec: 0.0327, adv: 2.6034) D: (cover: 0.2917, enc: 0.0622) PSNR: 38.95dB
+Epoch [119/400] Batch [540/925] G: 0.0707 (enc: 0.2022, dec: 0.0313, adv: 2.0641) D: (cover: 0.0980, enc: 0.1284) PSNR: 38.89dB
+Epoch [119/400] Batch [560/925] G: 0.0748 (enc: 0.2005, dec: 0.0330, adv: 2.7977) D: (cover: 0.0445, enc: 0.0925) PSNR: 38.92dB
+Epoch [119/400] Batch [580/925] G: 0.0716 (enc: 0.1965, dec: 0.0320, adv: 1.7634) D: (cover: 0.1788, enc: 0.2362) PSNR: 38.97dB
+Epoch [119/400] Batch [600/925] G: 0.0805 (enc: 0.1978, dec: 0.0359, adv: 2.7780) D: (cover: 0.0972, enc: 0.0787) PSNR: 39.02dB
+Epoch [119/400] Batch [620/925] G: 0.0848 (enc: 0.1926, dec: 0.0381, adv: 2.8579) D: (cover: 0.1683, enc: 0.0690) PSNR: 38.87dB
+Epoch [119/400] Batch [640/925] G: 0.0768 (enc: 0.2006, dec: 0.0343, adv: 2.1827) D: (cover: 0.0735, enc: 0.1153) PSNR: 38.90dB
+Epoch [119/400] Batch [660/925] G: 0.0770 (enc: 0.1997, dec: 0.0348, adv: 1.3012) D: (cover: 0.0268, enc: 0.7121) PSNR: 38.66dB
+Epoch [119/400] Batch [680/925] G: 0.0789 (enc: 0.2005, dec: 0.0347, adv: 3.5210) D: (cover: 2.1192, enc: 0.0171) PSNR: 38.61dB
+Epoch [119/400] Batch [700/925] G: 0.0732 (enc: 0.2001, dec: 0.0323, adv: 2.5853) D: (cover: 0.2071, enc: 0.1037) PSNR: 38.98dB
+Epoch [119/400] Batch [720/925] G: 0.0746 (enc: 0.1927, dec: 0.0335, adv: 1.8166) D: (cover: 0.0832, enc: 0.2480) PSNR: 38.70dB
+Epoch [119/400] Batch [740/925] G: 0.0781 (enc: 0.2015, dec: 0.0346, adv: 2.9200) D: (cover: 0.8273, enc: 0.0291) PSNR: 38.76dB
+Epoch [119/400] Batch [760/925] G: 0.0756 (enc: 0.1991, dec: 0.0334, adv: 2.8193) D: (cover: 0.2191, enc: 0.0430) PSNR: 38.83dB
+Epoch [119/400] Batch [780/925] G: 0.0795 (enc: 0.1891, dec: 0.0355, adv: 2.8717) D: (cover: 0.1364, enc: 0.0784) PSNR: 39.27dB
+Epoch [119/400] Batch [800/925] G: 0.0766 (enc: 0.1987, dec: 0.0334, adv: 3.7235) D: (cover: 0.1368, enc: 0.0349) PSNR: 38.77dB
+Epoch [119/400] Batch [820/925] G: 0.0746 (enc: 0.1998, dec: 0.0332, adv: 2.1135) D: (cover: 0.0255, enc: 0.1693) PSNR: 38.85dB
+Epoch [119/400] Batch [840/925] G: 0.0798 (enc: 0.1920, dec: 0.0357, adv: 2.7311) D: (cover: 0.0279, enc: 0.0995) PSNR: 38.88dB
+Epoch [119/400] Batch [860/925] G: 0.0762 (enc: 0.1959, dec: 0.0342, adv: 1.8985) D: (cover: 0.0308, enc: 0.1758) PSNR: 38.90dB
+Epoch [119/400] Batch [880/925] G: 0.0810 (enc: 0.1992, dec: 0.0363, adv: 2.5646) D: (cover: 0.1110, enc: 0.1243) PSNR: 38.54dB
+Epoch [119/400] Batch [900/925] G: 0.0797 (enc: 0.1926, dec: 0.0357, adv: 2.4328) D: (cover: 0.0703, enc: 0.1058) PSNR: 38.80dB
+Epoch [119/400] Batch [920/925] G: 0.0845 (enc: 0.1874, dec: 0.0385, adv: 1.8989) D: (cover: 0.0525, enc: 0.1537) PSNR: 38.95dB
+Epoch [119/400] 训练平均损失: 0.0790
+Epoch [119/400] 验证平均损失: 0.0879 enc: 0.1942, dec: 0.0410 PSNR: 38.66dB
+Epoch [119/400] 验证耗时: 9.94s
+Epoch [119/400] 保存验证输出耗时: 0.03s
+Epoch [119/400] 训练耗时: 471.22s
+Epoch [119/400] 保存检查点耗时: 0.00s
+Epoch [119/400] 总耗时: 481.19s
+Epoch [120/400] 第1批数据获取耗时: 1.15s
+Epoch [120/400] Batch [20/925] G: 0.0772 (enc: 0.1953, dec: 0.0343, adv: 2.8135) D: (cover: 0.0341, enc: 0.0498) PSNR: 39.04dB
+Epoch [120/400] Batch [40/925] G: 0.0839 (enc: 0.1896, dec: 0.0380, adv: 2.3026) D: (cover: 0.0884, enc: 0.0687) PSNR: 39.09dB
+Epoch [120/400] Batch [60/925] G: 0.0751 (enc: 0.1919, dec: 0.0334, adv: 2.5315) D: (cover: 0.2014, enc: 0.0598) PSNR: 38.88dB
+Epoch [120/400] Batch [80/925] G: 0.0785 (enc: 0.1943, dec: 0.0352, adv: 2.2704) D: (cover: 0.0262, enc: 0.1943) PSNR: 39.12dB
+Epoch [120/400] Batch [100/925] G: 0.0783 (enc: 0.1944, dec: 0.0343, adv: 3.9636) D: (cover: 0.1327, enc: 0.0760) PSNR: 38.95dB
+Epoch [120/400] Batch [120/925] G: 0.0801 (enc: 0.1989, dec: 0.0358, adv: 2.5111) D: (cover: 0.3796, enc: 0.1153) PSNR: 38.75dB
+Epoch [120/400] Batch [140/925] G: 0.0798 (enc: 0.1959, dec: 0.0357, adv: 2.4194) D: (cover: 0.1534, enc: 0.2428) PSNR: 38.80dB
+Epoch [120/400] Batch [160/925] G: 0.0787 (enc: 0.1976, dec: 0.0356, adv: 1.5884) D: (cover: 0.1019, enc: 0.2147) PSNR: 38.82dB
+Epoch [120/400] Batch [180/925] G: 0.0825 (enc: 0.1953, dec: 0.0369, adv: 2.7610) D: (cover: 0.0786, enc: 0.0896) PSNR: 38.75dB
+Epoch [120/400] Batch [200/925] G: 0.0798 (enc: 0.1955, dec: 0.0357, adv: 2.5708) D: (cover: 0.0232, enc: 0.2726) PSNR: 38.70dB
+Epoch [120/400] Batch [220/925] G: 0.0793 (enc: 0.1947, dec: 0.0350, adv: 3.3670) D: (cover: 0.1158, enc: 0.0441) PSNR: 38.96dB
+Epoch [120/400] Batch [240/925] G: 0.0843 (enc: 0.1996, dec: 0.0373, adv: 3.6709) D: (cover: 0.1507, enc: 0.0515) PSNR: 38.76dB
+Epoch [120/400] Batch [260/925] G: 0.0868 (enc: 0.1984, dec: 0.0396, adv: 1.6228) D: (cover: 0.0904, enc: 0.2938) PSNR: 38.90dB
+Epoch [120/400] Batch [280/925] G: 0.0787 (enc: 0.1984, dec: 0.0349, adv: 3.0159) D: (cover: 0.2060, enc: 0.0570) PSNR: 38.72dB
+Epoch [120/400] Batch [300/925] G: 0.0818 (enc: 0.1925, dec: 0.0370, adv: 1.9757) D: (cover: 0.0527, enc: 0.1472) PSNR: 39.00dB
+Epoch [120/400] Batch [320/925] G: 0.0814 (enc: 0.1929, dec: 0.0362, adv: 3.2324) D: (cover: 0.8570, enc: 0.0247) PSNR: 39.16dB
+Epoch [120/400] Batch [340/925] G: 0.0855 (enc: 0.1930, dec: 0.0386, adv: 2.4191) D: (cover: 0.0374, enc: 0.2741) PSNR: 38.78dB
+Epoch [120/400] Batch [360/925] G: 0.0781 (enc: 0.1945, dec: 0.0349, adv: 2.3562) D: (cover: 0.0345, enc: 0.1235) PSNR: 38.97dB
+Epoch [120/400] Batch [380/925] G: 0.0809 (enc: 0.1912, dec: 0.0362, adv: 2.7181) D: (cover: 0.0292, enc: 0.1684) PSNR: 38.96dB
+Epoch [120/400] Batch [400/925] G: 0.0856 (enc: 0.1997, dec: 0.0383, adv: 2.9654) D: (cover: 0.1139, enc: 0.0985) PSNR: 38.94dB
+Epoch [120/400] Batch [420/925] G: 0.0856 (enc: 0.1888, dec: 0.0386, adv: 2.6882) D: (cover: 0.0903, enc: 0.1304) PSNR: 39.26dB
+Epoch [120/400] Batch [440/925] G: 0.0793 (enc: 0.1951, dec: 0.0356, adv: 2.1695) D: (cover: 0.0352, enc: 0.2325) PSNR: 39.16dB
+Epoch [120/400] Batch [460/925] G: 0.0794 (enc: 0.2010, dec: 0.0356, adv: 2.2198) D: (cover: 0.0399, enc: 0.1289) PSNR: 38.96dB
+Epoch [120/400] Batch [480/925] G: 0.0870 (enc: 0.1979, dec: 0.0389, adv: 3.2026) D: (cover: 0.1520, enc: 0.0516) PSNR: 38.86dB
+Epoch [120/400] Batch [500/925] G: 0.0740 (enc: 0.2007, dec: 0.0331, adv: 1.7564) D: (cover: 0.1193, enc: 0.1482) PSNR: 39.03dB
+Epoch [120/400] Batch [520/925] G: 0.0788 (enc: 0.2007, dec: 0.0354, adv: 2.1122) D: (cover: 0.1452, enc: 0.1304) PSNR: 39.03dB
+Epoch [120/400] Batch [540/925] G: 0.0874 (enc: 0.1986, dec: 0.0397, adv: 2.0168) D: (cover: 0.2749, enc: 0.1410) PSNR: 38.79dB
+Epoch [120/400] Batch [560/925] G: 0.0793 (enc: 0.1944, dec: 0.0353, adv: 2.8041) D: (cover: 0.1035, enc: 0.1567) PSNR: 38.87dB
+Epoch [120/400] Batch [580/925] G: 0.0842 (enc: 0.1960, dec: 0.0374, adv: 3.5654) D: (cover: 0.0574, enc: 0.0964) PSNR: 38.80dB
+Epoch [120/400] Batch [600/925] G: 0.0760 (enc: 0.1966, dec: 0.0344, adv: 1.3106) D: (cover: 0.0457, enc: 0.3943) PSNR: 38.66dB
+Epoch [120/400] Batch [620/925] G: 0.0743 (enc: 0.1980, dec: 0.0334, adv: 1.4982) D: (cover: 0.0479, enc: 0.2418) PSNR: 38.98dB
+Epoch [120/400] Batch [640/925] G: 0.0787 (enc: 0.2018, dec: 0.0354, adv: 1.8527) D: (cover: 0.1065, enc: 0.2344) PSNR: 38.92dB
+Epoch [120/400] Batch [660/925] G: 0.0749 (enc: 0.1983, dec: 0.0330, adv: 2.9727) D: (cover: 0.2509, enc: 0.0537) PSNR: 38.97dB
+Epoch [120/400] Batch [680/925] G: 0.0743 (enc: 0.1991, dec: 0.0329, adv: 2.6258) D: (cover: 0.1324, enc: 0.0697) PSNR: 38.76dB
+Epoch [120/400] Batch [700/925] G: 0.0839 (enc: 0.1975, dec: 0.0377, adv: 2.6439) D: (cover: 0.1443, enc: 0.0405) PSNR: 38.99dB
+Epoch [120/400] Batch [720/925] G: 0.0767 (enc: 0.1967, dec: 0.0339, adv: 2.9313) D: (cover: 0.3187, enc: 0.0403) PSNR: 38.73dB
+Epoch [120/400] Batch [740/925] G: 0.0751 (enc: 0.1980, dec: 0.0337, adv: 1.8814) D: (cover: 0.0203, enc: 0.2070) PSNR: 38.89dB
+Epoch [120/400] Batch [760/925] G: 0.0840 (enc: 0.1953, dec: 0.0381, adv: 1.8220) D: (cover: 0.0182, enc: 0.2559) PSNR: 39.01dB
+Epoch [120/400] Batch [780/925] G: 0.0854 (enc: 0.1915, dec: 0.0390, adv: 1.5806) D: (cover: 0.1239, enc: 0.2297) PSNR: 39.11dB
+Epoch [120/400] Batch [800/925] G: 0.0751 (enc: 0.2005, dec: 0.0332, adv: 2.6279) D: (cover: 0.0321, enc: 0.2331) PSNR: 38.67dB
+Epoch [120/400] Batch [820/925] G: 0.0798 (enc: 0.1944, dec: 0.0360, adv: 2.0730) D: (cover: 0.1668, enc: 0.1004) PSNR: 39.12dB
+Epoch [120/400] Batch [840/925] G: 0.0837 (enc: 0.1889, dec: 0.0381, adv: 1.7635) D: (cover: 0.0165, enc: 0.2753) PSNR: 38.99dB
+Epoch [120/400] Batch [860/925] G: 0.0741 (enc: 0.2006, dec: 0.0321, adv: 3.8019) D: (cover: 0.6609, enc: 0.0209) PSNR: 38.90dB
+Epoch [120/400] Batch [880/925] G: 0.0842 (enc: 0.1908, dec: 0.0375, adv: 3.3491) D: (cover: 0.2074, enc: 0.0288) PSNR: 38.94dB
+Epoch [120/400] Batch [900/925] G: 0.0812 (enc: 0.1912, dec: 0.0365, adv: 2.4183) D: (cover: 0.3233, enc: 0.0613) PSNR: 38.86dB
+Epoch [120/400] Batch [920/925] G: 0.0790 (enc: 0.1974, dec: 0.0353, adv: 2.4614) D: (cover: 0.7903, enc: 0.0276) PSNR: 39.03dB
+Epoch [120/400] 训练平均损失: 0.0792
+Epoch [120/400] 验证平均损失: 0.0856 enc: 0.1940, dec: 0.0363 PSNR: 38.92dB
+Epoch [120/400] 验证耗时: 9.77s
+Epoch [120/400] 保存验证输出耗时: 0.03s
+Epoch [120/400] 训练耗时: 471.18s
+Epoch [120/400] 保存检查点耗时: 0.01s
+Epoch [120/400] 总耗时: 481.00s
+Epoch [121/400] 第1批数据获取耗时: 0.74s
+Epoch [121/400] Batch [20/925] G: 0.0773 (enc: 0.2049, dec: 0.0343, adv: 2.4430) D: (cover: 0.1311, enc: 0.0764) PSNR: 38.34dB
+Epoch [121/400] Batch [40/925] G: 0.0802 (enc: 0.1993, dec: 0.0357, adv: 2.8669) D: (cover: 0.2012, enc: 0.0483) PSNR: 38.69dB
+Epoch [121/400] Batch [60/925] G: 0.0770 (enc: 0.1957, dec: 0.0342, adv: 2.8199) D: (cover: 0.1384, enc: 0.0661) PSNR: 38.81dB
+Epoch [121/400] Batch [80/925] G: 0.0803 (enc: 0.1960, dec: 0.0358, adv: 2.8227) D: (cover: 0.0593, enc: 0.1362) PSNR: 38.64dB
+Epoch [121/400] Batch [100/925] G: 0.0792 (enc: 0.1977, dec: 0.0352, adv: 2.7464) D: (cover: 0.1896, enc: 0.1026) PSNR: 38.56dB
+Epoch [121/400] Batch [120/925] G: 0.0761 (enc: 0.1975, dec: 0.0341, adv: 2.0445) D: (cover: 0.0382, enc: 0.2147) PSNR: 39.13dB
+Epoch [121/400] Batch [140/925] G: 0.0803 (enc: 0.1989, dec: 0.0358, adv: 2.8637) D: (cover: 0.0266, enc: 0.1635) PSNR: 38.52dB
+Epoch [121/400] Batch [160/925] G: 0.0785 (enc: 0.1974, dec: 0.0349, adv: 2.8218) D: (cover: 0.1377, enc: 0.0545) PSNR: 38.81dB
+Epoch [121/400] Batch [180/925] G: 0.0827 (enc: 0.1888, dec: 0.0371, adv: 2.7676) D: (cover: 0.3245, enc: 0.0697) PSNR: 38.90dB
+Epoch [121/400] Batch [200/925] G: 0.0782 (enc: 0.1957, dec: 0.0350, adv: 2.4239) D: (cover: 0.0277, enc: 0.2318) PSNR: 38.99dB
+Epoch [121/400] Batch [220/925] G: 0.0797 (enc: 0.1966, dec: 0.0353, adv: 3.1278) D: (cover: 0.6070, enc: 0.0411) PSNR: 38.84dB
+Epoch [121/400] Batch [240/925] G: 0.0793 (enc: 0.1954, dec: 0.0352, adv: 2.9757) D: (cover: 0.4440, enc: 0.0277) PSNR: 38.80dB
+Epoch [121/400] Batch [260/925] G: 0.0800 (enc: 0.2008, dec: 0.0356, adv: 2.7313) D: (cover: 0.1472, enc: 0.0745) PSNR: 38.58dB
+Epoch [121/400] Batch [280/925] G: 0.0748 (enc: 0.1980, dec: 0.0335, adv: 1.9837) D: (cover: 0.0432, enc: 0.1725) PSNR: 38.84dB
+Epoch [121/400] Batch [300/925] G: 0.0744 (enc: 0.1983, dec: 0.0332, adv: 1.9196) D: (cover: 0.0455, enc: 0.1867) PSNR: 39.04dB
+Epoch [121/400] Batch [320/925] G: 0.0764 (enc: 0.1957, dec: 0.0336, adv: 3.3213) D: (cover: 0.2159, enc: 0.0271) PSNR: 38.88dB
+Epoch [121/400] Batch [340/925] G: 0.0798 (enc: 0.1981, dec: 0.0356, adv: 2.6995) D: (cover: 0.0631, enc: 0.0781) PSNR: 38.90dB
+Epoch [121/400] Batch [360/925] G: 0.0788 (enc: 0.1942, dec: 0.0351, adv: 2.7227) D: (cover: 0.0163, enc: 0.1329) PSNR: 39.15dB
+Epoch [121/400] Batch [380/925] G: 0.0793 (enc: 0.1971, dec: 0.0352, adv: 2.9815) D: (cover: 0.2861, enc: 0.0364) PSNR: 38.88dB
+Epoch [121/400] Batch [400/925] G: 0.0767 (enc: 0.1940, dec: 0.0338, adv: 3.2073) D: (cover: 0.3816, enc: 0.0421) PSNR: 39.12dB
+Epoch [121/400] Batch [420/925] G: 0.0765 (enc: 0.2046, dec: 0.0341, adv: 2.1395) D: (cover: 0.8591, enc: 0.0837) PSNR: 38.85dB
+Epoch [121/400] Batch [440/925] G: 0.0734 (enc: 0.2087, dec: 0.0327, adv: 1.8197) D: (cover: 0.2993, enc: 0.1387) PSNR: 38.60dB
+Epoch [121/400] Batch [460/925] G: 0.0789 (enc: 0.2020, dec: 0.0355, adv: 1.8468) D: (cover: 0.0391, enc: 0.4759) PSNR: 38.64dB
+Epoch [121/400] Batch [480/925] G: 0.0823 (enc: 0.1976, dec: 0.0368, adv: 2.7165) D: (cover: 0.2169, enc: 0.0921) PSNR: 38.93dB
+Epoch [121/400] Batch [500/925] G: 0.0773 (enc: 0.1982, dec: 0.0345, adv: 2.3260) D: (cover: 0.0920, enc: 0.1318) PSNR: 38.94dB
+Epoch [121/400] Batch [520/925] G: 0.0779 (enc: 0.2003, dec: 0.0344, adv: 3.1923) D: (cover: 0.0677, enc: 0.0533) PSNR: 38.83dB
+Epoch [121/400] Batch [540/925] G: 0.0802 (enc: 0.1914, dec: 0.0356, adv: 3.2315) D: (cover: 0.0577, enc: 0.0793) PSNR: 39.14dB
+Epoch [121/400] Batch [560/925] G: 0.0743 (enc: 0.1962, dec: 0.0329, adv: 2.5882) D: (cover: 0.1388, enc: 0.0507) PSNR: 38.78dB
+Epoch [121/400] Batch [580/925] G: 0.0745 (enc: 0.2007, dec: 0.0328, adv: 2.9151) D: (cover: 0.0531, enc: 0.1394) PSNR: 38.83dB
+Epoch [121/400] Batch [600/925] G: 0.0745 (enc: 0.1973, dec: 0.0328, adv: 2.9480) D: (cover: 0.3676, enc: 0.0708) PSNR: 38.97dB
+Epoch [121/400] Batch [620/925] G: 0.0800 (enc: 0.1965, dec: 0.0359, adv: 2.3305) D: (cover: 0.1108, enc: 0.1037) PSNR: 39.09dB
+Epoch [121/400] Batch [640/925] G: 0.0835 (enc: 0.1982, dec: 0.0367, adv: 4.2229) D: (cover: 0.2563, enc: 0.0213) PSNR: 38.84dB
+Epoch [121/400] Batch [660/925] G: 0.0802 (enc: 0.1940, dec: 0.0362, adv: 1.8965) D: (cover: 0.1222, enc: 0.1517) PSNR: 39.02dB
+Epoch [121/400] Batch [680/925] G: 0.0799 (enc: 0.1975, dec: 0.0356, adv: 2.8653) D: (cover: 0.1902, enc: 0.1183) PSNR: 38.94dB
+Epoch [121/400] Batch [700/925] G: 0.0780 (enc: 0.1937, dec: 0.0346, adv: 3.0446) D: (cover: 0.0511, enc: 0.0665) PSNR: 38.93dB
+Epoch [121/400] Batch [720/925] G: 0.0904 (enc: 0.1912, dec: 0.0413, adv: 2.0614) D: (cover: 0.0507, enc: 0.1698) PSNR: 39.07dB
+Epoch [121/400] Batch [740/925] G: 0.0774 (enc: 0.1985, dec: 0.0348, adv: 1.7965) D: (cover: 0.0638, enc: 0.1913) PSNR: 38.84dB
+Epoch [121/400] Batch [760/925] G: 0.0777 (enc: 0.1961, dec: 0.0346, adv: 2.5671) D: (cover: 0.0572, enc: 0.0910) PSNR: 39.15dB
+Epoch [121/400] Batch [780/925] G: 0.0786 (enc: 0.1976, dec: 0.0350, adv: 2.6712) D: (cover: 0.4312, enc: 0.0791) PSNR: 38.92dB
+Epoch [121/400] Batch [800/925] G: 0.0778 (enc: 0.1975, dec: 0.0348, adv: 2.1481) D: (cover: 0.0540, enc: 0.1752) PSNR: 38.94dB
+Epoch [121/400] Batch [820/925] G: 0.0863 (enc: 0.1913, dec: 0.0390, adv: 2.5010) D: (cover: 0.1941, enc: 0.1586) PSNR: 38.94dB
+Epoch [121/400] Batch [840/925] G: 0.0739 (enc: 0.1944, dec: 0.0325, adv: 3.0726) D: (cover: 0.3699, enc: 0.0364) PSNR: 39.15dB
+Epoch [121/400] Batch [860/925] G: 0.0799 (enc: 0.1960, dec: 0.0360, adv: 2.1562) D: (cover: 0.0585, enc: 0.1250) PSNR: 38.80dB
+Epoch [121/400] Batch [880/925] G: 0.0815 (enc: 0.1941, dec: 0.0366, adv: 2.5601) D: (cover: 0.0352, enc: 0.2000) PSNR: 38.82dB
+Epoch [121/400] Batch [900/925] G: 0.0771 (enc: 0.1966, dec: 0.0344, adv: 2.3366) D: (cover: 0.1770, enc: 0.2111) PSNR: 39.12dB
+Epoch [121/400] Batch [920/925] G: 0.0739 (enc: 0.2018, dec: 0.0326, adv: 2.6854) D: (cover: 0.1412, enc: 0.0665) PSNR: 38.93dB
+Epoch [121/400] 训练平均损失: 0.0789
+Epoch [121/400] 验证平均损失: 0.0870 enc: 0.2175, dec: 0.0357 PSNR: 38.85dB
+Epoch [121/400] 验证耗时: 10.20s
+Epoch [121/400] 保存验证输出耗时: 0.03s
+Epoch [121/400] 训练耗时: 470.92s
+Epoch [121/400] 保存检查点耗时: 0.00s
+Epoch [121/400] 总耗时: 481.15s
+Epoch [122/400] 第1批数据获取耗时: 1.27s
+Epoch [122/400] Batch [20/925] G: 0.0781 (enc: 0.2095, dec: 0.0346, adv: 2.6671) D: (cover: 0.0468, enc: 0.4947) PSNR: 38.84dB
+Epoch [122/400] Batch [40/925] G: 0.0775 (enc: 0.2014, dec: 0.0344, adv: 2.6780) D: (cover: 0.5143, enc: 0.0519) PSNR: 38.89dB
+Epoch [122/400] Batch [60/925] G: 0.0785 (enc: 0.1977, dec: 0.0350, adv: 2.5998) D: (cover: 0.2969, enc: 0.0821) PSNR: 38.85dB
+Epoch [122/400] Batch [80/925] G: 0.0811 (enc: 0.2009, dec: 0.0363, adv: 2.4745) D: (cover: 0.2226, enc: 0.0778) PSNR: 38.88dB
+Epoch [122/400] Batch [100/925] G: 0.0846 (enc: 0.1927, dec: 0.0383, adv: 2.2090) D: (cover: 0.2268, enc: 0.0884) PSNR: 38.87dB
+Epoch [122/400] Batch [120/925] G: 0.0815 (enc: 0.1886, dec: 0.0369, adv: 1.9875) D: (cover: 0.3209, enc: 0.1007) PSNR: 38.80dB
+Epoch [122/400] Batch [140/925] G: 0.0775 (enc: 0.2004, dec: 0.0348, adv: 1.8919) D: (cover: 0.0119, enc: 0.2836) PSNR: 38.97dB
+Epoch [122/400] Batch [160/925] G: 0.0736 (enc: 0.1934, dec: 0.0327, adv: 2.5340) D: (cover: 0.0949, enc: 0.0901) PSNR: 38.88dB
+Epoch [122/400] Batch [180/925] G: 0.0753 (enc: 0.1941, dec: 0.0335, adv: 2.3641) D: (cover: 0.0371, enc: 0.1666) PSNR: 39.14dB
+Epoch [122/400] Batch [200/925] G: 0.0805 (enc: 0.1963, dec: 0.0358, adv: 2.9268) D: (cover: 0.1514, enc: 0.0604) PSNR: 38.96dB
+Epoch [122/400] Batch [220/925] G: 0.0770 (enc: 0.1928, dec: 0.0344, adv: 2.4852) D: (cover: 0.0251, enc: 0.1148) PSNR: 39.07dB
+Epoch [122/400] Batch [240/925] G: 0.0713 (enc: 0.1953, dec: 0.0314, adv: 2.6975) D: (cover: 0.1743, enc: 0.0513) PSNR: 38.94dB
+Epoch [122/400] Batch [260/925] G: 0.0791 (enc: 0.1905, dec: 0.0350, adv: 3.4064) D: (cover: 0.0760, enc: 0.0674) PSNR: 38.98dB
+Epoch [122/400] Batch [280/925] G: 0.0775 (enc: 0.1972, dec: 0.0352, adv: 1.2485) D: (cover: 0.1866, enc: 0.1638) PSNR: 39.09dB
+Epoch [122/400] Batch [300/925] G: 0.0795 (enc: 0.1924, dec: 0.0358, adv: 2.0680) D: (cover: 0.2335, enc: 0.1125) PSNR: 38.68dB
+Epoch [122/400] Batch [320/925] G: 0.0784 (enc: 0.1980, dec: 0.0355, adv: 1.5578) D: (cover: 0.0386, enc: 0.1872) PSNR: 38.41dB
+Epoch [122/400] Batch [340/925] G: 0.0765 (enc: 0.1938, dec: 0.0339, adv: 2.9150) D: (cover: 0.4930, enc: 0.0747) PSNR: 38.85dB
+Epoch [122/400] Batch [360/925] G: 0.0826 (enc: 0.1935, dec: 0.0366, adv: 3.5183) D: (cover: 0.1629, enc: 0.0335) PSNR: 39.17dB
+Epoch [122/400] Batch [380/925] G: 0.0815 (enc: 0.1920, dec: 0.0366, adv: 2.5589) D: (cover: 0.1688, enc: 0.0863) PSNR: 38.80dB
+Epoch [122/400] Batch [400/925] G: 0.0804 (enc: 0.1937, dec: 0.0361, adv: 2.3074) D: (cover: 0.0953, enc: 0.0895) PSNR: 39.02dB
+Epoch [122/400] Batch [420/925] G: 0.0819 (enc: 0.1962, dec: 0.0369, adv: 2.1221) D: (cover: 0.0545, enc: 0.2002) PSNR: 38.58dB
+Epoch [122/400] Batch [440/925] G: 0.0791 (enc: 0.1999, dec: 0.0354, adv: 2.1961) D: (cover: 0.0445, enc: 0.2049) PSNR: 38.57dB
+Epoch [122/400] Batch [460/925] G: 0.0827 (enc: 0.1906, dec: 0.0371, adv: 2.7575) D: (cover: 0.4631, enc: 0.0320) PSNR: 38.97dB
+Epoch [122/400] Batch [480/925] G: 0.0805 (enc: 0.2009, dec: 0.0361, adv: 2.3045) D: (cover: 0.0302, enc: 0.1793) PSNR: 38.71dB
+Epoch [122/400] Batch [500/925] G: 0.0754 (enc: 0.1960, dec: 0.0339, adv: 1.7899) D: (cover: 0.4400, enc: 0.0974) PSNR: 38.81dB
+Epoch [122/400] Batch [520/925] G: 0.0753 (enc: 0.1981, dec: 0.0336, adv: 2.1514) D: (cover: 0.0449, enc: 0.2349) PSNR: 38.98dB
+Epoch [122/400] Batch [540/925] G: 0.0837 (enc: 0.1941, dec: 0.0374, adv: 3.0923) D: (cover: 0.1355, enc: 0.0734) PSNR: 38.99dB
+Epoch [122/400] Batch [560/925] G: 0.0798 (enc: 0.1968, dec: 0.0356, adv: 2.7181) D: (cover: 0.1252, enc: 0.0700) PSNR: 38.66dB
+Epoch [122/400] Batch [580/925] G: 0.0738 (enc: 0.1979, dec: 0.0326, adv: 2.6275) D: (cover: 0.0384, enc: 0.0838) PSNR: 39.05dB
+Epoch [122/400] Batch [600/925] G: 0.0752 (enc: 0.1920, dec: 0.0340, adv: 1.3853) D: (cover: 0.2479, enc: 0.0868) PSNR: 39.05dB
+Epoch [122/400] Batch [620/925] G: 0.0821 (enc: 0.1940, dec: 0.0370, adv: 2.2235) D: (cover: 0.1015, enc: 0.2242) PSNR: 38.87dB
+Epoch [122/400] Batch [640/925] G: 0.0761 (enc: 0.1989, dec: 0.0340, adv: 2.2084) D: (cover: 0.0718, enc: 0.1915) PSNR: 38.76dB
+Epoch [122/400] Batch [660/925] G: 0.0728 (enc: 0.1923, dec: 0.0326, adv: 1.8292) D: (cover: 0.2941, enc: 0.0771) PSNR: 39.17dB
+Epoch [122/400] Batch [680/925] G: 0.0770 (enc: 0.2034, dec: 0.0345, adv: 1.8396) D: (cover: 0.0373, enc: 0.1564) PSNR: 38.82dB
+Epoch [122/400] Batch [700/925] G: 0.0829 (enc: 0.2029, dec: 0.0368, adv: 3.1678) D: (cover: 0.0555, enc: 0.1077) PSNR: 38.67dB
+Epoch [122/400] Batch [720/925] G: 0.0784 (enc: 0.1960, dec: 0.0350, adv: 2.6075) D: (cover: 0.0505, enc: 0.2713) PSNR: 38.74dB
+Epoch [122/400] Batch [740/925] G: 0.0772 (enc: 0.1982, dec: 0.0345, adv: 2.2226) D: (cover: 0.1848, enc: 0.0947) PSNR: 38.75dB
+Epoch [122/400] Batch [760/925] G: 0.0756 (enc: 0.2048, dec: 0.0333, adv: 2.7789) D: (cover: 0.0743, enc: 0.1608) PSNR: 38.60dB
+Epoch [122/400] Batch [780/925] G: 0.0798 (enc: 0.1994, dec: 0.0353, adv: 3.1818) D: (cover: 0.1525, enc: 0.0468) PSNR: 38.94dB
+Epoch [122/400] Batch [800/925] G: 0.0818 (enc: 0.1964, dec: 0.0371, adv: 1.6957) D: (cover: 0.1013, enc: 0.1826) PSNR: 38.72dB
+Epoch [122/400] Batch [820/925] G: 0.0819 (enc: 0.2016, dec: 0.0372, adv: 1.3570) D: (cover: 0.0167, enc: 0.7242) PSNR: 38.60dB
+Epoch [122/400] Batch [840/925] G: 0.0785 (enc: 0.1968, dec: 0.0348, adv: 3.0623) D: (cover: 0.2182, enc: 0.0451) PSNR: 38.94dB
+Epoch [122/400] Batch [860/925] G: 0.0865 (enc: 0.1947, dec: 0.0394, adv: 1.7178) D: (cover: 0.0481, enc: 0.2829) PSNR: 38.89dB
+Epoch [122/400] Batch [880/925] G: 0.0797 (enc: 0.1982, dec: 0.0357, adv: 2.3341) D: (cover: 0.2863, enc: 0.0664) PSNR: 38.87dB
+Epoch [122/400] Batch [900/925] G: 0.0781 (enc: 0.2041, dec: 0.0349, adv: 2.1854) D: (cover: 0.0280, enc: 0.5935) PSNR: 38.79dB
+Epoch [122/400] Batch [920/925] G: 0.0767 (enc: 0.2032, dec: 0.0341, adv: 2.3699) D: (cover: 0.1842, enc: 0.1031) PSNR: 38.88dB
+Epoch [122/400] 训练平均损失: 0.0789
+Epoch [122/400] 验证平均损失: 0.0889 enc: 0.2110, dec: 0.0426 PSNR: 38.39dB
+Epoch [122/400] 验证耗时: 10.22s
+Epoch [122/400] 保存验证输出耗时: 0.03s
+Epoch [122/400] 训练耗时: 471.22s
+Epoch [122/400] 保存检查点耗时: 0.00s
+Epoch [122/400] 总耗时: 481.48s
+Epoch [123/400] 第1批数据获取耗时: 0.87s
+Epoch [123/400] Batch [20/925] G: 0.0769 (enc: 0.2005, dec: 0.0338, adv: 3.2689) D: (cover: 0.1766, enc: 0.0669) PSNR: 38.62dB
+Epoch [123/400] Batch [40/925] G: 0.0771 (enc: 0.1951, dec: 0.0347, adv: 1.9178) D: (cover: 0.0314, enc: 0.3481) PSNR: 38.98dB
+Epoch [123/400] Batch [60/925] G: 0.0831 (enc: 0.1932, dec: 0.0372, adv: 2.9376) D: (cover: 0.2315, enc: 0.0600) PSNR: 38.98dB
+Epoch [123/400] Batch [80/925] G: 0.0786 (enc: 0.1930, dec: 0.0353, adv: 2.1896) D: (cover: 0.0690, enc: 0.1277) PSNR: 38.95dB
+Epoch [123/400] Batch [100/925] G: 0.0766 (enc: 0.1965, dec: 0.0339, adv: 2.8564) D: (cover: 0.1171, enc: 0.0948) PSNR: 38.73dB
+Epoch [123/400] Batch [120/925] G: 0.0774 (enc: 0.1983, dec: 0.0345, adv: 2.3844) D: (cover: 0.0816, enc: 0.1155) PSNR: 38.70dB
+Epoch [123/400] Batch [140/925] G: 0.0758 (enc: 0.1948, dec: 0.0336, adv: 2.6402) D: (cover: 0.0798, enc: 0.0620) PSNR: 38.72dB
+Epoch [123/400] Batch [160/925] G: 0.0792 (enc: 0.1874, dec: 0.0360, adv: 1.6224) D: (cover: 0.0087, enc: 0.3671) PSNR: 39.13dB
+Epoch [123/400] Batch [180/925] G: 0.0781 (enc: 0.1932, dec: 0.0351, adv: 1.9816) D: (cover: 0.1284, enc: 0.1423) PSNR: 39.18dB
+Epoch [123/400] Batch [200/925] G: 0.0803 (enc: 0.1974, dec: 0.0361, adv: 2.1565) D: (cover: 0.0269, enc: 0.5632) PSNR: 39.00dB
+Epoch [123/400] Batch [220/925] G: 0.0785 (enc: 0.2097, dec: 0.0348, adv: 2.5039) D: (cover: 0.1326, enc: 0.3107) PSNR: 38.74dB
+Epoch [123/400] Batch [240/925] G: 0.0853 (enc: 0.1938, dec: 0.0388, adv: 1.9756) D: (cover: 0.2409, enc: 0.2348) PSNR: 38.96dB
+Epoch [123/400] Batch [260/925] G: 0.0770 (enc: 0.1995, dec: 0.0340, adv: 2.9689) D: (cover: 0.6124, enc: 0.0397) PSNR: 38.95dB
+Epoch [123/400] Batch [280/925] G: 0.0743 (enc: 0.2008, dec: 0.0333, adv: 1.6167) D: (cover: 0.1309, enc: 0.2036) PSNR: 38.76dB
+Epoch [123/400] Batch [300/925] G: 0.0768 (enc: 0.1980, dec: 0.0346, adv: 1.5918) D: (cover: 0.0276, enc: 0.2440) PSNR: 38.66dB
+Epoch [123/400] Batch [320/925] G: 0.0797 (enc: 0.1988, dec: 0.0358, adv: 2.1411) D: (cover: 0.2468, enc: 0.1276) PSNR: 39.07dB
+Epoch [123/400] Batch [340/925] G: 0.0757 (enc: 0.1968, dec: 0.0336, adv: 2.6410) D: (cover: 0.0922, enc: 0.0482) PSNR: 38.46dB
+Epoch [123/400] Batch [360/925] G: 0.0739 (enc: 0.1961, dec: 0.0326, adv: 2.8152) D: (cover: 0.4117, enc: 0.1038) PSNR: 39.08dB
+Epoch [123/400] Batch [380/925] G: 0.0819 (enc: 0.2066, dec: 0.0368, adv: 2.2241) D: (cover: 0.0916, enc: 0.0779) PSNR: 38.75dB
+Epoch [123/400] Batch [400/925] G: 0.0754 (enc: 0.1972, dec: 0.0335, adv: 2.4843) D: (cover: 0.2144, enc: 0.0623) PSNR: 38.81dB
+Epoch [123/400] Batch [420/925] G: 0.0832 (enc: 0.1904, dec: 0.0371, adv: 3.4106) D: (cover: 0.3317, enc: 0.0319) PSNR: 38.98dB
+Epoch [123/400] Batch [440/925] G: 0.0771 (enc: 0.1931, dec: 0.0347, adv: 1.9131) D: (cover: 0.0398, enc: 0.2587) PSNR: 38.91dB
+Epoch [123/400] Batch [460/925] G: 0.0792 (enc: 0.1968, dec: 0.0352, adv: 2.9450) D: (cover: 0.6072, enc: 0.0372) PSNR: 38.90dB
+Epoch [123/400] Batch [480/925] G: 0.0824 (enc: 0.2003, dec: 0.0370, adv: 2.2786) D: (cover: 0.0818, enc: 0.0965) PSNR: 38.56dB
+Epoch [123/400] Batch [500/925] G: 0.0747 (enc: 0.1976, dec: 0.0334, adv: 1.9309) D: (cover: 0.0639, enc: 0.1509) PSNR: 38.87dB
+Epoch [123/400] Batch [520/925] G: 0.0726 (enc: 0.1998, dec: 0.0321, adv: 2.3740) D: (cover: 0.0220, enc: 0.1369) PSNR: 38.92dB
+Epoch [123/400] Batch [540/925] G: 0.0812 (enc: 0.1963, dec: 0.0364, adv: 2.4251) D: (cover: 0.1713, enc: 0.0601) PSNR: 38.94dB
+Epoch [123/400] Batch [560/925] G: 0.0782 (enc: 0.1966, dec: 0.0349, adv: 2.5758) D: (cover: 0.1549, enc: 0.0631) PSNR: 38.90dB
+Epoch [123/400] Batch [580/925] G: 0.0810 (enc: 0.1931, dec: 0.0361, adv: 2.8897) D: (cover: 0.0553, enc: 0.0911) PSNR: 38.96dB
+Epoch [123/400] Batch [600/925] G: 0.0785 (enc: 0.1999, dec: 0.0351, adv: 2.3950) D: (cover: 0.0271, enc: 0.1650) PSNR: 38.84dB
+Epoch [123/400] Batch [620/925] G: 0.0768 (enc: 0.1942, dec: 0.0340, adv: 2.9729) D: (cover: 0.2034, enc: 0.0602) PSNR: 38.84dB
+Epoch [123/400] Batch [640/925] G: 0.0825 (enc: 0.1927, dec: 0.0376, adv: 1.5651) D: (cover: 0.0184, enc: 0.3931) PSNR: 38.90dB
+Epoch [123/400] Batch [660/925] G: 0.0796 (enc: 0.1987, dec: 0.0352, adv: 3.1818) D: (cover: 0.7087, enc: 0.0661) PSNR: 38.91dB
+Epoch [123/400] Batch [680/925] G: 0.0801 (enc: 0.1963, dec: 0.0358, adv: 2.6417) D: (cover: 0.5196, enc: 0.0596) PSNR: 38.88dB
+Epoch [123/400] Batch [700/925] G: 0.0752 (enc: 0.1924, dec: 0.0333, adv: 2.8695) D: (cover: 0.0204, enc: 0.4285) PSNR: 39.05dB
+Epoch [123/400] Batch [720/925] G: 0.0767 (enc: 0.1999, dec: 0.0343, adv: 2.1256) D: (cover: 0.0261, enc: 0.3129) PSNR: 39.03dB
+Epoch [123/400] Batch [740/925] G: 0.0788 (enc: 0.1972, dec: 0.0352, adv: 2.5084) D: (cover: 0.3345, enc: 0.0627) PSNR: 39.01dB
+Epoch [123/400] Batch [760/925] G: 0.0743 (enc: 0.1959, dec: 0.0329, adv: 2.6890) D: (cover: 0.2337, enc: 0.0611) PSNR: 38.72dB
+Epoch [123/400] Batch [780/925] G: 0.0821 (enc: 0.1904, dec: 0.0372, adv: 2.0335) D: (cover: 0.0224, enc: 0.3908) PSNR: 39.01dB
+Epoch [123/400] Batch [800/925] G: 0.0774 (enc: 0.1990, dec: 0.0344, adv: 2.5475) D: (cover: 0.5917, enc: 0.0940) PSNR: 38.82dB
+Epoch [123/400] Batch [820/925] G: 0.0775 (enc: 0.1981, dec: 0.0352, adv: 1.1524) D: (cover: 0.1787, enc: 0.2354) PSNR: 38.68dB
+Epoch [123/400] Batch [840/925] G: 0.0728 (enc: 0.1955, dec: 0.0330, adv: 0.8253) D: (cover: 0.0126, enc: 1.0673) PSNR: 38.96dB
+Epoch [123/400] Batch [860/925] G: 0.0797 (enc: 0.1964, dec: 0.0354, adv: 3.0609) D: (cover: 0.2434, enc: 0.0721) PSNR: 38.81dB
+Epoch [123/400] Batch [880/925] G: 0.0739 (enc: 0.1957, dec: 0.0327, adv: 2.5807) D: (cover: 0.2280, enc: 0.1245) PSNR: 38.95dB
+Epoch [123/400] Batch [900/925] G: 0.0792 (enc: 0.2034, dec: 0.0356, adv: 1.9131) D: (cover: 0.0935, enc: 0.1891) PSNR: 38.60dB
+Epoch [123/400] Batch [920/925] G: 0.0780 (enc: 0.1982, dec: 0.0347, adv: 2.7242) D: (cover: 0.1658, enc: 0.0857) PSNR: 38.93dB
+Epoch [123/400] 训练平均损失: 0.0786
+Epoch [123/400] 验证平均损失: 0.0910 enc: 0.2000, dec: 0.0379 PSNR: 38.62dB
+Epoch [123/400] 验证耗时: 10.20s
+Epoch [123/400] 保存验证输出耗时: 0.03s
+Epoch [123/400] 训练耗时: 470.88s
+Epoch [123/400] 保存检查点耗时: 0.01s
+Epoch [123/400] 总耗时: 481.12s
+Epoch [124/400] 第1批数据获取耗时: 0.95s
+Epoch [124/400] Batch [20/925] G: 0.0752 (enc: 0.2026, dec: 0.0335, adv: 2.1287) D: (cover: 0.0317, enc: 0.2319) PSNR: 38.87dB
+Epoch [124/400] Batch [40/925] G: 0.0796 (enc: 0.1954, dec: 0.0354, adv: 2.9276) D: (cover: 0.0810, enc: 0.0621) PSNR: 38.99dB
+Epoch [124/400] Batch [60/925] G: 0.0811 (enc: 0.1986, dec: 0.0363, adv: 2.5490) D: (cover: 0.0368, enc: 0.1037) PSNR: 38.89dB
+Epoch [124/400] Batch [80/925] G: 0.0775 (enc: 0.1989, dec: 0.0341, adv: 3.3787) D: (cover: 0.1563, enc: 0.0376) PSNR: 38.79dB
+Epoch [124/400] Batch [100/925] G: 0.0821 (enc: 0.1942, dec: 0.0363, adv: 3.6054) D: (cover: 0.0460, enc: 0.0324) PSNR: 38.74dB
+Epoch [124/400] Batch [120/925] G: 0.0807 (enc: 0.1982, dec: 0.0362, adv: 2.4321) D: (cover: 0.2197, enc: 0.0544) PSNR: 38.55dB
+Epoch [124/400] Batch [140/925] G: 0.0763 (enc: 0.1963, dec: 0.0339, adv: 2.6814) D: (cover: 0.3435, enc: 0.0202) PSNR: 38.96dB
+Epoch [124/400] Batch [160/925] G: 0.0766 (enc: 0.1950, dec: 0.0346, adv: 1.5176) D: (cover: 0.3565, enc: 0.2107) PSNR: 38.78dB
+Epoch [124/400] Batch [180/925] G: 0.0772 (enc: 0.1959, dec: 0.0347, adv: 1.9698) D: (cover: 0.1879, enc: 0.1489) PSNR: 38.83dB
+Epoch [124/400] Batch [200/925] G: 0.0727 (enc: 0.1972, dec: 0.0326, adv: 1.6236) D: (cover: 0.0444, enc: 0.3632) PSNR: 38.89dB
+Epoch [124/400] Batch [220/925] G: 0.0828 (enc: 0.2024, dec: 0.0372, adv: 2.2605) D: (cover: 0.0287, enc: 0.1400) PSNR: 38.86dB
+Epoch [124/400] Batch [240/925] G: 0.0803 (enc: 0.1894, dec: 0.0359, adv: 2.7757) D: (cover: 0.1899, enc: 0.0663) PSNR: 39.03dB
+Epoch [124/400] Batch [260/925] G: 0.0773 (enc: 0.1939, dec: 0.0347, adv: 2.1061) D: (cover: 0.0253, enc: 0.1463) PSNR: 38.96dB
+Epoch [124/400] Batch [280/925] G: 0.0767 (enc: 0.1961, dec: 0.0342, adv: 2.4712) D: (cover: 0.0377, enc: 0.1267) PSNR: 39.01dB
+Epoch [124/400] Batch [300/925] G: 0.0807 (enc: 0.1968, dec: 0.0354, adv: 3.8843) D: (cover: 0.2543, enc: 0.0175) PSNR: 38.67dB
+Epoch [124/400] Batch [320/925] G: 0.0752 (enc: 0.2004, dec: 0.0332, adv: 2.8256) D: (cover: 0.0386, enc: 0.2129) PSNR: 38.81dB
+Epoch [124/400] Batch [340/925] G: 0.0740 (enc: 0.1964, dec: 0.0325, adv: 3.1595) D: (cover: 0.1425, enc: 0.0666) PSNR: 38.78dB
+Epoch [124/400] Batch [360/925] G: 0.0749 (enc: 0.1956, dec: 0.0339, adv: 1.1940) D: (cover: 0.0590, enc: 0.2144) PSNR: 38.93dB
+Epoch [124/400] Batch [380/925] G: 0.0764 (enc: 0.1933, dec: 0.0340, adv: 2.6575) D: (cover: 0.1164, enc: 0.1149) PSNR: 38.96dB
+Epoch [124/400] Batch [400/925] G: 0.0783 (enc: 0.1984, dec: 0.0348, adv: 2.7048) D: (cover: 0.0575, enc: 0.1023) PSNR: 39.01dB
+Epoch [124/400] Batch [420/925] G: 0.0749 (enc: 0.1927, dec: 0.0332, adv: 2.6158) D: (cover: 0.0801, enc: 0.1158) PSNR: 39.12dB
+Epoch [124/400] Batch [440/925] G: 0.0868 (enc: 0.1909, dec: 0.0394, adv: 2.2629) D: (cover: 0.3902, enc: 0.0827) PSNR: 38.98dB
+Epoch [124/400] Batch [460/925] G: 0.0831 (enc: 0.1963, dec: 0.0377, adv: 1.9063) D: (cover: 0.0217, enc: 0.3996) PSNR: 38.84dB
+Epoch [124/400] Batch [480/925] G: 0.0845 (enc: 0.2019, dec: 0.0376, adv: 3.3245) D: (cover: 0.2181, enc: 0.0369) PSNR: 38.69dB
+Epoch [124/400] Batch [500/925] G: 0.0737 (enc: 0.1949, dec: 0.0326, adv: 2.5596) D: (cover: 0.0225, enc: 0.2376) PSNR: 38.73dB
+Epoch [124/400] Batch [520/925] G: 0.0764 (enc: 0.2008, dec: 0.0335, adv: 3.2820) D: (cover: 0.2425, enc: 0.0443) PSNR: 39.09dB
+Epoch [124/400] Batch [540/925] G: 0.0771 (enc: 0.1924, dec: 0.0346, adv: 2.0177) D: (cover: 0.1157, enc: 0.1740) PSNR: 38.97dB
+Epoch [124/400] Batch [560/925] G: 0.0777 (enc: 0.1969, dec: 0.0351, adv: 1.5691) D: (cover: 0.0458, enc: 0.3449) PSNR: 38.89dB
+Epoch [124/400] Batch [580/925] G: 0.0834 (enc: 0.1932, dec: 0.0372, adv: 3.2158) D: (cover: 0.6155, enc: 0.0234) PSNR: 38.93dB
+Epoch [124/400] Batch [600/925] G: 0.0778 (enc: 0.1945, dec: 0.0348, adv: 2.2606) D: (cover: 0.0160, enc: 0.3492) PSNR: 38.72dB
+Epoch [124/400] Batch [620/925] G: 0.0763 (enc: 0.1921, dec: 0.0344, adv: 1.8360) D: (cover: 0.0367, enc: 0.4308) PSNR: 39.14dB
+Epoch [124/400] Batch [640/925] G: 0.0776 (enc: 0.1963, dec: 0.0341, adv: 3.4222) D: (cover: 0.3590, enc: 0.0623) PSNR: 39.00dB
+Epoch [124/400] Batch [660/925] G: 0.0800 (enc: 0.1973, dec: 0.0361, adv: 1.9161) D: (cover: 0.0233, enc: 0.5084) PSNR: 39.02dB
+Epoch [124/400] Batch [680/925] G: 0.0804 (enc: 0.1925, dec: 0.0359, adv: 2.8786) D: (cover: 0.3655, enc: 0.0473) PSNR: 39.05dB
+Epoch [124/400] Batch [700/925] G: 0.0821 (enc: 0.1889, dec: 0.0370, adv: 2.4194) D: (cover: 0.0696, enc: 0.1184) PSNR: 39.04dB
+Epoch [124/400] Batch [720/925] G: 0.0757 (enc: 0.1926, dec: 0.0338, adv: 2.3415) D: (cover: 0.0300, enc: 0.1260) PSNR: 39.19dB
+Epoch [124/400] Batch [740/925] G: 0.0763 (enc: 0.1970, dec: 0.0338, adv: 2.7919) D: (cover: 0.0447, enc: 0.1678) PSNR: 38.98dB
+Epoch [124/400] Batch [760/925] G: 0.0815 (enc: 0.1963, dec: 0.0364, adv: 2.8367) D: (cover: 0.0959, enc: 0.0743) PSNR: 39.03dB
+Epoch [124/400] Batch [780/925] G: 0.0838 (enc: 0.1930, dec: 0.0376, adv: 2.7853) D: (cover: 0.0977, enc: 0.0962) PSNR: 39.20dB
+Epoch [124/400] Batch [800/925] G: 0.0806 (enc: 0.1879, dec: 0.0361, adv: 2.8733) D: (cover: 0.0555, enc: 0.0730) PSNR: 39.16dB
+Epoch [124/400] Batch [820/925] G: 0.0746 (enc: 0.1978, dec: 0.0329, adv: 2.8339) D: (cover: 0.0630, enc: 0.0925) PSNR: 38.92dB
+Epoch [124/400] Batch [840/925] G: 0.0755 (enc: 0.1931, dec: 0.0340, adv: 1.8204) D: (cover: 0.0147, enc: 0.4064) PSNR: 38.91dB
+Epoch [124/400] Batch [860/925] G: 0.0749 (enc: 0.2007, dec: 0.0328, adv: 3.3178) D: (cover: 0.1999, enc: 0.0522) PSNR: 38.84dB
+Epoch [124/400] Batch [880/925] G: 0.0774 (enc: 0.2014, dec: 0.0347, adv: 1.9551) D: (cover: 0.2762, enc: 0.0665) PSNR: 38.69dB
+Epoch [124/400] Batch [900/925] G: 0.0852 (enc: 0.1960, dec: 0.0387, adv: 1.9653) D: (cover: 0.0226, enc: 0.7016) PSNR: 39.17dB
+Epoch [124/400] Batch [920/925] G: 0.0776 (enc: 0.1946, dec: 0.0349, adv: 1.9462) D: (cover: 0.3614, enc: 0.1457) PSNR: 38.88dB
+Epoch [124/400] 训练平均损失: 0.0784
+Epoch [124/400] 验证平均损失: 0.0891 enc: 0.2143, dec: 0.0289 PSNR: 38.27dB
+Epoch [124/400] 验证耗时: 10.16s
+Epoch [124/400] 保存验证输出耗时: 0.03s
+Epoch [124/400] 训练耗时: 470.96s
+Epoch [124/400] 保存检查点耗时: 0.00s
+Epoch [124/400] 总耗时: 481.15s
+Epoch [125/400] 第1批数据获取耗时: 1.54s
+Epoch [125/400] Batch [20/925] G: 0.0754 (enc: 0.1974, dec: 0.0336, adv: 2.2183) D: (cover: 0.0212, enc: 0.4372) PSNR: 38.55dB
+Epoch [125/400] Batch [40/925] G: 0.0743 (enc: 0.1972, dec: 0.0331, adv: 2.1443) D: (cover: 0.0265, enc: 0.1620) PSNR: 38.88dB
+Epoch [125/400] Batch [60/925] G: 0.0780 (enc: 0.1910, dec: 0.0347, adv: 2.8085) D: (cover: 0.0262, enc: 0.1035) PSNR: 39.07dB
+Epoch [125/400] Batch [80/925] G: 0.0836 (enc: 0.1904, dec: 0.0371, adv: 3.5524) D: (cover: 0.0951, enc: 0.0512) PSNR: 38.80dB
+Epoch [125/400] Batch [100/925] G: 0.0734 (enc: 0.1951, dec: 0.0319, adv: 3.7159) D: (cover: 0.2105, enc: 0.0302) PSNR: 38.83dB
+Epoch [125/400] Batch [120/925] G: 0.0818 (enc: 0.1950, dec: 0.0367, adv: 2.5676) D: (cover: 0.0592, enc: 0.1385) PSNR: 38.98dB
+Epoch [125/400] Batch [140/925] G: 0.0878 (enc: 0.1922, dec: 0.0398, adv: 2.4281) D: (cover: 0.0261, enc: 0.4290) PSNR: 39.04dB
+Epoch [125/400] Batch [160/925] G: 0.0788 (enc: 0.1968, dec: 0.0351, adv: 2.6019) D: (cover: 0.1225, enc: 0.2209) PSNR: 38.70dB
+Epoch [125/400] Batch [180/925] G: 0.0738 (enc: 0.1946, dec: 0.0328, adv: 2.2735) D: (cover: 0.0497, enc: 0.2480) PSNR: 39.06dB
+Epoch [125/400] Batch [200/925] G: 0.0752 (enc: 0.1978, dec: 0.0336, adv: 2.1149) D: (cover: 0.0303, enc: 0.1817) PSNR: 38.88dB
+Epoch [125/400] Batch [220/925] G: 0.0800 (enc: 0.1860, dec: 0.0353, adv: 3.7678) D: (cover: 0.0950, enc: 0.0407) PSNR: 39.12dB
+Epoch [125/400] Batch [240/925] G: 0.0748 (enc: 0.1938, dec: 0.0334, adv: 2.1736) D: (cover: 0.0613, enc: 0.1884) PSNR: 38.95dB
+Epoch [125/400] Batch [260/925] G: 0.0805 (enc: 0.1949, dec: 0.0360, adv: 2.5507) D: (cover: 0.0747, enc: 0.1508) PSNR: 38.90dB
+Epoch [125/400] Batch [280/925] G: 0.0840 (enc: 0.1989, dec: 0.0373, adv: 3.3852) D: (cover: 0.1362, enc: 0.0374) PSNR: 38.68dB
+Epoch [125/400] Batch [300/925] G: 0.0748 (enc: 0.1985, dec: 0.0333, adv: 2.3731) D: (cover: 0.0248, enc: 0.1413) PSNR: 38.69dB
+Epoch [125/400] Batch [320/925] G: 0.0749 (enc: 0.1898, dec: 0.0327, adv: 3.7252) D: (cover: 0.1701, enc: 0.0225) PSNR: 39.09dB
+Epoch [125/400] Batch [340/925] G: 0.0760 (enc: 0.1941, dec: 0.0338, adv: 2.5748) D: (cover: 0.0324, enc: 0.1380) PSNR: 39.09dB
+Epoch [125/400] Batch [360/925] G: 0.0809 (enc: 0.1893, dec: 0.0364, adv: 2.4552) D: (cover: 0.0564, enc: 0.1181) PSNR: 38.92dB
+Epoch [125/400] Batch [380/925] G: 0.0801 (enc: 0.1960, dec: 0.0356, adv: 3.1387) D: (cover: 0.3909, enc: 0.0171) PSNR: 38.92dB
+Epoch [125/400] Batch [400/925] G: 0.0756 (enc: 0.2028, dec: 0.0333, adv: 2.9358) D: (cover: 0.2386, enc: 0.0482) PSNR: 38.87dB
+Epoch [125/400] Batch [420/925] G: 0.0750 (enc: 0.1913, dec: 0.0338, adv: 1.5516) D: (cover: 0.0035, enc: 0.6755) PSNR: 39.13dB
+Epoch [125/400] Batch [440/925] G: 0.0741 (enc: 0.1965, dec: 0.0327, adv: 2.6944) D: (cover: 0.0442, enc: 0.2016) PSNR: 38.92dB
+Epoch [125/400] Batch [460/925] G: 0.0809 (enc: 0.1924, dec: 0.0367, adv: 1.7304) D: (cover: 0.0230, enc: 0.3000) PSNR: 38.90dB
+Epoch [125/400] Batch [480/925] G: 0.0830 (enc: 0.1911, dec: 0.0377, adv: 1.9047) D: (cover: 0.0067, enc: 0.4264) PSNR: 39.12dB
+Epoch [125/400] Batch [500/925] G: 0.0841 (enc: 0.2011, dec: 0.0373, adv: 3.5010) D: (cover: 0.3662, enc: 0.0199) PSNR: 38.91dB
+Epoch [125/400] Batch [520/925] G: 0.0748 (enc: 0.1968, dec: 0.0328, adv: 3.2563) D: (cover: 0.1885, enc: 0.1140) PSNR: 38.78dB
+Epoch [125/400] Batch [540/925] G: 0.0738 (enc: 0.2026, dec: 0.0328, adv: 2.0924) D: (cover: 0.2105, enc: 0.1904) PSNR: 38.92dB
+Epoch [125/400] Batch [560/925] G: 0.0821 (enc: 0.2020, dec: 0.0374, adv: 1.3175) D: (cover: 0.1175, enc: 0.2644) PSNR: 38.64dB
+Epoch [125/400] Batch [580/925] G: 0.0787 (enc: 0.1916, dec: 0.0352, adv: 2.6247) D: (cover: 0.0774, enc: 0.1584) PSNR: 38.74dB
+Epoch [125/400] Batch [600/925] G: 0.0848 (enc: 0.1955, dec: 0.0385, adv: 1.9481) D: (cover: 0.4856, enc: 0.0936) PSNR: 38.93dB
+Epoch [125/400] Batch [620/925] G: 0.0773 (enc: 0.1966, dec: 0.0345, adv: 2.2653) D: (cover: 0.1353, enc: 0.1406) PSNR: 38.76dB
+Epoch [125/400] Batch [640/925] G: 0.0762 (enc: 0.1980, dec: 0.0339, adv: 2.3905) D: (cover: 0.0155, enc: 0.1331) PSNR: 38.68dB
+Epoch [125/400] Batch [660/925] G: 0.0774 (enc: 0.1980, dec: 0.0346, adv: 2.3013) D: (cover: 0.0390, enc: 0.3016) PSNR: 38.78dB
+Epoch [125/400] Batch [680/925] G: 0.0765 (enc: 0.1926, dec: 0.0344, adv: 1.8568) D: (cover: 0.1547, enc: 0.1503) PSNR: 38.85dB
+Epoch [125/400] Batch [700/925] G: 0.0741 (enc: 0.1947, dec: 0.0329, adv: 2.5198) D: (cover: 0.1603, enc: 0.0911) PSNR: 38.66dB
+Epoch [125/400] Batch [720/925] G: 0.0745 (enc: 0.1979, dec: 0.0329, adv: 2.7298) D: (cover: 0.3380, enc: 0.0382) PSNR: 38.81dB
+Epoch [125/400] Batch [740/925] G: 0.0749 (enc: 0.1881, dec: 0.0338, adv: 1.6556) D: (cover: 0.1622, enc: 0.1433) PSNR: 39.02dB
+Epoch [125/400] Batch [760/925] G: 0.0752 (enc: 0.1944, dec: 0.0332, adv: 2.9318) D: (cover: 0.1683, enc: 0.0699) PSNR: 38.93dB
+Epoch [125/400] Batch [780/925] G: 0.0887 (enc: 0.1926, dec: 0.0399, adv: 3.1393) D: (cover: 0.0341, enc: 0.3935) PSNR: 39.08dB
+Epoch [125/400] Batch [800/925] G: 0.0770 (enc: 0.2019, dec: 0.0342, adv: 2.5447) D: (cover: 0.3856, enc: 0.0957) PSNR: 38.91dB
+Epoch [125/400] Batch [820/925] G: 0.0765 (enc: 0.1948, dec: 0.0345, adv: 1.7340) D: (cover: 0.0175, enc: 0.4948) PSNR: 38.77dB
+Epoch [125/400] Batch [840/925] G: 0.0809 (enc: 0.1923, dec: 0.0361, adv: 2.8388) D: (cover: 0.3559, enc: 0.0621) PSNR: 38.99dB
+Epoch [125/400] Batch [860/925] G: 0.0844 (enc: 0.1984, dec: 0.0381, adv: 2.2807) D: (cover: 0.2151, enc: 0.1500) PSNR: 38.65dB
+Epoch [125/400] Batch [880/925] G: 0.0772 (enc: 0.1949, dec: 0.0340, adv: 3.4639) D: (cover: 0.1804, enc: 0.0387) PSNR: 39.04dB
+Epoch [125/400] Batch [900/925] G: 0.0784 (enc: 0.1986, dec: 0.0353, adv: 1.9055) D: (cover: 0.2553, enc: 0.0981) PSNR: 39.08dB
+Epoch [125/400] Batch [920/925] G: 0.0783 (enc: 0.1952, dec: 0.0353, adv: 1.8460) D: (cover: 0.0363, enc: 0.2522) PSNR: 38.75dB
+Epoch [125/400] 训练平均损失: 0.0788
+Epoch [125/400] 验证平均损失: 0.0846 enc: 0.2021, dec: 0.0391 PSNR: 38.54dB
+Epoch [125/400] 验证耗时: 10.17s
+Epoch [125/400] 保存验证输出耗时: 0.03s
+Epoch [125/400] 训练耗时: 471.56s
+Epoch [125/400] 保存检查点耗时: 0.00s
+Epoch [125/400] 总耗时: 481.77s
+Epoch [126/400] 第1批数据获取耗时: 1.32s
+Epoch [126/400] Batch [20/925] G: 0.0861 (enc: 0.1928, dec: 0.0385, adv: 3.3047) D: (cover: 0.0625, enc: 0.0606) PSNR: 38.90dB
+Epoch [126/400] Batch [40/925] G: 0.0796 (enc: 0.1905, dec: 0.0351, adv: 3.6578) D: (cover: 0.2429, enc: 0.0366) PSNR: 38.82dB
+Epoch [126/400] Batch [60/925] G: 0.0812 (enc: 0.1970, dec: 0.0367, adv: 1.8719) D: (cover: 0.0100, enc: 0.3750) PSNR: 38.93dB
+Epoch [126/400] Batch [80/925] G: 0.0763 (enc: 0.1937, dec: 0.0335, adv: 3.5625) D: (cover: 0.0472, enc: 0.0296) PSNR: 39.04dB
+Epoch [126/400] Batch [100/925] G: 0.0782 (enc: 0.1931, dec: 0.0344, adv: 3.5623) D: (cover: 0.2788, enc: 0.0321) PSNR: 38.94dB
+Epoch [126/400] Batch [120/925] G: 0.0817 (enc: 0.1974, dec: 0.0364, adv: 3.0405) D: (cover: 0.1302, enc: 0.0599) PSNR: 38.96dB
+Epoch [126/400] Batch [140/925] G: 0.0826 (enc: 0.1946, dec: 0.0372, adv: 2.3872) D: (cover: 0.0710, enc: 0.0875) PSNR: 38.93dB
+Epoch [126/400] Batch [160/925] G: 0.0809 (enc: 0.1921, dec: 0.0364, adv: 2.4505) D: (cover: 0.1850, enc: 0.0720) PSNR: 38.99dB
+Epoch [126/400] Batch [180/925] G: 0.0810 (enc: 0.1906, dec: 0.0363, adv: 2.6259) D: (cover: 0.1659, enc: 0.0784) PSNR: 38.90dB
+Epoch [126/400] Batch [200/925] G: 0.0933 (enc: 0.2000, dec: 0.0424, adv: 2.5182) D: (cover: 0.1225, enc: 0.0896) PSNR: 38.74dB
+Epoch [126/400] Batch [220/925] G: 0.0764 (enc: 0.1950, dec: 0.0347, adv: 1.1735) D: (cover: 0.2268, enc: 0.1350) PSNR: 38.80dB
+Epoch [126/400] Batch [240/925] G: 0.0755 (enc: 0.1980, dec: 0.0335, adv: 2.4400) D: (cover: 0.2657, enc: 0.0936) PSNR: 38.85dB
+Epoch [126/400] Batch [260/925] G: 0.0737 (enc: 0.1983, dec: 0.0329, adv: 2.0281) D: (cover: 0.0198, enc: 0.2025) PSNR: 38.74dB
+Epoch [126/400] Batch [280/925] G: 0.0733 (enc: 0.1962, dec: 0.0323, adv: 2.9086) D: (cover: 0.3634, enc: 0.0362) PSNR: 38.89dB
+Epoch [126/400] Batch [300/925] G: 0.0770 (enc: 0.1983, dec: 0.0346, adv: 1.9080) D: (cover: 0.0456, enc: 0.2009) PSNR: 39.11dB
+Epoch [126/400] Batch [320/925] G: 0.0795 (enc: 0.1905, dec: 0.0359, adv: 1.9115) D: (cover: 0.0206, enc: 0.2543) PSNR: 39.04dB
+Epoch [126/400] Batch [340/925] G: 0.0766 (enc: 0.1960, dec: 0.0340, adv: 2.7407) D: (cover: 0.0534, enc: 0.1176) PSNR: 39.00dB
+Epoch [126/400] Batch [360/925] G: 0.0779 (enc: 0.1940, dec: 0.0349, adv: 2.3792) D: (cover: 0.2115, enc: 0.0684) PSNR: 38.96dB
+Epoch [126/400] Batch [380/925] G: 0.0800 (enc: 0.1941, dec: 0.0361, adv: 1.8918) D: (cover: 0.0293, enc: 0.1868) PSNR: 38.80dB
+Epoch [126/400] Batch [400/925] G: 0.0766 (enc: 0.1961, dec: 0.0344, adv: 1.9664) D: (cover: 0.1324, enc: 0.1393) PSNR: 38.76dB
+Epoch [126/400] Batch [420/925] G: 0.0846 (enc: 0.1878, dec: 0.0380, adv: 2.8981) D: (cover: 0.1427, enc: 0.0598) PSNR: 38.95dB
+Epoch [126/400] Batch [440/925] G: 0.0714 (enc: 0.1954, dec: 0.0313, adv: 3.0047) D: (cover: 0.0954, enc: 0.2464) PSNR: 38.99dB
+Epoch [126/400] Batch [460/925] G: 0.0793 (enc: 0.1979, dec: 0.0357, adv: 1.9771) D: (cover: 0.0540, enc: 0.2084) PSNR: 39.02dB
+Epoch [126/400] Batch [480/925] G: 0.0758 (enc: 0.1992, dec: 0.0341, adv: 1.4947) D: (cover: 0.0841, enc: 0.2486) PSNR: 38.80dB
+Epoch [126/400] Batch [500/925] G: 0.0782 (enc: 0.1948, dec: 0.0350, adv: 2.3524) D: (cover: 0.0426, enc: 0.1682) PSNR: 39.20dB
+Epoch [126/400] Batch [520/925] G: 0.0762 (enc: 0.1959, dec: 0.0339, adv: 2.5238) D: (cover: 0.0399, enc: 0.2177) PSNR: 38.93dB
+Epoch [126/400] Batch [540/925] G: 0.0728 (enc: 0.1941, dec: 0.0324, adv: 2.1223) D: (cover: 0.2382, enc: 0.1004) PSNR: 39.00dB
+Epoch [126/400] Batch [560/925] G: 0.0817 (enc: 0.1981, dec: 0.0367, adv: 2.3932) D: (cover: 0.0032, enc: 1.2137) PSNR: 39.02dB
+Epoch [126/400] Batch [580/925] G: 0.0717 (enc: 0.1946, dec: 0.0318, adv: 2.2467) D: (cover: 0.1496, enc: 0.1323) PSNR: 38.82dB
+Epoch [126/400] Batch [600/925] G: 0.0836 (enc: 0.1940, dec: 0.0378, adv: 2.3118) D: (cover: 0.0419, enc: 0.2709) PSNR: 39.02dB
+Epoch [126/400] Batch [620/925] G: 0.0792 (enc: 0.1988, dec: 0.0356, adv: 2.0810) D: (cover: 0.3550, enc: 0.0750) PSNR: 38.83dB
+Epoch [126/400] Batch [640/925] G: 0.0807 (enc: 0.1903, dec: 0.0361, adv: 2.7660) D: (cover: 0.0482, enc: 0.0657) PSNR: 38.91dB
+Epoch [126/400] Batch [660/925] G: 0.0749 (enc: 0.1950, dec: 0.0336, adv: 1.9190) D: (cover: 0.0908, enc: 0.0954) PSNR: 38.71dB
+Epoch [126/400] Batch [680/925] G: 0.0759 (enc: 0.1963, dec: 0.0338, adv: 2.4555) D: (cover: 0.2486, enc: 0.0771) PSNR: 38.60dB
+Epoch [126/400] Batch [700/925] G: 0.0841 (enc: 0.1889, dec: 0.0376, adv: 3.1633) D: (cover: 0.1377, enc: 0.0533) PSNR: 38.91dB
+Epoch [126/400] Batch [720/925] G: 0.0870 (enc: 0.1924, dec: 0.0388, adv: 3.6046) D: (cover: 0.1530, enc: 0.0320) PSNR: 38.83dB
+Epoch [126/400] Batch [740/925] G: 0.0789 (enc: 0.2015, dec: 0.0351, adv: 2.5643) D: (cover: 0.0981, enc: 0.0780) PSNR: 38.82dB
+Epoch [126/400] Batch [760/925] G: 0.0715 (enc: 0.1969, dec: 0.0313, adv: 3.0120) D: (cover: 0.0490, enc: 0.0846) PSNR: 38.77dB
+Epoch [126/400] Batch [780/925] G: 0.0815 (enc: 0.1947, dec: 0.0362, adv: 3.2619) D: (cover: 0.0550, enc: 0.0584) PSNR: 38.79dB
+Epoch [126/400] Batch [800/925] G: 0.0821 (enc: 0.1915, dec: 0.0368, adv: 2.6672) D: (cover: 0.0281, enc: 0.1618) PSNR: 38.87dB
+Epoch [126/400] Batch [820/925] G: 0.0804 (enc: 0.1945, dec: 0.0365, adv: 1.5541) D: (cover: 0.0107, enc: 0.6675) PSNR: 38.79dB
+Epoch [126/400] Batch [840/925] G: 0.0810 (enc: 0.2033, dec: 0.0360, adv: 2.9282) D: (cover: 0.1509, enc: 0.0944) PSNR: 38.91dB
+Epoch [126/400] Batch [860/925] G: 0.0726 (enc: 0.1946, dec: 0.0326, adv: 1.6216) D: (cover: 0.0185, enc: 0.2862) PSNR: 38.87dB
+Epoch [126/400] Batch [880/925] G: 0.0772 (enc: 0.1897, dec: 0.0340, adv: 3.5243) D: (cover: 0.4797, enc: 0.0219) PSNR: 39.16dB
+Epoch [126/400] Batch [900/925] G: 0.0781 (enc: 0.1996, dec: 0.0350, adv: 2.0094) D: (cover: 0.0268, enc: 0.2696) PSNR: 38.95dB
+Epoch [126/400] Batch [920/925] G: 0.0800 (enc: 0.1939, dec: 0.0356, adv: 2.9925) D: (cover: 0.3511, enc: 0.0773) PSNR: 38.88dB
+Epoch [126/400] 训练平均损失: 0.0787
+Epoch [126/400] 验证平均损失: 0.0863 enc: 0.2053, dec: 0.0314 PSNR: 38.94dB
+Epoch [126/400] 验证耗时: 9.88s
+Epoch [126/400] 保存验证输出耗时: 0.03s
+Epoch [126/400] 训练耗时: 471.33s
+Epoch [126/400] 保存检查点耗时: 0.01s
+Epoch [126/400] 总耗时: 481.26s
+Epoch [127/400] 第1批数据获取耗时: 1.12s
+Epoch [127/400] Batch [20/925] G: 0.0799 (enc: 0.1997, dec: 0.0363, adv: 1.2635) D: (cover: 0.3131, enc: 0.2200) PSNR: 38.89dB
+Epoch [127/400] Batch [40/925] G: 0.0793 (enc: 0.1954, dec: 0.0357, adv: 2.1133) D: (cover: 0.1026, enc: 0.3154) PSNR: 38.91dB
+Epoch [127/400] Batch [60/925] G: 0.0751 (enc: 0.2005, dec: 0.0331, adv: 2.8808) D: (cover: 0.3525, enc: 0.0733) PSNR: 38.81dB
+Epoch [127/400] Batch [80/925] G: 0.0778 (enc: 0.1981, dec: 0.0348, adv: 2.1855) D: (cover: 0.0578, enc: 0.1918) PSNR: 38.59dB
+Epoch [127/400] Batch [100/925] G: 0.0742 (enc: 0.1994, dec: 0.0328, adv: 2.6943) D: (cover: 0.2762, enc: 0.0917) PSNR: 39.03dB
+Epoch [127/400] Batch [120/925] G: 0.0731 (enc: 0.1971, dec: 0.0324, adv: 2.3718) D: (cover: 0.0530, enc: 0.1230) PSNR: 38.82dB
+Epoch [127/400] Batch [140/925] G: 0.0795 (enc: 0.1940, dec: 0.0354, adv: 2.7774) D: (cover: 0.1825, enc: 0.0685) PSNR: 38.96dB
+Epoch [127/400] Batch [160/925] G: 0.0815 (enc: 0.1985, dec: 0.0361, adv: 3.2670) D: (cover: 0.2866, enc: 0.0301) PSNR: 38.70dB
+Epoch [127/400] Batch [180/925] G: 0.0774 (enc: 0.1951, dec: 0.0350, adv: 1.6596) D: (cover: 0.0328, enc: 0.3614) PSNR: 38.84dB
+Epoch [127/400] Batch [200/925] G: 0.0734 (enc: 0.1968, dec: 0.0329, adv: 1.7474) D: (cover: 0.0297, enc: 0.2865) PSNR: 38.71dB
+Epoch [127/400] Batch [220/925] G: 0.0798 (enc: 0.1985, dec: 0.0360, adv: 1.9033) D: (cover: 0.0433, enc: 0.1538) PSNR: 38.86dB
+Epoch [127/400] Batch [240/925] G: 0.0815 (enc: 0.1947, dec: 0.0365, adv: 2.5906) D: (cover: 0.1674, enc: 0.1218) PSNR: 38.94dB
+Epoch [127/400] Batch [260/925] G: 0.0786 (enc: 0.1939, dec: 0.0354, adv: 1.9020) D: (cover: 0.0458, enc: 0.1796) PSNR: 38.68dB
+Epoch [127/400] Batch [280/925] G: 0.0809 (enc: 0.1930, dec: 0.0365, adv: 1.9905) D: (cover: 0.0044, enc: 0.8760) PSNR: 38.70dB
+Epoch [127/400] Batch [300/925] G: 0.0790 (enc: 0.1962, dec: 0.0355, adv: 2.1439) D: (cover: 0.0864, enc: 0.1242) PSNR: 38.57dB
+Epoch [127/400] Batch [320/925] G: 0.0749 (enc: 0.1916, dec: 0.0340, adv: 1.1521) D: (cover: 0.0031, enc: 0.8361) PSNR: 38.91dB
+Epoch [127/400] Batch [340/925] G: 0.0764 (enc: 0.2021, dec: 0.0341, adv: 2.2024) D: (cover: 0.2194, enc: 0.1215) PSNR: 38.45dB
+Epoch [127/400] Batch [360/925] G: 0.0755 (enc: 0.1946, dec: 0.0340, adv: 1.7452) D: (cover: 0.0470, enc: 0.2215) PSNR: 38.89dB
+Epoch [127/400] Batch [380/925] G: 0.0736 (enc: 0.1957, dec: 0.0325, adv: 2.7577) D: (cover: 0.1517, enc: 0.0872) PSNR: 38.82dB
+Epoch [127/400] Batch [400/925] G: 0.0791 (enc: 0.1884, dec: 0.0353, adv: 2.9000) D: (cover: 0.1508, enc: 0.0775) PSNR: 39.13dB
+Epoch [127/400] Batch [420/925] G: 0.0807 (enc: 0.1931, dec: 0.0366, adv: 1.6195) D: (cover: 0.1051, enc: 0.2311) PSNR: 38.78dB
+Epoch [127/400] Batch [440/925] G: 0.0825 (enc: 0.1950, dec: 0.0372, adv: 2.2056) D: (cover: 0.2625, enc: 0.0831) PSNR: 39.07dB
+Epoch [127/400] Batch [460/925] G: 0.0809 (enc: 0.1916, dec: 0.0368, adv: 1.5715) D: (cover: 0.0318, enc: 0.3457) PSNR: 38.96dB
+Epoch [127/400] Batch [480/925] G: 0.0765 (enc: 0.2015, dec: 0.0340, adv: 2.5765) D: (cover: 0.0428, enc: 0.0911) PSNR: 38.92dB
+Epoch [127/400] Batch [500/925] G: 0.0736 (enc: 0.1943, dec: 0.0325, adv: 2.6511) D: (cover: 0.0455, enc: 0.0938) PSNR: 39.03dB
+Epoch [127/400] Batch [520/925] G: 0.0772 (enc: 0.1939, dec: 0.0340, adv: 3.4617) D: (cover: 0.2342, enc: 0.0347) PSNR: 39.07dB
+Epoch [127/400] Batch [540/925] G: 0.0781 (enc: 0.2023, dec: 0.0348, adv: 2.4102) D: (cover: 0.0257, enc: 0.3098) PSNR: 38.87dB
+Epoch [127/400] Batch [560/925] G: 0.0780 (enc: 0.1965, dec: 0.0346, adv: 2.8602) D: (cover: 0.1278, enc: 0.1555) PSNR: 38.81dB
+Epoch [127/400] Batch [580/925] G: 0.0727 (enc: 0.2023, dec: 0.0326, adv: 1.3647) D: (cover: 0.0263, enc: 0.3648) PSNR: 38.93dB
+Epoch [127/400] Batch [600/925] G: 0.0790 (enc: 0.1958, dec: 0.0351, adv: 2.8807) D: (cover: 0.8465, enc: 0.0289) PSNR: 38.74dB
+Epoch [127/400] Batch [620/925] G: 0.0758 (enc: 0.1998, dec: 0.0339, adv: 1.8920) D: (cover: 0.0996, enc: 0.2362) PSNR: 38.72dB
+Epoch [127/400] Batch [640/925] G: 0.0734 (enc: 0.2006, dec: 0.0329, adv: 1.5850) D: (cover: 0.0176, enc: 0.2569) PSNR: 38.86dB
+Epoch [127/400] Batch [660/925] G: 0.0858 (enc: 0.1911, dec: 0.0391, adv: 1.7903) D: (cover: 0.0174, enc: 0.2140) PSNR: 39.16dB
+Epoch [127/400] Batch [680/925] G: 0.0849 (enc: 0.1868, dec: 0.0386, adv: 2.0898) D: (cover: 0.0963, enc: 0.1243) PSNR: 38.96dB
+Epoch [127/400] Batch [700/925] G: 0.0828 (enc: 0.1942, dec: 0.0364, adv: 4.0755) D: (cover: 0.1741, enc: 0.0229) PSNR: 38.66dB
+Epoch [127/400] Batch [720/925] G: 0.0777 (enc: 0.1920, dec: 0.0347, adv: 2.5879) D: (cover: 0.0525, enc: 0.1162) PSNR: 38.87dB
+Epoch [127/400] Batch [740/925] G: 0.0767 (enc: 0.1922, dec: 0.0343, adv: 2.2882) D: (cover: 0.0647, enc: 0.0627) PSNR: 38.83dB
+Epoch [127/400] Batch [760/925] G: 0.0834 (enc: 0.1917, dec: 0.0370, adv: 3.5944) D: (cover: 0.1948, enc: 0.0568) PSNR: 38.87dB
+Epoch [127/400] Batch [780/925] G: 0.0842 (enc: 0.1916, dec: 0.0380, adv: 2.3812) D: (cover: 0.0143, enc: 0.1824) PSNR: 39.10dB
+Epoch [127/400] Batch [800/925] G: 0.0744 (enc: 0.1881, dec: 0.0332, adv: 2.3198) D: (cover: 0.0098, enc: 0.2401) PSNR: 39.02dB
+Epoch [127/400] Batch [820/925] G: 0.0824 (enc: 0.1917, dec: 0.0376, adv: 1.3998) D: (cover: 0.0158, enc: 0.4460) PSNR: 38.90dB
+Epoch [127/400] Batch [840/925] G: 0.0833 (enc: 0.1955, dec: 0.0375, adv: 2.4636) D: (cover: 0.3207, enc: 0.0551) PSNR: 38.82dB
+Epoch [127/400] Batch [860/925] G: 0.0798 (enc: 0.1992, dec: 0.0357, adv: 2.3677) D: (cover: 0.0865, enc: 0.3406) PSNR: 38.73dB
+Epoch [127/400] Batch [880/925] G: 0.0784 (enc: 0.1960, dec: 0.0352, adv: 2.1808) D: (cover: 0.1644, enc: 0.1617) PSNR: 38.82dB
+Epoch [127/400] Batch [900/925] G: 0.0705 (enc: 0.2018, dec: 0.0311, adv: 2.2703) D: (cover: 0.2018, enc: 0.1776) PSNR: 38.80dB
+Epoch [127/400] Batch [920/925] G: 0.0838 (enc: 0.1969, dec: 0.0378, adv: 2.2946) D: (cover: 0.2451, enc: 0.0875) PSNR: 38.71dB
+Epoch [127/400] 训练平均损失: 0.0783
+Epoch [127/400] 验证平均损失: 0.0883 enc: 0.2021, dec: 0.0360 PSNR: 38.18dB
+Epoch [127/400] 验证耗时: 10.22s
+Epoch [127/400] 保存验证输出耗时: 0.03s
+Epoch [127/400] 训练耗时: 471.09s
+Epoch [127/400] 保存检查点耗时: 0.00s
+Epoch [127/400] 总耗时: 481.34s
+Epoch [128/400] 第1批数据获取耗时: 1.12s
+Epoch [128/400] Batch [20/925] G: 0.0810 (enc: 0.1985, dec: 0.0365, adv: 2.1197) D: (cover: 0.1301, enc: 0.3023) PSNR: 38.59dB
+Epoch [128/400] Batch [40/925] G: 0.0764 (enc: 0.1987, dec: 0.0345, adv: 1.3508) D: (cover: 0.0616, enc: 0.3518) PSNR: 38.64dB
+Epoch [128/400] Batch [60/925] G: 0.0775 (enc: 0.1949, dec: 0.0343, adv: 3.0450) D: (cover: 0.0493, enc: 0.0820) PSNR: 38.66dB
+Epoch [128/400] Batch [80/925] G: 0.0803 (enc: 0.1962, dec: 0.0359, adv: 2.6560) D: (cover: 0.1350, enc: 0.0442) PSNR: 38.89dB
+Epoch [128/400] Batch [100/925] G: 0.0757 (enc: 0.2027, dec: 0.0334, adv: 2.8392) D: (cover: 0.5107, enc: 0.0294) PSNR: 38.86dB
+Epoch [128/400] Batch [120/925] G: 0.0803 (enc: 0.1927, dec: 0.0358, adv: 2.9183) D: (cover: 0.0956, enc: 0.0705) PSNR: 39.00dB
+Epoch [128/400] Batch [140/925] G: 0.0802 (enc: 0.1982, dec: 0.0361, adv: 2.0181) D: (cover: 0.0431, enc: 0.1774) PSNR: 38.83dB
+Epoch [128/400] Batch [160/925] G: 0.0789 (enc: 0.1910, dec: 0.0354, adv: 2.4194) D: (cover: 0.0719, enc: 0.1003) PSNR: 39.01dB
+Epoch [128/400] Batch [180/925] G: 0.0822 (enc: 0.1984, dec: 0.0362, adv: 3.8720) D: (cover: 0.2881, enc: 0.0219) PSNR: 38.59dB
+Epoch [128/400] Batch [200/925] G: 0.0815 (enc: 0.1927, dec: 0.0366, adv: 2.4571) D: (cover: 0.1469, enc: 0.0485) PSNR: 38.95dB
+Epoch [128/400] Batch [220/925] G: 0.0825 (enc: 0.1931, dec: 0.0379, adv: 1.0476) D: (cover: 0.0223, enc: 0.9027) PSNR: 39.01dB
+Epoch [128/400] Batch [240/925] G: 0.0750 (enc: 0.1984, dec: 0.0338, adv: 1.4417) D: (cover: 0.0102, enc: 0.9743) PSNR: 38.82dB
+Epoch [128/400] Batch [260/925] G: 0.0788 (enc: 0.1986, dec: 0.0349, adv: 3.0863) D: (cover: 0.3041, enc: 0.0632) PSNR: 38.82dB
+Epoch [128/400] Batch [280/925] G: 0.0768 (enc: 0.1970, dec: 0.0342, adv: 2.5336) D: (cover: 0.1187, enc: 0.0835) PSNR: 38.88dB
+Epoch [128/400] Batch [300/925] G: 0.0772 (enc: 0.1922, dec: 0.0345, adv: 2.3270) D: (cover: 0.1066, enc: 0.1605) PSNR: 39.19dB
+Epoch [128/400] Batch [320/925] G: 0.0808 (enc: 0.1947, dec: 0.0358, adv: 3.4248) D: (cover: 0.3618, enc: 0.0270) PSNR: 38.77dB
+Epoch [128/400] Batch [340/925] G: 0.0735 (enc: 0.1966, dec: 0.0327, adv: 2.2531) D: (cover: 0.0588, enc: 0.1039) PSNR: 38.91dB
+Epoch [128/400] Batch [360/925] G: 0.0816 (enc: 0.1965, dec: 0.0368, adv: 2.1206) D: (cover: 0.0756, enc: 0.0703) PSNR: 38.90dB
+Epoch [128/400] Batch [380/925] G: 0.0762 (enc: 0.1954, dec: 0.0344, adv: 1.6515) D: (cover: 0.0271, enc: 0.2122) PSNR: 38.97dB
+Epoch [128/400] Batch [400/925] G: 0.0806 (enc: 0.1972, dec: 0.0362, adv: 2.3768) D: (cover: 0.0182, enc: 0.2462) PSNR: 38.76dB
+Epoch [128/400] Batch [420/925] G: 0.0759 (enc: 0.2018, dec: 0.0334, adv: 2.9753) D: (cover: 0.3327, enc: 0.0396) PSNR: 38.85dB
+Epoch [128/400] Batch [440/925] G: 0.0764 (enc: 0.1965, dec: 0.0345, adv: 1.5215) D: (cover: 0.0582, enc: 0.6197) PSNR: 39.01dB
+Epoch [128/400] Batch [460/925] G: 0.0849 (enc: 0.1944, dec: 0.0389, adv: 1.1687) D: (cover: 0.1300, enc: 0.3518) PSNR: 38.97dB
+Epoch [128/400] Batch [480/925] G: 0.0755 (enc: 0.1983, dec: 0.0339, adv: 1.7419) D: (cover: 0.0612, enc: 0.2397) PSNR: 38.55dB
+Epoch [128/400] Batch [500/925] G: 0.0909 (enc: 0.1922, dec: 0.0415, adv: 2.0278) D: (cover: 0.0193, enc: 0.3178) PSNR: 38.98dB
+Epoch [128/400] Batch [520/925] G: 0.0767 (enc: 0.1888, dec: 0.0343, adv: 2.4767) D: (cover: 0.0329, enc: 0.1099) PSNR: 39.06dB
+Epoch [128/400] Batch [540/925] G: 0.0787 (enc: 0.1963, dec: 0.0347, adv: 3.3715) D: (cover: 0.1151, enc: 0.0370) PSNR: 38.91dB
+Epoch [128/400] Batch [560/925] G: 0.0816 (enc: 0.1970, dec: 0.0364, adv: 2.7908) D: (cover: 0.0839, enc: 0.0833) PSNR: 39.00dB
+Epoch [128/400] Batch [580/925] G: 0.0754 (enc: 0.1932, dec: 0.0335, adv: 2.7067) D: (cover: 0.0580, enc: 0.0823) PSNR: 38.95dB
+Epoch [128/400] Batch [600/925] G: 0.0818 (enc: 0.1859, dec: 0.0370, adv: 2.2285) D: (cover: 0.0207, enc: 0.1168) PSNR: 39.05dB
+Epoch [128/400] Batch [620/925] G: 0.0759 (enc: 0.1918, dec: 0.0338, adv: 2.5262) D: (cover: 0.0160, enc: 0.0960) PSNR: 39.25dB
+Epoch [128/400] Batch [640/925] G: 0.0799 (enc: 0.1937, dec: 0.0360, adv: 2.0858) D: (cover: 0.0385, enc: 0.2199) PSNR: 38.95dB
+Epoch [128/400] Batch [660/925] G: 0.0768 (enc: 0.1956, dec: 0.0343, adv: 2.3941) D: (cover: 0.0730, enc: 0.1482) PSNR: 38.86dB
+Epoch [128/400] Batch [680/925] G: 0.0781 (enc: 0.1958, dec: 0.0350, adv: 2.1938) D: (cover: 0.0645, enc: 0.1559) PSNR: 38.99dB
+Epoch [128/400] Batch [700/925] G: 0.0798 (enc: 0.1983, dec: 0.0350, adv: 3.8619) D: (cover: 0.4546, enc: 0.0246) PSNR: 38.81dB
+Epoch [128/400] Batch [720/925] G: 0.0762 (enc: 0.1959, dec: 0.0345, adv: 1.3420) D: (cover: 0.0801, enc: 0.3954) PSNR: 38.97dB
+Epoch [128/400] Batch [740/925] G: 0.0815 (enc: 0.2013, dec: 0.0359, adv: 3.7522) D: (cover: 0.4528, enc: 0.0648) PSNR: 39.05dB
+Epoch [128/400] Batch [760/925] G: 0.0800 (enc: 0.2000, dec: 0.0363, adv: 1.5128) D: (cover: 0.1488, enc: 0.2163) PSNR: 38.74dB
+Epoch [128/400] Batch [780/925] G: 0.0742 (enc: 0.1988, dec: 0.0327, adv: 2.8582) D: (cover: 0.1859, enc: 0.1906) PSNR: 38.86dB
+Epoch [128/400] Batch [800/925] G: 0.0829 (enc: 0.1982, dec: 0.0376, adv: 1.8217) D: (cover: 0.0407, enc: 0.4146) PSNR: 38.67dB
+Epoch [128/400] Batch [820/925] G: 0.0776 (enc: 0.1937, dec: 0.0346, adv: 2.5286) D: (cover: 0.1318, enc: 0.1288) PSNR: 38.96dB
+Epoch [128/400] Batch [840/925] G: 0.0807 (enc: 0.1892, dec: 0.0364, adv: 2.2656) D: (cover: 0.0648, enc: 0.1293) PSNR: 39.18dB
+Epoch [128/400] Batch [860/925] G: 0.0794 (enc: 0.1916, dec: 0.0352, adv: 3.1541) D: (cover: 0.1234, enc: 0.0459) PSNR: 39.21dB
+Epoch [128/400] Batch [880/925] G: 0.0769 (enc: 0.1975, dec: 0.0344, adv: 2.1330) D: (cover: 0.0180, enc: 0.2252) PSNR: 38.61dB
+Epoch [128/400] Batch [900/925] G: 0.0813 (enc: 0.1975, dec: 0.0367, adv: 2.0657) D: (cover: 0.0221, enc: 0.1951) PSNR: 38.65dB
+Epoch [128/400] Batch [920/925] G: 0.0788 (enc: 0.1881, dec: 0.0355, adv: 2.0797) D: (cover: 0.1395, enc: 0.1636) PSNR: 38.96dB
+Epoch [128/400] 训练平均损失: 0.0782
+Epoch [128/400] 验证平均损失: 0.0871 enc: 0.2132, dec: 0.0333 PSNR: 38.25dB
+Epoch [128/400] 验证耗时: 9.93s
+Epoch [128/400] 保存验证输出耗时: 0.03s
+Epoch [128/400] 训练耗时: 471.12s
+Epoch [128/400] 保存检查点耗时: 0.00s
+Epoch [128/400] 总耗时: 481.08s
+Epoch [129/400] 第1批数据获取耗时: 1.07s
+Epoch [129/400] Batch [20/925] G: 0.0775 (enc: 0.1940, dec: 0.0345, adv: 2.6548) D: (cover: 0.3346, enc: 0.0807) PSNR: 38.75dB
+Epoch [129/400] Batch [40/925] G: 0.0747 (enc: 0.1960, dec: 0.0333, adv: 2.2865) D: (cover: 0.0096, enc: 0.3610) PSNR: 38.77dB
+Epoch [129/400] Batch [60/925] G: 0.0754 (enc: 0.1967, dec: 0.0342, adv: 1.1817) D: (cover: 0.0093, enc: 0.7208) PSNR: 39.01dB
+Epoch [129/400] Batch [80/925] G: 0.0774 (enc: 0.1960, dec: 0.0344, adv: 2.6676) D: (cover: 0.2019, enc: 0.0920) PSNR: 38.65dB
+Epoch [129/400] Batch [100/925] G: 0.0817 (enc: 0.1979, dec: 0.0370, adv: 1.6738) D: (cover: 0.0352, enc: 0.1807) PSNR: 38.55dB
+Epoch [129/400] Batch [120/925] G: 0.0805 (enc: 0.1955, dec: 0.0363, adv: 2.0864) D: (cover: 0.0929, enc: 0.1470) PSNR: 38.58dB
+Epoch [129/400] Batch [140/925] G: 0.0793 (enc: 0.1912, dec: 0.0357, adv: 2.0710) D: (cover: 0.0788, enc: 0.1340) PSNR: 38.84dB
+Epoch [129/400] Batch [160/925] G: 0.0779 (enc: 0.1942, dec: 0.0347, adv: 2.7812) D: (cover: 0.0649, enc: 0.0924) PSNR: 38.87dB
+Epoch [129/400] Batch [180/925] G: 0.0738 (enc: 0.1976, dec: 0.0328, adv: 2.1715) D: (cover: 0.0390, enc: 0.3949) PSNR: 38.86dB
+Epoch [129/400] Batch [200/925] G: 0.0759 (enc: 0.1939, dec: 0.0338, adv: 2.6030) D: (cover: 0.3738, enc: 0.0400) PSNR: 38.70dB
+Epoch [129/400] Batch [220/925] G: 0.0786 (enc: 0.1950, dec: 0.0349, adv: 2.8956) D: (cover: 0.0349, enc: 0.2724) PSNR: 38.89dB
+Epoch [129/400] Batch [240/925] G: 0.0850 (enc: 0.1943, dec: 0.0378, adv: 3.5221) D: (cover: 0.5589, enc: 0.0282) PSNR: 38.83dB
+Epoch [129/400] Batch [260/925] G: 0.0741 (enc: 0.2009, dec: 0.0327, adv: 2.7167) D: (cover: 0.0813, enc: 0.0610) PSNR: 38.91dB
+Epoch [129/400] Batch [280/925] G: 0.0758 (enc: 0.1993, dec: 0.0336, adv: 2.6576) D: (cover: 0.7742, enc: 0.0292) PSNR: 38.71dB
+Epoch [129/400] Batch [300/925] G: 0.0789 (enc: 0.1949, dec: 0.0352, adv: 2.6116) D: (cover: 0.0940, enc: 0.0789) PSNR: 38.91dB
+Epoch [129/400] Batch [320/925] G: 0.0715 (enc: 0.1915, dec: 0.0321, adv: 1.5667) D: (cover: 0.0049, enc: 0.4676) PSNR: 39.09dB
+Epoch [129/400] Batch [340/925] G: 0.0789 (enc: 0.2003, dec: 0.0352, adv: 2.4541) D: (cover: 0.2703, enc: 0.0682) PSNR: 38.58dB
+Epoch [129/400] Batch [360/925] G: 0.0853 (enc: 0.1949, dec: 0.0381, adv: 3.2228) D: (cover: 0.3929, enc: 0.0380) PSNR: 38.65dB
+Epoch [129/400] Batch [380/925] G: 0.0776 (enc: 0.2029, dec: 0.0347, adv: 2.1508) D: (cover: 0.1686, enc: 0.1496) PSNR: 38.78dB
+Epoch [129/400] Batch [400/925] G: 0.0712 (enc: 0.1951, dec: 0.0319, adv: 1.5524) D: (cover: 0.0254, enc: 0.3794) PSNR: 38.53dB
+Epoch [129/400] Batch [420/925] G: 0.0779 (enc: 0.1936, dec: 0.0348, adv: 2.5285) D: (cover: 0.4191, enc: 0.0860) PSNR: 38.83dB
+Epoch [129/400] Batch [440/925] G: 0.0782 (enc: 0.2008, dec: 0.0345, adv: 3.1168) D: (cover: 0.2020, enc: 0.0664) PSNR: 38.54dB
+Epoch [129/400] Batch [460/925] G: 0.0777 (enc: 0.1901, dec: 0.0347, adv: 2.6260) D: (cover: 0.1358, enc: 0.0708) PSNR: 38.85dB
+Epoch [129/400] Batch [480/925] G: 0.0818 (enc: 0.1868, dec: 0.0372, adv: 1.7828) D: (cover: 0.0508, enc: 0.1601) PSNR: 38.96dB
+Epoch [129/400] Batch [500/925] G: 0.0857 (enc: 0.1952, dec: 0.0386, adv: 2.6273) D: (cover: 0.0373, enc: 0.3781) PSNR: 38.61dB
+Epoch [129/400] Batch [520/925] G: 0.0875 (enc: 0.1950, dec: 0.0397, adv: 2.2561) D: (cover: 0.1064, enc: 0.1463) PSNR: 38.75dB
+Epoch [129/400] Batch [540/925] G: 0.0813 (enc: 0.1929, dec: 0.0363, adv: 2.9057) D: (cover: 0.2144, enc: 0.0584) PSNR: 38.92dB
+Epoch [129/400] Batch [560/925] G: 0.0767 (enc: 0.2015, dec: 0.0339, adv: 2.9582) D: (cover: 0.1278, enc: 0.0689) PSNR: 38.67dB
+Epoch [129/400] Batch [580/925] G: 0.0758 (enc: 0.1976, dec: 0.0336, adv: 2.6464) D: (cover: 0.0522, enc: 0.0844) PSNR: 38.79dB
+Epoch [129/400] Batch [600/925] G: 0.0838 (enc: 0.1995, dec: 0.0374, adv: 2.9457) D: (cover: 0.1798, enc: 0.0333) PSNR: 38.63dB
+Epoch [129/400] Batch [620/925] G: 0.0782 (enc: 0.1985, dec: 0.0347, adv: 2.8380) D: (cover: 0.1567, enc: 0.0814) PSNR: 38.72dB
+Epoch [129/400] Batch [640/925] G: 0.0772 (enc: 0.1954, dec: 0.0344, adv: 2.5676) D: (cover: 0.2183, enc: 0.0827) PSNR: 38.81dB
+Epoch [129/400] Batch [660/925] G: 0.0727 (enc: 0.1949, dec: 0.0327, adv: 1.5590) D: (cover: 0.0078, enc: 0.4883) PSNR: 38.86dB
+Epoch [129/400] Batch [680/925] G: 0.0853 (enc: 0.1904, dec: 0.0387, adv: 2.2358) D: (cover: 0.0781, enc: 0.2163) PSNR: 38.71dB
+Epoch [129/400] Batch [700/925] G: 0.0788 (enc: 0.1899, dec: 0.0354, adv: 2.4232) D: (cover: 0.1777, enc: 0.0549) PSNR: 38.97dB
+Epoch [129/400] Batch [720/925] G: 0.0760 (enc: 0.1945, dec: 0.0338, adv: 2.4960) D: (cover: 0.1275, enc: 0.1053) PSNR: 38.99dB
+Epoch [129/400] Batch [740/925] G: 0.0765 (enc: 0.1943, dec: 0.0341, adv: 2.3753) D: (cover: 0.1095, enc: 0.1079) PSNR: 38.92dB
+Epoch [129/400] Batch [760/925] G: 0.0825 (enc: 0.1962, dec: 0.0376, adv: 1.4961) D: (cover: 0.0271, enc: 0.4968) PSNR: 38.79dB
+Epoch [129/400] Batch [780/925] G: 0.0867 (enc: 0.1975, dec: 0.0390, adv: 2.7275) D: (cover: 0.0705, enc: 0.1160) PSNR: 38.88dB
+Epoch [129/400] Batch [800/925] G: 0.0792 (enc: 0.1960, dec: 0.0350, adv: 3.2670) D: (cover: 0.0912, enc: 0.0525) PSNR: 38.83dB
+Epoch [129/400] Batch [820/925] G: 0.0748 (enc: 0.1951, dec: 0.0335, adv: 1.9857) D: (cover: 0.5456, enc: 0.0341) PSNR: 38.94dB
+Epoch [129/400] Batch [840/925] G: 0.0815 (enc: 0.1954, dec: 0.0366, adv: 2.5084) D: (cover: 0.2222, enc: 0.0714) PSNR: 38.81dB
+Epoch [129/400] Batch [860/925] G: 0.0783 (enc: 0.1961, dec: 0.0352, adv: 2.1128) D: (cover: 0.2458, enc: 0.0930) PSNR: 38.86dB
+Epoch [129/400] Batch [880/925] G: 0.0845 (enc: 0.1929, dec: 0.0382, adv: 2.3579) D: (cover: 0.0364, enc: 0.1323) PSNR: 38.87dB
+Epoch [129/400] Batch [900/925] G: 0.0754 (enc: 0.1983, dec: 0.0332, adv: 3.1055) D: (cover: 0.4295, enc: 0.0287) PSNR: 38.79dB
+Epoch [129/400] Batch [920/925] G: 0.0822 (enc: 0.1980, dec: 0.0365, adv: 3.1334) D: (cover: 0.2900, enc: 0.0304) PSNR: 39.00dB
+Epoch [129/400] 训练平均损失: 0.0784
+Epoch [129/400] 验证平均损失: 0.0867 enc: 0.2109, dec: 0.0336 PSNR: 38.69dB
+Epoch [129/400] 验证耗时: 10.17s
+Epoch [129/400] 保存验证输出耗时: 0.03s
+Epoch [129/400] 训练耗时: 471.05s
+Epoch [129/400] 保存检查点耗时: 0.01s
+Epoch [129/400] 总耗时: 481.26s
+Epoch [130/400] 第1批数据获取耗时: 1.67s
+Epoch [130/400] Batch [20/925] G: 0.0772 (enc: 0.1904, dec: 0.0340, adv: 3.4191) D: (cover: 0.3417, enc: 0.0172) PSNR: 38.84dB
+Epoch [130/400] Batch [40/925] G: 0.0756 (enc: 0.1962, dec: 0.0337, adv: 2.2569) D: (cover: 0.0199, enc: 0.1222) PSNR: 38.86dB
+Epoch [130/400] Batch [60/925] G: 0.0868 (enc: 0.1920, dec: 0.0394, adv: 2.2213) D: (cover: 0.0647, enc: 0.1064) PSNR: 38.86dB
+Epoch [130/400] Batch [80/925] G: 0.0779 (enc: 0.1991, dec: 0.0345, adv: 2.9766) D: (cover: 0.0355, enc: 0.0777) PSNR: 38.71dB
+Epoch [130/400] Batch [100/925] G: 0.0822 (enc: 0.1884, dec: 0.0374, adv: 1.8416) D: (cover: 0.0576, enc: 0.6606) PSNR: 38.91dB
+Epoch [130/400] Batch [120/925] G: 0.0742 (enc: 0.1986, dec: 0.0328, adv: 2.6931) D: (cover: 0.3964, enc: 0.0351) PSNR: 39.11dB
+Epoch [130/400] Batch [140/925] G: 0.0783 (enc: 0.1979, dec: 0.0347, adv: 3.0031) D: (cover: 0.1647, enc: 0.0738) PSNR: 38.86dB
+Epoch [130/400] Batch [160/925] G: 0.0830 (enc: 0.1898, dec: 0.0381, adv: 1.2231) D: (cover: 0.0077, enc: 0.8640) PSNR: 38.70dB
+Epoch [130/400] Batch [180/925] G: 0.0746 (enc: 0.1950, dec: 0.0331, adv: 2.5745) D: (cover: 0.3595, enc: 0.1814) PSNR: 38.92dB
+Epoch [130/400] Batch [200/925] G: 0.0806 (enc: 0.1946, dec: 0.0360, adv: 2.7269) D: (cover: 0.1700, enc: 0.0621) PSNR: 38.66dB
+Epoch [130/400] Batch [220/925] G: 0.0776 (enc: 0.1930, dec: 0.0341, adv: 3.6671) D: (cover: 0.1723, enc: 0.0290) PSNR: 38.90dB
+Epoch [130/400] Batch [240/925] G: 0.0733 (enc: 0.1978, dec: 0.0327, adv: 2.1077) D: (cover: 0.0204, enc: 0.6324) PSNR: 38.81dB
+Epoch [130/400] Batch [260/925] G: 0.0811 (enc: 0.1991, dec: 0.0365, adv: 2.1156) D: (cover: 0.0115, enc: 0.3063) PSNR: 38.91dB
+Epoch [130/400] Batch [280/925] G: 0.0750 (enc: 0.1973, dec: 0.0330, adv: 3.0347) D: (cover: 0.2378, enc: 0.0514) PSNR: 38.97dB
+Epoch [130/400] Batch [300/925] G: 0.0731 (enc: 0.1948, dec: 0.0320, adv: 3.1947) D: (cover: 0.2966, enc: 0.0308) PSNR: 39.00dB
+Epoch [130/400] Batch [320/925] G: 0.0853 (enc: 0.1924, dec: 0.0383, adv: 2.8857) D: (cover: 0.1605, enc: 0.0573) PSNR: 38.86dB
+Epoch [130/400] Batch [340/925] G: 0.0773 (enc: 0.1950, dec: 0.0341, adv: 3.1249) D: (cover: 0.0529, enc: 0.0810) PSNR: 38.81dB
+Epoch [130/400] Batch [360/925] G: 0.0755 (enc: 0.1924, dec: 0.0341, adv: 1.4467) D: (cover: 0.0153, enc: 0.3475) PSNR: 38.92dB
+Epoch [130/400] Batch [380/925] G: 0.0814 (enc: 0.1920, dec: 0.0365, adv: 2.5940) D: (cover: 0.0169, enc: 0.3232) PSNR: 38.71dB
+Epoch [130/400] Batch [400/925] G: 0.0805 (enc: 0.2015, dec: 0.0362, adv: 2.1077) D: (cover: 0.1269, enc: 0.1207) PSNR: 38.86dB
+Epoch [130/400] Batch [420/925] G: 0.0771 (enc: 0.1943, dec: 0.0345, adv: 2.3050) D: (cover: 0.1779, enc: 0.1106) PSNR: 38.76dB
+Epoch [130/400] Batch [440/925] G: 0.0858 (enc: 0.1928, dec: 0.0391, adv: 1.8211) D: (cover: 0.0365, enc: 0.2811) PSNR: 38.73dB
+Epoch [130/400] Batch [460/925] G: 0.0796 (enc: 0.1945, dec: 0.0356, adv: 2.4745) D: (cover: 0.0251, enc: 0.2766) PSNR: 38.92dB
+Epoch [130/400] Batch [480/925] G: 0.0769 (enc: 0.1965, dec: 0.0346, adv: 1.8332) D: (cover: 0.1370, enc: 0.0789) PSNR: 38.73dB
+Epoch [130/400] Batch [500/925] G: 0.0787 (enc: 0.1952, dec: 0.0354, adv: 2.0250) D: (cover: 0.0430, enc: 0.2806) PSNR: 38.54dB
+Epoch [130/400] Batch [520/925] G: 0.0843 (enc: 0.2007, dec: 0.0375, adv: 3.1764) D: (cover: 0.0498, enc: 0.1733) PSNR: 38.31dB
+Epoch [130/400] Batch [540/925] G: 0.0797 (enc: 0.1963, dec: 0.0353, adv: 3.0693) D: (cover: 0.1774, enc: 0.0598) PSNR: 38.80dB
+训练异常退出: DataLoader worker (pid 74580) is killed by signal: Terminated. 
+Traceback (most recent call last):
+  File "/mnt/code/Watermark/train.py", line 485, in train
+    run_training(model, discriminator, train_loader, val_loader, loss_fn,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec, optimizer_discrim, train_sampler)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 354, in run_training
+    train_avg_loss = train_one_epoch(epoch, model, discriminator, train_loader, loss_fn,
+                                     optimizer_enc_dec, optimizer_discrim, train_sampler)
+  File "/mnt/code/Watermark/train.py", line 212, in train_one_epoch
+    compute_step(model, discriminator, loss_fn, img, msg,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec=optimizer_enc_dec,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_discrim=optimizer_discrim)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 164, in compute_step
+    optimizer_enc_dec.step()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 517, in wrapper
+    out = func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 82, in _use_grad
+    ret = func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 247, in step
+    adam(
+    ~~~~^
+        params_with_grad,
+        ^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+        decoupled_weight_decay=group["decoupled_weight_decay"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 150, in maybe_fallback
+    return func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 953, in adam
+    func(
+    ~~~~^
+        params,
+        ^^^^^^^
+    ...<17 lines>...
+        decoupled_weight_decay=decoupled_weight_decay,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 759, in _multi_tensor_adam
+    1 - beta1 ** _get_value(step) for step in device_state_steps
+                 ~~~~~~~~~~^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 97, in _get_value
+    return x.item() if isinstance(x, torch.Tensor) else x
+           ~~~~~~^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+RuntimeError: DataLoader worker (pid 74580) is killed by signal: Terminated. 

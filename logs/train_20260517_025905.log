@@ -1,0 +1,25 @@
+分布式训练: rank=0, world_size=1, local_rank=0
+日志文件: logs/train_20260517_025905.log
+从epoch 129 恢复训练
+Epoch [130/400] 第1批数据获取耗时: 1.36s
+训练异常退出: 'LossFunction' object has no attribute 'adv_loss'
+Traceback (most recent call last):
+  File "/mnt/code/Watermark/train.py", line 497, in train
+    run_training(model, discriminator, train_loader, val_loader, loss_fn,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec, optimizer_discrim, train_sampler)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 366, in run_training
+    train_avg_loss = train_one_epoch(epoch, model, discriminator, train_loader, loss_fn,
+                                     optimizer_enc_dec, optimizer_discrim, train_sampler)
+  File "/mnt/code/Watermark/train.py", line 224, in train_one_epoch
+    compute_step(model, discriminator, loss_fn, img, msg,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec=optimizer_enc_dec,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_discrim=optimizer_discrim)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 129, in compute_step
+    d_loss_cover = loss_fn.adv_loss(d_on_cover, d_target_cover)
+                   ^^^^^^^^^^^^^^^^
+AttributeError: 'LossFunction' object has no attribute 'adv_loss'. Did you mean: 'img_loss'?

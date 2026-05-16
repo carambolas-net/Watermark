@@ -8,7 +8,7 @@ class Config:
 
         train_paths = ("../data_set/train/", "../data_set/val/")
         test_paths = ("data_set/train/", "data_set/val/")
-        linux_paths = ("/root/watermark/img/train/class1", "/root/watermark/img/val/class1")
+        linux_paths = ("/root/image/train/train_class", "/root/image/val/val_class")
 
         if os.name == "nt":  # Windows
             self.train_data_path, self.val_data_path = train_paths if is_train else test_paths
@@ -22,26 +22,34 @@ class Config:
         self.conv_channels = 64
         self.encoder_block = 4
         self.decoder_block = 7
+        self.discriminator_blocks = 3
         self.message_length = 32
         self.H = 100
         self.W = 100
 
         # training
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.num_workers = 8 if is_train else 16
-        self.batch_size = 24 if is_train else 100
-        self.learning_rate = 1e-3
+        self.num_workers = 32 if is_train else 32
+        self.batch_size = 128 if is_train else 128
+        self.learning_rate = 1e-4
+        self.discriminator_learning_rate = 1e-5
         self.num_epochs = 400
-        self.log_interval_batch = 3
+        self.adversarial_loss_weight = 0.001
+        # self.encoder_loss_weight = 0.5
+        self.encoder_loss_weight = 0.03
+        self.decoder_loss_weight = 2.0
+        self.cover_label = 0
+        self.encoded_label = 1
+        self.log_interval_batch = 20
         self.save_eval_number = 4 if is_train else 2
-        self.save_interval_epoch = 3
-        self.resume_epoch = 0
+        self.save_interval_epoch = 1
+        self.resume_epoch = 132
         self.enable_validation = True
         self.enable_save_eval = True
         self.data_time_batch_idx = 0
 
         # noisy
-        self.jpeg_quality = 60
+        self.jpeg_quality = 80
         self.gaussian_std = 0.03  # 高斯噪声标准差
         self.dropout_prob = 0.3  # dropout概率
         self.crop_ratio_min = 0.7  # 裁剪最小比例
@@ -52,8 +60,10 @@ class Config:
         # 混合噪声配置（按顺序应用）
         # 示例: ["gaussian", "jpeg", "cropout"] 会依次应用这三种噪声
         # 设置为 None 或空列表则使用单一随机噪声
-        self.noise_sequence = ["I"] if is_train else ["I"]
+        self.noise_sequence = ["gaussian","cropout","jpeg"] if is_train else ["gaussian","cropout","jpeg_real"]
 
 
 config = Config("train")
 config_test = Config("test")
+# print(config.noise_sequence)
+# print(config_test.noise_sequence)

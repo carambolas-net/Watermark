@@ -1,0 +1,84 @@
+分布式训练: rank=0, world_size=1, local_rank=0
+日志文件: logs/train_20260501_224911.log
+从epoch 24 恢复训练
+Epoch [25/400] 第1批数据获取耗时: 1.47s
+Epoch [25/400] Batch [20/925] G: 0.2041 (enc: 0.0457, dec: 0.2007, adv: 1.0987) D: (cover: 0.4947, enc: 0.4615) PSNR: 39.66dB
+Epoch [25/400] Batch [40/925] G: 0.1986 (enc: 0.0560, dec: 0.1947, adv: 1.0790) D: (cover: 0.3753, enc: 0.4422) PSNR: 38.85dB
+Epoch [25/400] Batch [60/925] G: 0.2034 (enc: 0.0444, dec: 0.1999, adv: 1.2640) D: (cover: 0.5710, enc: 0.3771) PSNR: 39.54dB
+Epoch [25/400] Batch [80/925] G: 0.1962 (enc: 0.0520, dec: 0.1925, adv: 1.0690) D: (cover: 0.2843, enc: 0.5182) PSNR: 39.06dB
+Epoch [25/400] Batch [100/925] G: 0.1998 (enc: 0.0469, dec: 0.1963, adv: 1.1930) D: (cover: 0.4066, enc: 0.4234) PSNR: 39.74dB
+Epoch [25/400] Batch [120/925] G: 0.2006 (enc: 0.0462, dec: 0.1974, adv: 0.9672) D: (cover: 0.3325, enc: 0.5477) PSNR: 39.50dB
+Epoch [25/400] Batch [140/925] G: 0.1962 (enc: 0.0492, dec: 0.1925, adv: 1.2082) D: (cover: 0.4425, enc: 0.4209) PSNR: 39.06dB
+Epoch [25/400] Batch [160/925] G: 0.1973 (enc: 0.0459, dec: 0.1939, adv: 1.1392) D: (cover: 0.3369, enc: 0.5093) PSNR: 39.67dB
+Epoch [25/400] Batch [180/925] G: 0.1972 (enc: 0.0458, dec: 0.1937, adv: 1.2018) D: (cover: 0.4878, enc: 0.4010) PSNR: 39.55dB
+Epoch [25/400] Batch [200/925] G: 0.1991 (enc: 0.0414, dec: 0.1957, adv: 1.3227) D: (cover: 0.4460, enc: 0.4330) PSNR: 40.73dB
+Epoch [25/400] Batch [220/925] G: 0.1962 (enc: 0.0483, dec: 0.1928, adv: 1.0509) D: (cover: 0.3226, enc: 0.4549) PSNR: 39.40dB
+Epoch [25/400] Batch [240/925] G: 0.1994 (enc: 0.0445, dec: 0.1960, adv: 1.1638) D: (cover: 0.3641, enc: 0.3918) PSNR: 39.50dB
+Epoch [25/400] Batch [260/925] G: 0.1996 (enc: 0.0447, dec: 0.1960, adv: 1.3524) D: (cover: 0.4702, enc: 0.3638) PSNR: 39.71dB
+Epoch [25/400] Batch [280/925] G: 0.1967 (enc: 0.0426, dec: 0.1934, adv: 1.1824) D: (cover: 0.3359, enc: 0.4862) PSNR: 39.87dB
+Epoch [25/400] Batch [300/925] G: 0.1946 (enc: 0.0451, dec: 0.1911, adv: 1.1929) D: (cover: 0.3603, enc: 0.4171) PSNR: 39.68dB
+Epoch [25/400] Batch [320/925] G: 0.2007 (enc: 0.0466, dec: 0.1971, adv: 1.2706) D: (cover: 0.3562, enc: 0.3741) PSNR: 39.79dB
+Epoch [25/400] Batch [340/925] G: 0.2019 (enc: 0.0457, dec: 0.1985, adv: 1.1022) D: (cover: 0.4258, enc: 0.4365) PSNR: 39.65dB
+Epoch [25/400] Batch [360/925] G: 0.1958 (enc: 0.0458, dec: 0.1923, adv: 1.2048) D: (cover: 0.3492, enc: 0.4479) PSNR: 39.27dB
+Epoch [25/400] Batch [380/925] G: 0.1993 (enc: 0.0426, dec: 0.1958, adv: 1.4062) D: (cover: 0.6105, enc: 0.2985) PSNR: 39.78dB
+Epoch [25/400] Batch [400/925] G: 0.2006 (enc: 0.0441, dec: 0.1972, adv: 1.2328) D: (cover: 0.4881, enc: 0.3645) PSNR: 40.16dB
+Epoch [25/400] Batch [420/925] G: 0.1991 (enc: 0.0465, dec: 0.1956, adv: 1.1737) D: (cover: 0.3375, enc: 0.4700) PSNR: 39.69dB
+Epoch [25/400] Batch [440/925] G: 0.1965 (enc: 0.0427, dec: 0.1931, adv: 1.2580) D: (cover: 0.4676, enc: 0.3719) PSNR: 39.80dB
+Epoch [25/400] Batch [460/925] G: 0.1969 (enc: 0.0477, dec: 0.1931, adv: 1.3621) D: (cover: 0.3974, enc: 0.3408) PSNR: 39.19dB
+Epoch [25/400] Batch [480/925] G: 0.1952 (enc: 0.0465, dec: 0.1917, adv: 1.1933) D: (cover: 0.3487, enc: 0.3783) PSNR: 39.72dB
+训练异常退出: DataLoader worker (pid 7211) is killed by signal: Terminated. 
+Traceback (most recent call last):
+  File "/mnt/code/Watermark/train.py", line 485, in train
+    run_training(model, discriminator, train_loader, val_loader, loss_fn,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec, optimizer_discrim, train_sampler)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 354, in run_training
+    train_avg_loss = train_one_epoch(epoch, model, discriminator, train_loader, loss_fn,
+                                     optimizer_enc_dec, optimizer_discrim, train_sampler)
+  File "/mnt/code/Watermark/train.py", line 212, in train_one_epoch
+    compute_step(model, discriminator, loss_fn, img, msg,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec=optimizer_enc_dec,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_discrim=optimizer_discrim)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 142, in compute_step
+    optimizer_discrim.step()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 517, in wrapper
+    out = func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 82, in _use_grad
+    ret = func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 247, in step
+    adam(
+    ~~~~^
+        params_with_grad,
+        ^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+        decoupled_weight_decay=group["decoupled_weight_decay"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 150, in maybe_fallback
+    return func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 953, in adam
+    func(
+    ~~~~^
+        params,
+        ^^^^^^^
+    ...<17 lines>...
+        decoupled_weight_decay=decoupled_weight_decay,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 759, in _multi_tensor_adam
+    1 - beta1 ** _get_value(step) for step in device_state_steps
+                 ~~~~~~~~~~^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 97, in _get_value
+    return x.item() if isinstance(x, torch.Tensor) else x
+           ~~~~~~^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+RuntimeError: DataLoader worker (pid 7211) is killed by signal: Terminated. 

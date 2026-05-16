@@ -1,0 +1,57 @@
+分布式训练: rank=0, world_size=1, local_rank=0
+日志文件: logs/train_20260517_024648.log
+从epoch 129 恢复训练
+Epoch [130/400] 第1批数据获取耗时: 1.93s
+Epoch [130/400] Batch [20/925] G: 0.0805 (enc: 0.1956, dec: 0.0349, adv: 4.9130) D: (cover: 1.2790, enc: 0.0752) PSNR: 38.68dB
+训练异常退出: DataLoader worker (pid 111511) is killed by signal: Terminated. 
+Traceback (most recent call last):
+  File "/mnt/code/Watermark/train.py", line 497, in train
+    run_training(model, discriminator, train_loader, val_loader, loss_fn,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec, optimizer_discrim, train_sampler)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 366, in run_training
+    train_avg_loss = train_one_epoch(epoch, model, discriminator, train_loader, loss_fn,
+                                     optimizer_enc_dec, optimizer_discrim, train_sampler)
+  File "/mnt/code/Watermark/train.py", line 224, in train_one_epoch
+    compute_step(model, discriminator, loss_fn, img, msg,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec=optimizer_enc_dec,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_discrim=optimizer_discrim)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 134, in compute_step
+    out_img, noisy_img, out_msg = encoder_decoder(img, msg)
+                                  ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1661, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1487, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/code/Watermark/model/encoder_decoder.py", line 16, in forward
+    noisy_image = self.noisy(encoded_image)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/code/Watermark/model/noisy.py", line 187, in forward
+    result = self.random_cropout(result)
+  File "/mnt/code/Watermark/model/noisy.py", line 225, in random_cropout
+    result[:, :, top:top+cropout_h, left:left+cropout_w] = torch.rand(B, C, cropout_h, cropout_w).to(image.device) * 2 - 1
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+RuntimeError: DataLoader worker (pid 111511) is killed by signal: Terminated. 

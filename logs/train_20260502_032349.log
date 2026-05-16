@@ -1,0 +1,68 @@
+分布式训练: rank=0, world_size=1, local_rank=0
+日志文件: logs/train_20260502_032349.log
+从epoch 36 恢复训练
+Epoch [37/400] 第1批数据获取耗时: 1.25s
+Epoch [37/400] Batch [20/925] G: 0.1683 (enc: 0.2166, dec: 0.1599, adv: 1.8476) D: (cover: 0.2103, enc: 0.1733) PSNR: 37.12dB
+Epoch [37/400] Batch [40/925] G: 0.1552 (enc: 0.2570, dec: 0.1456, adv: 1.8822) D: (cover: 0.2045, enc: 0.1770) PSNR: 36.33dB
+Epoch [37/400] Batch [60/925] G: 0.1550 (enc: 0.2717, dec: 0.1452, adv: 1.6059) D: (cover: 0.0954, enc: 0.2577) PSNR: 34.83dB
+Epoch [37/400] Batch [80/925] G: 0.1508 (enc: 0.2677, dec: 0.1408, adv: 1.9724) D: (cover: 0.2363, enc: 0.1624) PSNR: 33.96dB
+Epoch [37/400] Batch [100/925] G: 0.1448 (enc: 0.2906, dec: 0.1342, adv: 1.8965) D: (cover: 0.0952, enc: 0.2256) PSNR: 34.81dB
+Epoch [37/400] Batch [120/925] G: 0.1349 (enc: 0.2863, dec: 0.1246, adv: 1.6755) D: (cover: 0.1236, enc: 0.3126) PSNR: 34.60dB
+Epoch [37/400] Batch [140/925] G: 0.1410 (enc: 0.2840, dec: 0.1308, adv: 1.6880) D: (cover: 0.3013, enc: 0.2011) PSNR: 34.66dB
+Epoch [37/400] Batch [160/925] G: 0.1424 (enc: 0.2820, dec: 0.1321, adv: 1.7742) D: (cover: 0.2029, enc: 0.2275) PSNR: 34.33dB
+训练异常退出: DataLoader worker (pid 39070) is killed by signal: Terminated. 
+Traceback (most recent call last):
+  File "/mnt/code/Watermark/train.py", line 485, in train
+    run_training(model, discriminator, train_loader, val_loader, loss_fn,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec, optimizer_discrim, train_sampler)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 354, in run_training
+    train_avg_loss = train_one_epoch(epoch, model, discriminator, train_loader, loss_fn,
+                                     optimizer_enc_dec, optimizer_discrim, train_sampler)
+  File "/mnt/code/Watermark/train.py", line 212, in train_one_epoch
+    compute_step(model, discriminator, loss_fn, img, msg,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec=optimizer_enc_dec,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_discrim=optimizer_discrim)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 164, in compute_step
+    optimizer_enc_dec.step()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 517, in wrapper
+    out = func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 82, in _use_grad
+    ret = func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 247, in step
+    adam(
+    ~~~~^
+        params_with_grad,
+        ^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+        decoupled_weight_decay=group["decoupled_weight_decay"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 150, in maybe_fallback
+    return func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 953, in adam
+    func(
+    ~~~~^
+        params,
+        ^^^^^^^
+    ...<17 lines>...
+        decoupled_weight_decay=decoupled_weight_decay,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 759, in _multi_tensor_adam
+    1 - beta1 ** _get_value(step) for step in device_state_steps
+                 ~~~~~~~~~~^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 97, in _get_value
+    return x.item() if isinstance(x, torch.Tensor) else x
+           ~~~~~~^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+RuntimeError: DataLoader worker (pid 39070) is killed by signal: Terminated. 

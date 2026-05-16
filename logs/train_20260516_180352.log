@@ -1,0 +1,46 @@
+分布式训练: rank=0, world_size=1, local_rank=0
+日志文件: logs/train_20260516_180352.log
+从epoch 69 恢复训练
+Epoch [70/400] 第1批数据获取耗时: 1.71s
+训练异常退出: Target size (torch.Size([128, 0])) must be the same as input size (torch.Size([128, 1]))
+Traceback (most recent call last):
+  File "/mnt/code/Watermark/train.py", line 485, in train
+    run_training(model, discriminator, train_loader, val_loader, loss_fn,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec, optimizer_discrim, train_sampler)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 354, in run_training
+    train_avg_loss = train_one_epoch(epoch, model, discriminator, train_loader, loss_fn,
+                                     optimizer_enc_dec, optimizer_discrim, train_sampler)
+  File "/mnt/code/Watermark/train.py", line 212, in train_one_epoch
+    compute_step(model, discriminator, loss_fn, img, msg,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec=optimizer_enc_dec,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_discrim=optimizer_discrim)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 129, in compute_step
+    d_loss_cover = loss_fn.adv_loss(d_on_cover, d_target_cover)
+  File "/mnt/code/Watermark/loss_function.py", line 61, in adv_loss
+    return self.bce_with_logits_loss(pred, target_label)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/loss.py", line 850, in forward
+    return F.binary_cross_entropy_with_logits(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<3 lines>...
+        reduction=self.reduction,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/functional.py", line 3589, in binary_cross_entropy_with_logits
+    raise ValueError(
+        f"Target size ({target.size()}) must be the same as input size ({input.size()})"
+    )
+ValueError: Target size (torch.Size([128, 0])) must be the same as input size (torch.Size([128, 1]))

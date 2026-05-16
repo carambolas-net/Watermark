@@ -1,0 +1,40 @@
+分布式训练: rank=0, world_size=1, local_rank=0
+日志文件: logs/train_20260517_025006.log
+从epoch 129 恢复训练
+Epoch [130/400] 第1批数据获取耗时: 1.30s
+Epoch [130/400] Batch [20/925] G: 0.0777 (enc: 0.1927, dec: 0.0335, adv: 4.8507) D: (cover: 1.5040, enc: 0.0830) PSNR: 38.98dB
+Epoch [130/400] Batch [40/925] G: 0.0785 (enc: 0.1942, dec: 0.0345, adv: 3.6276) D: (cover: 0.6167, enc: 0.1090) PSNR: 39.05dB
+Epoch [130/400] Batch [60/925] G: 0.0821 (enc: 0.1913, dec: 0.0367, adv: 2.9857) D: (cover: 0.1718, enc: 0.1511) PSNR: 38.48dB
+Epoch [130/400] Batch [80/925] G: 0.0826 (enc: 0.1941, dec: 0.0368, adv: 3.1351) D: (cover: 0.1142, enc: 0.0982) PSNR: 38.72dB
+Epoch [130/400] Batch [100/925] G: 0.0880 (enc: 0.1917, dec: 0.0397, adv: 2.9491) D: (cover: 0.2151, enc: 0.0904) PSNR: 38.84dB
+Epoch [130/400] Batch [120/925] G: 0.0771 (enc: 0.1969, dec: 0.0338, adv: 3.5000) D: (cover: 0.1507, enc: 0.0706) PSNR: 38.91dB
+Epoch [130/400] Batch [140/925] G: 0.0837 (enc: 0.1956, dec: 0.0376, adv: 2.6927) D: (cover: 0.1387, enc: 0.1069) PSNR: 38.78dB
+Epoch [130/400] Batch [160/925] G: 0.0791 (enc: 0.1962, dec: 0.0355, adv: 2.1009) D: (cover: 0.0749, enc: 0.1643) PSNR: 38.71dB
+Epoch [130/400] Batch [180/925] G: 0.0809 (enc: 0.1925, dec: 0.0361, adv: 2.8978) D: (cover: 0.2224, enc: 0.0913) PSNR: 38.87dB
+Epoch [130/400] Batch [200/925] G: 0.0802 (enc: 0.1957, dec: 0.0363, adv: 1.7134) D: (cover: 0.0771, enc: 0.3364) PSNR: 38.39dB
+Epoch [130/400] Batch [220/925] G: 0.0768 (enc: 0.2088, dec: 0.0346, adv: 1.3563) D: (cover: 0.0775, enc: 0.6346) PSNR: 37.51dB
+Epoch [130/400] Batch [240/925] G: 0.0743 (enc: 0.2142, dec: 0.0333, adv: 1.2442) D: (cover: 0.1199, enc: 1.3993) PSNR: 36.59dB
+Epoch [130/400] Batch [260/925] G: 0.0780 (enc: 0.2103, dec: 0.0353, adv: 1.1271) D: (cover: 0.1044, enc: 2.1908) PSNR: 36.40dB
+训练异常退出: DataLoader worker (pid 112633) is killed by signal: Terminated. 
+Traceback (most recent call last):
+  File "/mnt/code/Watermark/train.py", line 497, in train
+    run_training(model, discriminator, train_loader, val_loader, loss_fn,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec, optimizer_discrim, train_sampler)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 366, in run_training
+    train_avg_loss = train_one_epoch(epoch, model, discriminator, train_loader, loss_fn,
+                                     optimizer_enc_dec, optimizer_discrim, train_sampler)
+  File "/mnt/code/Watermark/train.py", line 224, in train_one_epoch
+    compute_step(model, discriminator, loss_fn, img, msg,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec=optimizer_enc_dec,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_discrim=optimizer_discrim)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 144, in compute_step
+    # total_d_loss = d_loss_cover.item() + d_loss_encoded.item()
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+RuntimeError: DataLoader worker (pid 112633) is killed by signal: Terminated. 

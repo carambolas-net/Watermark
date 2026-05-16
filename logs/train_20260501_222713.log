@@ -1,0 +1,43 @@
+分布式训练: rank=0, world_size=1, local_rank=0
+日志文件: logs/train_20260501_222713.log
+Epoch [1/400] 第1批数据获取耗时: 10.71s
+Epoch [1/400] Batch [20/463] G: 0.3883 (enc: 0.5256, dec: 0.3561, adv: 0.6174) D: (cover: 0.6115, enc: 0.7795) PSNR: 22.75dB
+Epoch [1/400] Batch [40/463] G: 0.2851 (enc: 0.1895, dec: 0.2731, adv: 0.6628) D: (cover: 0.6583, enc: 0.7267) PSNR: 24.80dB
+Epoch [1/400] Batch [60/463] G: 0.2615 (enc: 0.1144, dec: 0.2539, adv: 0.6813) D: (cover: 0.6776, enc: 0.7061) PSNR: 26.14dB
+Epoch [1/400] Batch [80/463] G: 0.2581 (enc: 0.0888, dec: 0.2521, adv: 0.6881) D: (cover: 0.6853, enc: 0.6984) PSNR: 27.52dB
+Epoch [1/400] Batch [100/463] G: 0.2561 (enc: 0.0720, dec: 0.2511, adv: 0.6891) D: (cover: 0.6848, enc: 0.6985) PSNR: 28.63dB
+Epoch [1/400] Batch [120/463] G: 0.2549 (enc: 0.0538, dec: 0.2510, adv: 0.6962) D: (cover: 0.6944, enc: 0.6900) PSNR: 30.13dB
+Epoch [1/400] Batch [140/463] G: 0.2537 (enc: 0.0468, dec: 0.2502, adv: 0.6890) D: (cover: 0.6878, enc: 0.6972) PSNR: 31.36dB
+Epoch [1/400] Batch [160/463] G: 0.2537 (enc: 0.0384, dec: 0.2507, adv: 0.6933) D: (cover: 0.6919, enc: 0.6928) PSNR: 32.87dB
+Epoch [1/400] Batch [180/463] G: 0.2528 (enc: 0.0328, dec: 0.2502, adv: 0.6955) D: (cover: 0.6944, enc: 0.6900) PSNR: 34.05dB
+Epoch [1/400] Batch [200/463] G: 0.2525 (enc: 0.0274, dec: 0.2502, adv: 0.6972) D: (cover: 0.6957, enc: 0.6892) PSNR: 35.24dB
+Epoch [1/400] Batch [220/463] G: 0.2522 (enc: 0.0231, dec: 0.2501, adv: 0.6995) D: (cover: 0.6978, enc: 0.6867) PSNR: 36.57dB
+Epoch [1/400] Batch [240/463] G: 0.2525 (enc: 0.0207, dec: 0.2506, adv: 0.6958) D: (cover: 0.6934, enc: 0.6910) PSNR: 37.68dB
+Epoch [1/400] Batch [260/463] G: 0.2518 (enc: 0.0186, dec: 0.2500, adv: 0.6935) D: (cover: 0.6933, enc: 0.6922) PSNR: 39.01dB
+Epoch [1/400] Batch [280/463] G: 0.2520 (enc: 0.0166, dec: 0.2503, adv: 0.6947) D: (cover: 0.6924, enc: 0.6928) PSNR: 39.98dB
+Epoch [1/400] Batch [300/463] G: 0.2521 (enc: 0.0145, dec: 0.2505, adv: 0.6909) D: (cover: 0.6897, enc: 0.6957) PSNR: 41.04dB
+Epoch [1/400] Batch [320/463] G: 0.2518 (enc: 0.0128, dec: 0.2503, adv: 0.6956) D: (cover: 0.6953, enc: 0.6898) PSNR: 42.15dB
+Epoch [1/400] Batch [340/463] G: 0.2516 (enc: 0.0111, dec: 0.2503, adv: 0.6869) D: (cover: 0.6849, enc: 0.7003) PSNR: 42.96dB
+Epoch [1/400] Batch [360/463] G: 0.2518 (enc: 0.0103, dec: 0.2505, adv: 0.6975) D: (cover: 0.6943, enc: 0.6894) PSNR: 43.48dB
+Epoch [1/400] Batch [380/463] G: 0.2517 (enc: 0.0088, dec: 0.2505, adv: 0.6906) D: (cover: 0.6895, enc: 0.6964) PSNR: 44.79dB
+Epoch [1/400] Batch [400/463] G: 0.2515 (enc: 0.0080, dec: 0.2503, adv: 0.6913) D: (cover: 0.6890, enc: 0.6957) PSNR: 45.35dB
+Epoch [1/400] Batch [420/463] G: 0.2515 (enc: 0.0078, dec: 0.2503, adv: 0.6900) D: (cover: 0.6917, enc: 0.6936) PSNR: 46.13dB
+Epoch [1/400] Batch [440/463] G: 0.2514 (enc: 0.0077, dec: 0.2503, adv: 0.6955) D: (cover: 0.6933, enc: 0.6921) PSNR: 46.71dB
+Epoch [1/400] Batch [460/463] G: 0.2514 (enc: 0.0068, dec: 0.2503, adv: 0.6913) D: (cover: 0.6880, enc: 0.6967) PSNR: 47.10dB
+Epoch [1/400] 训练平均损失: 0.2787
+Epoch [1/400] 验证平均损失: 0.2513 enc: 0.0066, dec: 0.2506 PSNR: 47.02dB
+Epoch [1/400] 验证耗时: 14.14s
+训练异常退出: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+Traceback (most recent call last):
+  File "/mnt/code/Watermark/train.py", line 483, in train
+    run_training(model, discriminator, train_loader, val_loader, loss_fn,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec, optimizer_discrim, train_sampler)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 376, in run_training
+    save_eval_outputs(epoch, val_batch)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 318, in save_eval_outputs
+    mse = torch.mean((out_img[i] - orig_img[i]) ** 2).item()
+                      ~~~~~~~~~~~^~~~~~~~~~~~~
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!

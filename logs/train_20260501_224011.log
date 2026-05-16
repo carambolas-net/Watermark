@@ -1,0 +1,21 @@
+分布式训练: rank=0, world_size=1, local_rank=0
+日志文件: logs/train_20260501_224011.log
+Epoch [1/400] 第1批数据获取耗时: 3.20s
+Epoch [1/400] Batch [20/463] G: 0.4146 (enc: 0.8316, dec: 0.3723, adv: 0.7469) D: (cover: 0.7390, enc: 0.6412) PSNR: 17.38dB
+Epoch [1/400] Batch [40/463] G: 0.2964 (enc: 0.2912, dec: 0.2811, adv: 0.7179) D: (cover: 0.7088, enc: 0.6693) PSNR: 21.95dB
+Epoch [1/400] Batch [60/463] G: 0.2657 (enc: 0.1484, dec: 0.2575, adv: 0.7050) D: (cover: 0.6986, enc: 0.6812) PSNR: 25.26dB
+Epoch [1/400] Batch [80/463] G: 0.2575 (enc: 0.0998, dec: 0.2518, adv: 0.6993) D: (cover: 0.6943, enc: 0.6879) PSNR: 26.68dB
+Epoch [1/400] Batch [100/463] G: 0.2558 (enc: 0.0820, dec: 0.2510, adv: 0.6963) D: (cover: 0.6925, enc: 0.6905) PSNR: 27.73dB
+Epoch [1/400] Batch [120/463] G: 0.2541 (enc: 0.0582, dec: 0.2505, adv: 0.6977) D: (cover: 0.6936, enc: 0.6891) PSNR: 28.67dB
+Epoch [1/400] Batch [140/463] G: 0.2535 (enc: 0.0472, dec: 0.2505, adv: 0.6930) D: (cover: 0.6884, enc: 0.6938) PSNR: 29.60dB
+Epoch [1/400] Batch [160/463] G: 0.2534 (enc: 0.0396, dec: 0.2507, adv: 0.6988) D: (cover: 0.6933, enc: 0.6879) PSNR: 30.64dB
+Epoch [1/400] Batch [180/463] G: 0.2528 (enc: 0.0341, dec: 0.2504, adv: 0.6937) D: (cover: 0.6886, enc: 0.6929) PSNR: 31.38dB
+Epoch [1/400] Batch [200/463] G: 0.2522 (enc: 0.0290, dec: 0.2501, adv: 0.6969) D: (cover: 0.6912, enc: 0.6889) PSNR: 32.42dB
+Epoch [1/400] Batch [220/463] G: 0.2523 (enc: 0.0242, dec: 0.2504, adv: 0.7013) D: (cover: 0.6939, enc: 0.6852) PSNR: 33.19dB
+Epoch [1/400] Batch [240/463] G: 0.2521 (enc: 0.0218, dec: 0.2503, adv: 0.6989) D: (cover: 0.6908, enc: 0.6881) PSNR: 34.22dB
+Epoch [1/400] Batch [260/463] G: 0.2517 (enc: 0.0187, dec: 0.2501, adv: 0.7002) D: (cover: 0.6932, enc: 0.6853) PSNR: 35.13dB
+Epoch [1/400] Batch [280/463] G: 0.2522 (enc: 0.0174, dec: 0.2506, adv: 0.6976) D: (cover: 0.6891, enc: 0.6896) PSNR: 35.94dB
+Epoch [1/400] Batch [300/463] G: 0.2518 (enc: 0.0157, dec: 0.2504, adv: 0.6969) D: (cover: 0.6871, enc: 0.6907) PSNR: 36.84dB
+Epoch [1/400] Batch [320/463] G: 0.2518 (enc: 0.0147, dec: 0.2504, adv: 0.6995) D: (cover: 0.6922, enc: 0.6860) PSNR: 37.42dB
+Epoch [1/400] Batch [340/463] G: 0.2511 (enc: 0.0127, dec: 0.2498, adv: 0.6920) D: (cover: 0.6839, enc: 0.6937) PSNR: 38.42dB
+Epoch [1/400] Batch [360/463] G: 0.2513 (enc: 0.0115, dec: 0.2500, adv: 0.6985) D: (cover: 0.6883, enc: 0.6881) PSNR: 39.21dB

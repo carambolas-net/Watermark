@@ -1,0 +1,153 @@
+分布式训练: rank=0, world_size=1, local_rank=0
+日志文件: logs/train_20260516_200645.log
+从epoch 84 恢复训练
+Epoch [85/400] 第1批数据获取耗时: 1.03s
+Epoch [85/400] Batch [20/925] G: 0.0984 (enc: 0.1941, dec: 0.0451, adv: 2.4306) D: (cover: 0.1377, enc: 0.0997) PSNR: 39.12dB
+Epoch [85/400] Batch [40/925] G: 0.1002 (enc: 0.1954, dec: 0.0463, adv: 1.7386) D: (cover: 0.0799, enc: 0.1769) PSNR: 38.91dB
+Epoch [85/400] Batch [60/925] G: 0.0962 (enc: 0.1967, dec: 0.0440, adv: 2.2722) D: (cover: 0.2473, enc: 0.0528) PSNR: 39.02dB
+Epoch [85/400] Batch [80/925] G: 0.0971 (enc: 0.1916, dec: 0.0448, adv: 1.7260) D: (cover: 0.0655, enc: 0.2477) PSNR: 39.16dB
+Epoch [85/400] Batch [100/925] G: 0.0949 (enc: 0.1888, dec: 0.0433, adv: 2.5751) D: (cover: 0.0712, enc: 0.1221) PSNR: 39.23dB
+Epoch [85/400] Batch [120/925] G: 0.1058 (enc: 0.1933, dec: 0.0488, adv: 2.4814) D: (cover: 0.2100, enc: 0.0995) PSNR: 39.11dB
+Epoch [85/400] Batch [140/925] G: 0.1032 (enc: 0.1943, dec: 0.0475, adv: 2.4617) D: (cover: 0.3057, enc: 0.0766) PSNR: 38.91dB
+Epoch [85/400] Batch [160/925] G: 0.1012 (enc: 0.1960, dec: 0.0463, adv: 2.5821) D: (cover: 0.0392, enc: 0.1558) PSNR: 39.23dB
+Epoch [85/400] Batch [180/925] G: 0.1018 (enc: 0.1909, dec: 0.0470, adv: 2.1614) D: (cover: 0.0496, enc: 0.1187) PSNR: 39.04dB
+Epoch [85/400] Batch [200/925] G: 0.0993 (enc: 0.2018, dec: 0.0450, adv: 3.1952) D: (cover: 0.9639, enc: 0.0368) PSNR: 38.90dB
+Epoch [85/400] Batch [220/925] G: 0.1034 (enc: 0.1961, dec: 0.0478, adv: 1.8878) D: (cover: 0.0226, enc: 0.3723) PSNR: 39.14dB
+Epoch [85/400] Batch [240/925] G: 0.0911 (enc: 0.1963, dec: 0.0416, adv: 2.0537) D: (cover: 0.1071, enc: 0.1813) PSNR: 38.80dB
+Epoch [85/400] Batch [260/925] G: 0.0879 (enc: 0.1989, dec: 0.0400, adv: 1.9297) D: (cover: 0.1063, enc: 0.1238) PSNR: 38.80dB
+Epoch [85/400] Batch [280/925] G: 0.0953 (enc: 0.1917, dec: 0.0438, adv: 1.9263) D: (cover: 0.0328, enc: 0.2768) PSNR: 39.08dB
+Epoch [85/400] Batch [300/925] G: 0.0984 (enc: 0.2016, dec: 0.0452, adv: 1.9430) D: (cover: 0.0301, enc: 0.3512) PSNR: 38.89dB
+Epoch [85/400] Batch [320/925] G: 0.0971 (enc: 0.1949, dec: 0.0442, adv: 2.7789) D: (cover: 0.2998, enc: 0.0631) PSNR: 39.05dB
+Epoch [85/400] Batch [340/925] G: 0.0983 (enc: 0.1910, dec: 0.0453, adv: 1.9699) D: (cover: 0.0507, enc: 0.1846) PSNR: 38.78dB
+Epoch [85/400] Batch [360/925] G: 0.0946 (enc: 0.1937, dec: 0.0432, adv: 2.3274) D: (cover: 0.0532, enc: 0.1879) PSNR: 39.07dB
+Epoch [85/400] Batch [380/925] G: 0.0936 (enc: 0.1996, dec: 0.0426, adv: 2.4830) D: (cover: 0.0762, enc: 0.0886) PSNR: 39.11dB
+Epoch [85/400] Batch [400/925] G: 0.0974 (enc: 0.2005, dec: 0.0444, adv: 2.6132) D: (cover: 0.0793, enc: 0.1412) PSNR: 39.13dB
+Epoch [85/400] Batch [420/925] G: 0.1003 (enc: 0.1969, dec: 0.0462, adv: 2.0508) D: (cover: 0.1645, enc: 0.1141) PSNR: 38.96dB
+Epoch [85/400] Batch [440/925] G: 0.0967 (enc: 0.1942, dec: 0.0444, adv: 1.9894) D: (cover: 0.0846, enc: 0.2173) PSNR: 38.93dB
+Epoch [85/400] Batch [460/925] G: 0.0966 (enc: 0.1912, dec: 0.0442, adv: 2.5143) D: (cover: 0.0878, enc: 0.1219) PSNR: 38.94dB
+Epoch [85/400] Batch [480/925] G: 0.0953 (enc: 0.1978, dec: 0.0434, adv: 2.5007) D: (cover: 0.0475, enc: 0.2136) PSNR: 39.06dB
+Epoch [85/400] Batch [500/925] G: 0.0995 (enc: 0.1962, dec: 0.0458, adv: 1.9276) D: (cover: 0.0682, enc: 0.1536) PSNR: 38.94dB
+Epoch [85/400] Batch [520/925] G: 0.0987 (enc: 0.1929, dec: 0.0457, adv: 1.4970) D: (cover: 0.0664, enc: 0.2195) PSNR: 38.95dB
+Epoch [85/400] Batch [540/925] G: 0.0972 (enc: 0.1919, dec: 0.0444, adv: 2.5546) D: (cover: 0.1299, enc: 0.1390) PSNR: 39.13dB
+Epoch [85/400] Batch [560/925] G: 0.0950 (enc: 0.1981, dec: 0.0436, adv: 1.9300) D: (cover: 0.0499, enc: 0.2523) PSNR: 39.14dB
+Epoch [85/400] Batch [580/925] G: 0.0968 (enc: 0.1913, dec: 0.0446, adv: 1.7495) D: (cover: 0.0574, enc: 0.2172) PSNR: 38.86dB
+Epoch [85/400] Batch [600/925] G: 0.1015 (enc: 0.1912, dec: 0.0468, adv: 2.1939) D: (cover: 0.1874, enc: 0.0751) PSNR: 39.12dB
+Epoch [85/400] Batch [620/925] G: 0.0949 (enc: 0.1974, dec: 0.0429, adv: 3.1358) D: (cover: 0.1521, enc: 0.0910) PSNR: 39.02dB
+Epoch [85/400] Batch [640/925] G: 0.0946 (enc: 0.1969, dec: 0.0432, adv: 2.2278) D: (cover: 0.0298, enc: 0.1730) PSNR: 38.92dB
+Epoch [85/400] Batch [660/925] G: 0.0960 (enc: 0.1982, dec: 0.0441, adv: 1.7819) D: (cover: 0.0466, enc: 0.1380) PSNR: 38.72dB
+Epoch [85/400] Batch [680/925] G: 0.0971 (enc: 0.1997, dec: 0.0443, adv: 2.4159) D: (cover: 0.3360, enc: 0.0684) PSNR: 38.65dB
+Epoch [85/400] Batch [700/925] G: 0.0967 (enc: 0.2064, dec: 0.0441, adv: 2.2286) D: (cover: 0.3134, enc: 0.0781) PSNR: 38.73dB
+Epoch [85/400] Batch [720/925] G: 0.0859 (enc: 0.1999, dec: 0.0388, adv: 2.2860) D: (cover: 0.0701, enc: 0.1415) PSNR: 39.04dB
+Epoch [85/400] Batch [740/925] G: 0.0942 (enc: 0.2015, dec: 0.0424, adv: 3.4183) D: (cover: 0.0787, enc: 0.0650) PSNR: 38.91dB
+Epoch [85/400] Batch [760/925] G: 0.0935 (enc: 0.2008, dec: 0.0429, adv: 1.8069) D: (cover: 0.0504, enc: 0.1804) PSNR: 38.37dB
+Epoch [85/400] Batch [780/925] G: 0.0934 (enc: 0.1922, dec: 0.0425, adv: 2.7145) D: (cover: 0.1064, enc: 0.1693) PSNR: 39.10dB
+Epoch [85/400] Batch [800/925] G: 0.0974 (enc: 0.2000, dec: 0.0444, adv: 2.4589) D: (cover: 0.3008, enc: 0.1708) PSNR: 39.01dB
+Epoch [85/400] Batch [820/925] G: 0.0943 (enc: 0.1961, dec: 0.0428, adv: 2.8323) D: (cover: 0.0783, enc: 0.0801) PSNR: 38.97dB
+Epoch [85/400] Batch [840/925] G: 0.0908 (enc: 0.2023, dec: 0.0416, adv: 1.6193) D: (cover: 0.2434, enc: 0.2165) PSNR: 38.86dB
+Epoch [85/400] Batch [860/925] G: 0.0957 (enc: 0.1998, dec: 0.0438, adv: 2.1929) D: (cover: 0.0817, enc: 0.2253) PSNR: 38.80dB
+Epoch [85/400] Batch [880/925] G: 0.1036 (enc: 0.1905, dec: 0.0478, adv: 2.1874) D: (cover: 0.0968, enc: 0.1771) PSNR: 39.06dB
+Epoch [85/400] Batch [900/925] G: 0.0975 (enc: 0.1894, dec: 0.0444, adv: 2.9842) D: (cover: 0.1230, enc: 0.1101) PSNR: 39.18dB
+Epoch [85/400] Batch [920/925] G: 0.0948 (enc: 0.2031, dec: 0.0434, adv: 1.8695) D: (cover: 0.0254, enc: 0.2642) PSNR: 38.67dB
+Epoch [85/400] 训练平均损失: 0.0978
+Epoch [85/400] 验证平均损失: 0.1079 enc: 0.2069, dec: 0.0508 PSNR: 38.26dB
+Epoch [85/400] 验证耗时: 10.06s
+Epoch [85/400] 保存验证输出耗时: 0.03s
+Epoch [85/400] 训练耗时: 472.39s
+Epoch [85/400] 保存检查点耗时: 0.00s
+Epoch [85/400] 总耗时: 482.48s
+Epoch [86/400] 第1批数据获取耗时: 1.74s
+Epoch [86/400] Batch [20/925] G: 0.0935 (enc: 0.1960, dec: 0.0426, adv: 2.3459) D: (cover: 0.1453, enc: 0.1022) PSNR: 39.07dB
+Epoch [86/400] Batch [40/925] G: 0.0979 (enc: 0.1919, dec: 0.0452, adv: 1.7274) D: (cover: 0.0422, enc: 0.1904) PSNR: 39.03dB
+Epoch [86/400] Batch [60/925] G: 0.0930 (enc: 0.1913, dec: 0.0426, adv: 2.0337) D: (cover: 0.1196, enc: 0.1431) PSNR: 39.02dB
+Epoch [86/400] Batch [80/925] G: 0.0938 (enc: 0.2011, dec: 0.0432, adv: 1.3271) D: (cover: 0.0579, enc: 0.4543) PSNR: 38.97dB
+Epoch [86/400] Batch [100/925] G: 0.1066 (enc: 0.1971, dec: 0.0492, adv: 2.1775) D: (cover: 0.0413, enc: 0.1875) PSNR: 39.18dB
+Epoch [86/400] Batch [120/925] G: 0.0962 (enc: 0.1919, dec: 0.0444, adv: 1.5694) D: (cover: 0.0362, enc: 0.3379) PSNR: 39.21dB
+Epoch [86/400] Batch [140/925] G: 0.0971 (enc: 0.2029, dec: 0.0441, adv: 2.9283) D: (cover: 0.1677, enc: 0.0655) PSNR: 39.00dB
+Epoch [86/400] Batch [160/925] G: 0.1004 (enc: 0.2005, dec: 0.0460, adv: 2.4740) D: (cover: 0.2811, enc: 0.0550) PSNR: 38.92dB
+Epoch [86/400] Batch [180/925] G: 0.0959 (enc: 0.1959, dec: 0.0441, adv: 1.7711) D: (cover: 0.1039, enc: 0.1704) PSNR: 38.91dB
+Epoch [86/400] Batch [200/925] G: 0.0906 (enc: 0.1948, dec: 0.0411, adv: 2.6422) D: (cover: 0.1167, enc: 0.0887) PSNR: 39.06dB
+Epoch [86/400] Batch [220/925] G: 0.0924 (enc: 0.1991, dec: 0.0423, adv: 1.7004) D: (cover: 0.0438, enc: 0.1711) PSNR: 38.90dB
+Epoch [86/400] Batch [240/925] G: 0.0953 (enc: 0.1979, dec: 0.0435, adv: 2.4451) D: (cover: 0.1221, enc: 0.0927) PSNR: 38.88dB
+Epoch [86/400] Batch [260/925] G: 0.0905 (enc: 0.1998, dec: 0.0406, adv: 3.3547) D: (cover: 0.3369, enc: 0.0458) PSNR: 38.87dB
+Epoch [86/400] Batch [280/925] G: 0.0962 (enc: 0.1960, dec: 0.0440, adv: 2.3906) D: (cover: 0.3854, enc: 0.0459) PSNR: 38.85dB
+Epoch [86/400] Batch [300/925] G: 0.0999 (enc: 0.1960, dec: 0.0461, adv: 1.8511) D: (cover: 0.1776, enc: 0.1436) PSNR: 38.90dB
+Epoch [86/400] Batch [320/925] G: 0.1005 (enc: 0.2045, dec: 0.0461, adv: 2.0406) D: (cover: 0.1686, enc: 0.0971) PSNR: 38.70dB
+Epoch [86/400] Batch [340/925] G: 0.0938 (enc: 0.2051, dec: 0.0424, adv: 2.9303) D: (cover: 0.1690, enc: 0.1047) PSNR: 38.81dB
+Epoch [86/400] Batch [360/925] G: 0.0943 (enc: 0.2021, dec: 0.0431, adv: 2.1081) D: (cover: 0.2971, enc: 0.0946) PSNR: 38.66dB
+Epoch [86/400] Batch [380/925] G: 0.0906 (enc: 0.1926, dec: 0.0415, adv: 1.8338) D: (cover: 0.1138, enc: 0.1584) PSNR: 38.69dB
+Epoch [86/400] Batch [400/925] G: 0.0941 (enc: 0.1977, dec: 0.0428, adv: 2.6087) D: (cover: 0.2126, enc: 0.0660) PSNR: 38.72dB
+Epoch [86/400] Batch [420/925] G: 0.1009 (enc: 0.1905, dec: 0.0465, adv: 2.1896) D: (cover: 0.1674, enc: 0.1673) PSNR: 39.10dB
+Epoch [86/400] Batch [440/925] G: 0.0955 (enc: 0.1982, dec: 0.0435, adv: 2.5940) D: (cover: 0.1504, enc: 0.1150) PSNR: 38.68dB
+Epoch [86/400] Batch [460/925] G: 0.1013 (enc: 0.1937, dec: 0.0468, adv: 1.9906) D: (cover: 0.0770, enc: 0.0940) PSNR: 39.00dB
+Epoch [86/400] Batch [480/925] G: 0.0977 (enc: 0.1977, dec: 0.0450, adv: 1.7875) D: (cover: 0.1000, enc: 0.1579) PSNR: 39.00dB
+Epoch [86/400] Batch [500/925] G: 0.0950 (enc: 0.1979, dec: 0.0437, adv: 1.7605) D: (cover: 0.0777, enc: 0.3254) PSNR: 38.96dB
+Epoch [86/400] Batch [520/925] G: 0.1052 (enc: 0.2046, dec: 0.0482, adv: 2.6734) D: (cover: 0.5380, enc: 0.0677) PSNR: 38.65dB
+Epoch [86/400] Batch [540/925] G: 0.0963 (enc: 0.2059, dec: 0.0439, adv: 2.2818) D: (cover: 0.1426, enc: 0.1013) PSNR: 38.81dB
+Epoch [86/400] Batch [560/925] G: 0.0921 (enc: 0.1962, dec: 0.0424, adv: 1.3707) D: (cover: 0.0827, enc: 0.2096) PSNR: 38.82dB
+Epoch [86/400] Batch [580/925] G: 0.1041 (enc: 0.2056, dec: 0.0473, adv: 3.2539) D: (cover: 0.2736, enc: 0.1241) PSNR: 38.54dB
+Epoch [86/400] Batch [600/925] G: 0.0901 (enc: 0.1981, dec: 0.0412, adv: 1.8040) D: (cover: 0.1423, enc: 0.1758) PSNR: 38.90dB
+Epoch [86/400] Batch [620/925] G: 0.0951 (enc: 0.1965, dec: 0.0438, adv: 1.6981) D: (cover: 0.0287, enc: 0.2883) PSNR: 38.92dB
+Epoch [86/400] Batch [640/925] G: 0.0997 (enc: 0.1962, dec: 0.0457, adv: 2.3512) D: (cover: 0.1389, enc: 0.1320) PSNR: 38.97dB
+Epoch [86/400] Batch [660/925] G: 0.0950 (enc: 0.2028, dec: 0.0433, adv: 2.3270) D: (cover: 0.0595, enc: 0.2147) PSNR: 38.86dB
+Epoch [86/400] Batch [680/925] G: 0.0961 (enc: 0.1937, dec: 0.0439, adv: 2.4811) D: (cover: 0.1759, enc: 0.0951) PSNR: 39.08dB
+Epoch [86/400] Batch [700/925] G: 0.1023 (enc: 0.1998, dec: 0.0468, adv: 2.7410) D: (cover: 0.4532, enc: 0.0775) PSNR: 38.92dB
+Epoch [86/400] Batch [720/925] G: 0.0962 (enc: 0.1956, dec: 0.0439, adv: 2.4964) D: (cover: 0.0560, enc: 0.3431) PSNR: 38.91dB
+Epoch [86/400] Batch [740/925] G: 0.0972 (enc: 0.1994, dec: 0.0446, adv: 2.0870) D: (cover: 0.2463, enc: 0.1103) PSNR: 38.69dB
+Epoch [86/400] Batch [760/925] G: 0.0936 (enc: 0.2020, dec: 0.0426, adv: 2.4115) D: (cover: 0.0943, enc: 0.1764) PSNR: 38.88dB
+Epoch [86/400] Batch [780/925] G: 0.1074 (enc: 0.1962, dec: 0.0495, adv: 2.3798) D: (cover: 0.0894, enc: 0.0661) PSNR: 38.72dB
+训练异常退出: DataLoader worker (pid 54648) is killed by signal: Terminated. 
+Traceback (most recent call last):
+  File "/mnt/code/Watermark/train.py", line 485, in train
+    run_training(model, discriminator, train_loader, val_loader, loss_fn,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec, optimizer_discrim, train_sampler)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 354, in run_training
+    train_avg_loss = train_one_epoch(epoch, model, discriminator, train_loader, loss_fn,
+                                     optimizer_enc_dec, optimizer_discrim, train_sampler)
+  File "/mnt/code/Watermark/train.py", line 212, in train_one_epoch
+    compute_step(model, discriminator, loss_fn, img, msg,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec=optimizer_enc_dec,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_discrim=optimizer_discrim)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 164, in compute_step
+    optimizer_enc_dec.step()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 517, in wrapper
+    out = func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 82, in _use_grad
+    ret = func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 247, in step
+    adam(
+    ~~~~^
+        params_with_grad,
+        ^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+        decoupled_weight_decay=group["decoupled_weight_decay"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 150, in maybe_fallback
+    return func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 953, in adam
+    func(
+    ~~~~^
+        params,
+        ^^^^^^^
+    ...<17 lines>...
+        decoupled_weight_decay=decoupled_weight_decay,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 759, in _multi_tensor_adam
+    1 - beta1 ** _get_value(step) for step in device_state_steps
+                 ~~~~~~~~~~^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 97, in _get_value
+    return x.item() if isinstance(x, torch.Tensor) else x
+           ~~~~~~^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+RuntimeError: DataLoader worker (pid 54648) is killed by signal: Terminated. 

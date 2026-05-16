@@ -1,0 +1,5 @@
+分布式训练: rank=0, world_size=1, local_rank=0
+日志文件: logs/train_20260502_005323.log
+从epoch 18 恢复训练
+检测到中断信号，在 epoch 18 前停止训练
+训练因用户中断而提前结束

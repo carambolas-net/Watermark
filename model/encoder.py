@@ -31,8 +31,8 @@ class Encoder(nn.Module):
         #print_min_max(merged, "merged")
         output = self.output_layer(merged)
         #print_min_max(output, "output before clamp")
-        
+        output1 = image + output
         #output = torch.clamp(output, 0.0, 1.0)
         
-        return output
+        return output1
         

@@ -1,0 +1,66 @@
+分布式训练: rank=0, world_size=1, local_rank=0
+日志文件: logs/train_20260517_024956.log
+从epoch 129 恢复训练
+Epoch [130/400] 第1批数据获取耗时: 1.52s
+训练异常退出: DataLoader worker (pid 112399) is killed by signal: Terminated. 
+Traceback (most recent call last):
+  File "/mnt/code/Watermark/train.py", line 497, in train
+    run_training(model, discriminator, train_loader, val_loader, loss_fn,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec, optimizer_discrim, train_sampler)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 366, in run_training
+    train_avg_loss = train_one_epoch(epoch, model, discriminator, train_loader, loss_fn,
+                                     optimizer_enc_dec, optimizer_discrim, train_sampler)
+  File "/mnt/code/Watermark/train.py", line 224, in train_one_epoch
+    compute_step(model, discriminator, loss_fn, img, msg,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_enc_dec=optimizer_enc_dec,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 optimizer_discrim=optimizer_discrim)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 134, in compute_step
+    out_img, noisy_img, out_msg = encoder_decoder(img, msg)
+                                  ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1657, in forward
+    inputs, kwargs = self._pre_forward(*inputs, **kwargs)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1553, in _pre_forward
+    self._sync_buffers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 2189, in _sync_buffers
+    self._assign_modules_buffers()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1360, in _assign_modules_buffers
+    for buffer_name, buffer in self.module.named_buffers()
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2765, in named_buffers
+    yield from gen
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2646, in _named_members
+    for module_prefix, module in modules:
+                                 ^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2868, in named_modules
+    yield from module.named_modules(
+        memo, submodule_prefix, remove_duplicate
+    )
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2868, in named_modules
+    yield from module.named_modules(
+        memo, submodule_prefix, remove_duplicate
+    )
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2868, in named_modules
+    yield from module.named_modules(
+        memo, submodule_prefix, remove_duplicate
+    )
+  [Previous line repeated 2 more times]
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2823, in named_modules
+    def named_modules(
+    
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+RuntimeError: DataLoader worker (pid 112399) is killed by signal: Terminated. 

@@ -1,0 +1,77 @@
+分布式训练: rank=0, world_size=1, local_rank=0
+日志文件: logs/train_20260517_024104.log
+从epoch 129 恢复训练
+Epoch [130/400] 第1批数据获取耗时: 1.95s
+Epoch [130/400] Batch [20/925] G: 0.0832 (enc: 0.1934, dec: 0.0371, adv: 3.0680) D: (cover: 0.2859, enc: 0.0599) PSNR: 38.97dB
+Epoch [130/400] Batch [40/925] G: 0.0753 (enc: 0.1954, dec: 0.0333, adv: 2.9303) D: (cover: 0.0664, enc: 0.0670) PSNR: 38.75dB
+Epoch [130/400] Batch [60/925] G: 0.0838 (enc: 0.1916, dec: 0.0377, adv: 2.6912) D: (cover: 0.0504, enc: 0.0983) PSNR: 38.52dB
+Epoch [130/400] Batch [80/925] G: 0.0831 (enc: 0.1910, dec: 0.0379, adv: 1.7165) D: (cover: 0.0359, enc: 0.2838) PSNR: 38.82dB
+Epoch [130/400] Batch [100/925] G: 0.0849 (enc: 0.1861, dec: 0.0383, adv: 2.8112) D: (cover: 0.1925, enc: 0.0974) PSNR: 38.94dB
+Epoch [130/400] Batch [120/925] G: 0.0794 (enc: 0.1915, dec: 0.0344, adv: 4.7798) D: (cover: 0.8725, enc: 0.0628) PSNR: 38.94dB
+Epoch [130/400] Batch [140/925] G: 0.0797 (enc: 0.2027, dec: 0.0348, adv: 4.1460) D: (cover: 1.1236, enc: 0.1164) PSNR: 38.73dB
+Epoch [130/400] Batch [160/925] G: 0.0789 (enc: 0.1970, dec: 0.0348, adv: 3.4596) D: (cover: 0.4014, enc: 0.1526) PSNR: 38.74dB
+Epoch [130/400] Batch [180/925] G: 0.0798 (enc: 0.1884, dec: 0.0352, adv: 3.8684) D: (cover: 0.8040, enc: 0.0736) PSNR: 38.91dB
+Epoch [130/400] Batch [200/925] G: 0.0730 (enc: 0.1922, dec: 0.0326, adv: 2.1160) D: (cover: 0.1563, enc: 0.1700) PSNR: 38.78dB
+Epoch [130/400] Batch [220/925] G: 0.0794 (enc: 0.1981, dec: 0.0358, adv: 1.8807) D: (cover: 0.1027, enc: 0.2073) PSNR: 38.80dB
+Epoch [130/400] Batch [240/925] G: 0.0805 (enc: 0.1944, dec: 0.0361, adv: 2.5365) D: (cover: 0.1785, enc: 0.1111) PSNR: 38.82dB
+Epoch [130/400] Batch [260/925] G: 0.0755 (enc: 0.1956, dec: 0.0340, adv: 1.5423) D: (cover: 0.0405, enc: 0.2845) PSNR: 38.83dB
+Epoch [130/400] Batch [280/925] G: 0.0783 (enc: 0.1967, dec: 0.0352, adv: 2.0573) D: (cover: 0.0874, enc: 0.1621) PSNR: 38.81dB
+Epoch [130/400] Batch [300/925] G: 0.0799 (enc: 0.1963, dec: 0.0356, adv: 2.9467) D: (cover: 0.1423, enc: 0.0786) PSNR: 38.68dB
+Epoch [130/400] Batch [320/925] G: 0.0765 (enc: 0.1950, dec: 0.0339, adv: 2.8086) D: (cover: 0.1962, enc: 0.0937) PSNR: 38.67dB
+Epoch [130/400] Batch [340/925] G: 0.0760 (enc: 0.2007, dec: 0.0345, adv: 0.9076) D: (cover: 0.0284, enc: 0.6788) PSNR: 38.25dB
+训练异常退出: DataLoader worker (pid 110038) is killed by signal: Terminated. 
+Traceback (most recent call last):
+  File "/mnt/code/Watermark/train.py", line 496, in train
+    
+    run_training(model, discriminator, train_loader, val_loader, loss_fn,
+  File "/mnt/code/Watermark/train.py", line 365, in run_training
+    train_start_time = time.time()
+                     ^^^^^^^^^^^^^
+    train_avg_loss = train_one_epoch(epoch, model, discriminator, train_loader, loss_fn,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 223, in train_one_epoch
+    _, _, _, g_loss_enc, g_loss_dec, g_loss_adv, d_loss_cover, d_loss_encoded, g_loss, psnr = \
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        compute_step(model, discriminator, loss_fn, img, msg,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     optimizer_enc_dec=optimizer_enc_dec,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/code/Watermark/train.py", line 175, in compute_step
+    torch.nn.utils.clip_grad_norm_(encoder_decoder.parameters(), max_norm=1.0)
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 517, in wrapper
+    out = func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 82, in _use_grad
+    ret = func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 247, in step
+    adam(
+    ~~~~^
+        params_with_grad,
+        ^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+        decoupled_weight_decay=group["decoupled_weight_decay"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 150, in maybe_fallback
+    return func(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 953, in adam
+    func(
+    ~~~~^
+        params,
+        ^^^^^^^
+    ...<17 lines>...
+        decoupled_weight_decay=decoupled_weight_decay,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/adam.py", line 759, in _multi_tensor_adam
+    1 - beta1 ** _get_value(step) for step in device_state_steps
+                 ~~~~~~~~~~^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/optim/optimizer.py", line 97, in _get_value
+    return x.item() if isinstance(x, torch.Tensor) else x
+           ~~~~~~^^
+  File "/root/miniconda3/lib/python3.13/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+RuntimeError: DataLoader worker (pid 110038) is killed by signal: Terminated. 
